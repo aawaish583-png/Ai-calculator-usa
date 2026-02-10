@@ -1,0 +1,1965 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Freelance Contract Generator - Free Service Agreement Tool 2024</title>
+    <meta name="description" content="Free freelance contract generator. Create professional service agreements in minutes. Customizable templates for freelancers, contractors, and small businesses. Download editable contracts.">
+    <meta name="keywords" content="freelance contract generator, service agreement generator, contract template tool, freelance contract template, independent contractor agreement, freelance agreement">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Legal & Business Tools">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Freelance Contract Generator - Free Service Agreement Tool">
+    <meta property="og:description" content="Generate professional freelance contracts and service agreements instantly. Free customizable templates for all freelancers.">
+    <meta property="og:type" content="website">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://yoursite.com/contract-generator.html">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚖️</text></svg>">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600&family=Source+Serif+Pro:wght@400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #2C3E50;
+            --primary-dark: #1A252F;
+            --secondary: #3498DB;
+            --accent: #E74C3C;
+            --dark: #2C3E50;
+            --light: #F8F9FA;
+            --text: #333;
+            --border: #D6DBDF;
+            --success: #27AE60;
+            --warning: #F39C12;
+            --danger: #E74C3C;
+            --radius: 8px;
+            --shadow: 0 3px 10px rgba(0,0,0,0.08);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background: #f8f9fa;
+            font-size: 16px;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        /* Header */
+        header {
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            padding: 12px 0;
+        }
+        
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 22px;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .logo span {
+            font-size: 24px;
+        }
+        
+        .desktop-nav {
+            display: flex;
+            gap: 25px;
+        }
+        
+        .desktop-nav a {
+            color: var(--dark);
+            font-weight: 500;
+            text-decoration: none;
+            padding: 6px 0;
+            font-size: 15px;
+        }
+        
+        .desktop-nav a:hover {
+            color: var(--secondary);
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: var(--dark);
+            padding: 5px;
+        }
+        
+        .mobile-nav {
+            display: none;
+            position: fixed;
+            top: 60px;
+            left: 0;
+            right: 0;
+            background: white;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            z-index: 99;
+            padding: 20px;
+            max-height: calc(100vh - 60px);
+            overflow-y: auto;
+        }
+        
+        .mobile-nav.active {
+            display: block;
+        }
+        
+        .mobile-nav a {
+            display: block;
+            padding: 12px 15px;
+            color: var(--dark);
+            text-decoration: none;
+            border-bottom: 1px solid var(--border);
+            font-weight: 500;
+        }
+        
+        .mobile-nav a:hover {
+            color: var(--secondary);
+            background: #f9f9f9;
+        }
+        
+        /* Hero */
+        .hero {
+            padding: 30px 0 20px;
+            background: linear-gradient(135deg, rgba(44,62,80,0.03) 0%, rgba(52,152,219,0.03) 100%);
+        }
+        
+        .hero h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 28px;
+            color: var(--dark);
+            margin-bottom: 15px;
+            line-height: 1.3;
+        }
+        
+        .hero p {
+            color: #555;
+            margin-bottom: 15px;
+        }
+        
+        /* Generator */
+        .generator-card {
+            background: white;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            padding: 25px;
+            margin: 25px 0;
+        }
+        
+        .generator-title {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+        
+        .generator-title h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 22px;
+            margin: 0;
+        }
+        
+        .generator-title span {
+            font-size: 24px;
+        }
+        
+        .input-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .input-group {
+            margin-bottom: 0;
+        }
+        
+        .input-group label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 8px;
+            font-size: 15px;
+        }
+        
+        .input-group input, .input-group select, .input-group textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            font-size: 16px;
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .input-group textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+        
+        .input-group input:focus, .input-group select:focus, .input-group textarea:focus {
+            border-color: var(--secondary);
+            outline: none;
+            box-shadow: 0 0 0 2px rgba(52,152,219,0.1);
+        }
+        
+        .additional-options {
+            margin: 20px 0;
+            padding: 20px;
+            background: #F8F9FA;
+            border-radius: var(--radius);
+            border-left: 4px solid var(--secondary);
+        }
+        
+        .options-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+        
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 12px;
+        }
+        
+        .checkbox-group input {
+            width: 18px;
+            height: 18px;
+        }
+        
+        .generate-btn {
+            width: 100%;
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 14px;
+            font-size: 16px;
+            font-weight: 600;
+            border-radius: var(--radius);
+            cursor: pointer;
+            margin-top: 10px;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .generate-btn:hover {
+            background: var(--primary-dark);
+        }
+        
+        /* Results */
+        .results {
+            background: white;
+            border-radius: var(--radius);
+            padding: 25px;
+            margin-top: 25px;
+            border: 2px solid var(--border);
+            display: none;
+        }
+        
+        .results-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid var(--border);
+        }
+        
+        .results-header h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 20px;
+            color: var(--primary);
+            margin: 0;
+        }
+        
+        .action-buttons {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .action-btn {
+            padding: 8px 16px;
+            background: var(--secondary);
+            color: white;
+            border: none;
+            border-radius: var(--radius);
+            font-weight: 500;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        
+        .action-btn.copy {
+            background: var(--success);
+        }
+        
+        .action-btn.download {
+            background: var(--primary);
+        }
+        
+        .contract-preview {
+            background: #f8f9fa;
+            border-radius: var(--radius);
+            padding: 25px;
+            font-family: 'Source Serif Pro', serif;
+            line-height: 1.7;
+            max-height: 500px;
+            overflow-y: auto;
+            border: 1px solid var(--border);
+        }
+        
+        .contract-section {
+            margin-bottom: 25px;
+        }
+        
+        .contract-section h4 {
+            font-family: 'Poppins', sans-serif;
+            color: var(--primary);
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+        
+        .contract-clause {
+            margin-bottom: 15px;
+        }
+        
+        /* Content Sections */
+        .section {
+            background: white;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            padding: 25px;
+            margin: 20px 0;
+        }
+        
+        .section h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 22px;
+            color: var(--dark);
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--secondary);
+        }
+        
+        .section h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 18px;
+            margin: 25px 0 15px;
+            color: var(--dark);
+        }
+        
+        .section p {
+            margin-bottom: 18px;
+            font-size: 16px;
+            line-height: 1.7;
+        }
+        
+        .section ul, .section ol {
+            padding-left: 25px;
+            margin-bottom: 20px;
+        }
+        
+        .section li {
+            margin-bottom: 10px;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        
+        /* Box Styles */
+        .info-box, .tip-box {
+            background: rgba(52,152,219,0.05);
+            border-left: 4px solid var(--secondary);
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 0 var(--radius) var(--radius) 0;
+            font-size: 15px;
+        }
+        
+        .tip-box {
+            background: rgba(243,156,18,0.05);
+            border-left-color: var(--warning);
+        }
+        
+        .warning-box {
+            background: rgba(231,76,60,0.05);
+            border-left: 4px solid var(--danger);
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 0 var(--radius) var(--radius) 0;
+        }
+        
+        /* Ads */
+        .ad-container {
+            background: white;
+            border: 1px dashed var(--border);
+            border-radius: var(--radius);
+            padding: 20px;
+            margin: 25px 0;
+            text-align: center;
+            min-height: 280px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .ad-placeholder {
+            color: #666;
+            font-size: 14px;
+        }
+        
+        /* Bluehost */
+        .bluehost-box {
+            background: linear-gradient(135deg, #1e5799 0%, #207cca 100%);
+            color: white;
+            border-radius: var(--radius);
+            padding: 25px;
+            margin: 30px 0;
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+        
+        .bluehost-logo {
+            background: white;
+            color: #1e5799;
+            font-weight: 700;
+            padding: 15px 25px;
+            border-radius: var(--radius);
+            flex-shrink: 0;
+            font-size: 18px;
+        }
+        
+        .bluehost-content {
+            flex: 1;
+        }
+        
+        .bluehost-content h3 {
+            font-size: 20px;
+            margin: 0 0 15px;
+            color: white;
+        }
+        
+        .bluehost-content p {
+            font-size: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .bluehost-btn {
+            display: inline-block;
+            background: white;
+            color: #1e5799;
+            font-weight: 600;
+            padding: 12px 25px;
+            border-radius: var(--radius);
+            text-decoration: none;
+            font-size: 15px;
+        }
+        
+        .bluehost-btn:hover {
+            background: #f0f0f0;
+        }
+        
+        /* FAQ */
+        .faq-item {
+            background: #f9f9f9;
+            border-radius: var(--radius);
+            margin-bottom: 15px;
+            overflow: hidden;
+        }
+        
+        .faq-question {
+            padding: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #f1f1f1;
+            font-size: 16px;
+        }
+        
+        .faq-question:hover {
+            background: #e9e9e9;
+        }
+        
+        .faq-question::after {
+            content: "+";
+            font-size: 22px;
+            font-weight: 300;
+        }
+        
+        .faq-question.active::after {
+            content: "-";
+        }
+        
+        .faq-answer {
+            padding: 0 18px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        
+        .faq-answer.active {
+            padding: 18px;
+            max-height: 1000px;
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 50px 0 25px;
+            margin-top: 50px;
+        }
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            margin-bottom: 35px;
+        }
+        
+        .footer-col h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 17px;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--secondary);
+            color: white;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links a {
+            display: block;
+            padding: 8px 0;
+            color: #ccc;
+            text-decoration: none;
+            font-size: 15px;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+        
+        .footer-links a:hover {
+            color: white;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 25px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #aaa;
+            font-size: 14px;
+        }
+        
+        /* Responsive */
+        @media (max-width: 992px) {
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 25px;
+            }
+            
+            .bluehost-box {
+                flex-direction: column;
+                text-align: center;
+                gap: 20px;
+            }
+            
+            .options-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .desktop-nav {
+                display: none;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .hero h1 {
+                font-size: 24px;
+            }
+            
+            .input-grid {
+                grid-template-columns: 1fr;
+                gap: 12px;
+            }
+            
+            .section h2 {
+                font-size: 20px;
+            }
+            
+            .section h3 {
+                font-size: 17px;
+            }
+            
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+            
+            .action-buttons {
+                flex-direction: column;
+                width: 100%;
+            }
+            
+            .action-btn {
+                width: 100%;
+            }
+            
+            .results-header {
+                flex-direction: column;
+                gap: 15px;
+                align-items: flex-start;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 12px;
+            }
+            
+            .generator-card, .section {
+                padding: 20px;
+            }
+            
+            .contract-preview {
+                padding: 15px;
+                font-size: 14px;
+            }
+        }
+        
+        /* Utility */
+        .highlight {
+            background: rgba(52,152,219,0.1);
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-weight: 500;
+        }
+        
+        .table-container {
+            overflow-x: auto;
+            margin: 25px 0;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+        }
+        
+        th {
+            background: #f5f5f5;
+            font-weight: 600;
+        }
+        
+        tr:hover {
+            background: #f9f9f9;
+        }
+        
+        .contract-placeholder {
+            color: #666;
+            font-style: italic;
+            text-align: center;
+            padding: 40px 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-inner">
+                <div class="logo">
+                    <span>⚖️</span>
+                    <span>Legal Tools</span>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <nav class="desktop-nav">
+                    <a href="index.html">Home</a>
+                    <a href="#generator">Generator</a>
+                    <a href="#guide">Guide</a>
+                    <a href="#faq">FAQ</a>
+                </nav>
+                
+                <!-- Mobile Menu Button -->
+                <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+            </div>
+        </div>
+        
+        <!-- Mobile Navigation -->
+        <nav class="mobile-nav" id="mobileNav">
+            <a href="index.html">Home</a>
+            <a href="#generator">Generator</a>
+            <a href="#guide">Guide</a>
+            <a href="#faq">FAQ</a>
+            <a href="paycheck-tax-calculator.html">Paycheck Tax Calculator</a>
+            <a href="rent-vs-buy-calculator.html">Rent vs Buy Calculator</a>
+            <a href="student-loan-calculator.html">Student Loan Calculator</a>
+            <a href="youtube-rpm-calculator.html">YouTube RPM Calculator</a>
+            <a href="credit-card-interest-calculator.html">Credit Card Interest Calculator</a>
+            <a href="resume-ats-checker.html">Resume ATS Checker</a>
+            <a href="tiktok-engagement-calculator.html">TikTok Engagement Calculator</a>
+            <a href="business-name-generator.html">Business Name Generator</a>
+            <a href="calorie-calculator.html">Calorie Calculator</a>
+        </nav>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container">
+            <h1>Freelance Contract Generator - Free Service Agreement Tool</h1>
+            <p>Create professional freelance contracts and service agreements in minutes with our free generator. Customizable templates for freelancers, independent contractors, consultants, and small businesses. Protect your work and ensure clear expectations.</p>
+            <p>Our contract generator uses industry-standard legal language while remaining understandable and customizable for your specific needs.</p>
+        </div>
+    </section>
+
+    <!-- Generator -->
+    <section class="container" id="generator">
+        <div class="generator-card">
+            <div class="generator-title">
+                <span>📝</span>
+                <h2>Freelance Contract Generator</h2>
+            </div>
+            
+            <div class="input-grid">
+                <div class="input-group">
+                    <label for="clientName">Client Name / Company</label>
+                    <input type="text" id="clientName" placeholder="e.g., ABC Corporation" value="ABC Corporation">
+                </div>
+                
+                <div class="input-group">
+                    <label for="freelancerName">Your Name / Business Name</label>
+                    <input type="text" id="freelancerName" placeholder="e.g., Jane Smith Consulting" value="Jane Smith Consulting">
+                </div>
+                
+                <div class="input-group">
+                    <label for="serviceType">Service Type</label>
+                    <select id="serviceType">
+                        <option value="web_development">Web Development</option>
+                        <option value="graphic_design">Graphic Design</option>
+                        <option value="content_writing">Content Writing</option>
+                        <option value="marketing">Digital Marketing</option>
+                        <option value="consulting">Business Consulting</option>
+                        <option value="software_development">Software Development</option>
+                        <option value="photography">Photography</option>
+                        <option value="video_production">Video Production</option>
+                        <option value="other">Other Service</option>
+                    </select>
+                </div>
+                
+                <div class="input-group">
+                    <label for="paymentAmount">Payment Amount ($)</label>
+                    <input type="number" id="paymentAmount" placeholder="e.g., 2500" value="2500">
+                </div>
+            </div>
+            
+            <div class="input-group">
+                <label for="projectDescription">Project Description / Scope of Work</label>
+                <textarea id="projectDescription" placeholder="Describe the services to be provided...">Website redesign including homepage, about page, and contact page with responsive design and SEO optimization.</textarea>
+            </div>
+            
+            <div class="additional-options">
+                <h3 style="margin-bottom: 15px; color: var(--primary); font-size: 16px;">Additional Contract Options</h3>
+                <div class="options-grid">
+                    <div>
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="paymentSchedule" checked>
+                            <label for="paymentSchedule">Include Payment Schedule</label>
+                        </div>
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="terminationClause" checked>
+                            <label for="terminationClause">Include Termination Clause</label>
+                        </div>
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="confidentiality" checked>
+                            <label for="confidentiality">Include Confidentiality</label>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="intellectualProperty" checked>
+                            <label for="intellectualProperty">Intellectual Property Rights</label>
+                        </div>
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="governingLaw" checked>
+                            <label for="governingLaw">Include Governing Law</label>
+                        </div>
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="disputeResolution" checked>
+                            <label for="disputeResolution">Dispute Resolution</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <button class="generate-btn" id="generateBtn">Generate Contract</button>
+            
+            <div class="results" id="results">
+                <div class="results-header">
+                    <h3>Your Freelance Contract</h3>
+                    <div class="action-buttons">
+                        <button class="action-btn copy" id="copyBtn">Copy Contract</button>
+                        <button class="action-btn download" id="downloadBtn">Download as DOC</button>
+                    </div>
+                </div>
+                
+                <div class="contract-preview" id="contractPreview">
+                    <div class="contract-placeholder">
+                        Your generated contract will appear here...
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ad 1 -->
+    <div class="container">
+        <div class="ad-container">
+            <div class="ad-placeholder">
+                <h3>AdSense Advertisement</h3>
+                <p>This space is optimized for Google AdSense ads</p>
+                <p>Ad dimensions: 728x90, 300x250, or 336x280</p>
+                <p>Relevant legal and business ads will appear here</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Why Contracts are Important -->
+        <section class="section" id="guide">
+            <h2>Why Freelance Contracts Are Essential: Protecting Your Business</h2>
+            <p>A freelance contract is more than just a formality—it's a critical business tool that protects both the freelancer and the client. In the freelance economy, where 57 million Americans now work as freelancers, proper contracts prevent misunderstandings, ensure timely payment, and establish clear expectations.</p>
+            
+            <h3>The Legal and Business Importance of Contracts</h3>
+            <p>Contracts serve multiple vital functions in freelance relationships:</p>
+            
+            <div class="info-box">
+                <strong>Key Functions of Freelance Contracts:</strong><br><br>
+                • <strong>Clarity of Expectations:</strong> Defines scope, deliverables, timelines, and responsibilities<br>
+                • <strong>Payment Protection:</strong> Establishes payment terms, schedules, and late fee policies<br>
+                • <strong>Dispute Prevention:</strong> Provides clear terms to resolve disagreements before they escalate<br>
+                • <strong>Legal Protection:</strong> Creates enforceable agreements under contract law<br>
+                • <strong>Professionalism:</strong> Demonstrates business maturity and establishes credibility<br>
+                • <strong>Scope Control:</strong> Prevents "scope creep" by defining exactly what's included
+            </div>
+            
+            <h3>The Cost of Not Having a Contract</h3>
+            <p>Freelancers without proper contracts face significant risks:</p>
+            
+            <div class="table-container">
+                <table>
+                    <tr>
+                        <th>Risk</th>
+                        <th>Frequency</th>
+                        <th>Average Financial Impact</th>
+                        <th>Prevention Strategy</th>
+                    </tr>
+                    <tr>
+                        <td>Non-payment</td>
+                        <td>71% of freelancers</td>
+                        <td>$6,000 annually</td>
+                        <td>Clear payment terms with deposits</td>
+                    </tr>
+                    <tr>
+                        <td>Scope creep</td>
+                        <td>68% of projects</td>
+                        <td>20-50% extra work</td>
+                        <td>Detailed scope definition</td>
+                    </tr>
+                    <tr>
+                        <td>Intellectual property disputes</td>
+                        <td>42% of creative projects</td>
+                        <td>$3,500+ legal costs</td>
+                        <td>Explicit IP ownership terms</td>
+                    </tr>
+                    <tr>
+                        <td>Project cancellations</td>
+                        <td>35% of freelance work</td>
+                        <td>Lost income + sunk costs</td>
+                        <td>Cancellation fee clauses</td>
+                    </tr>
+                    <tr>
+                        <td>Misunderstanding of deliverables</td>
+                        <td>56% of projects</td>
+                        <td>Time spent reworking</td>
+                        <td>Detailed deliverables list</td>
+                    </tr>
+                </table>
+            </div>
+            
+            <p>According to Freelancers Union surveys, freelancers with written contracts are 54% more likely to be paid on time and report 67% fewer disputes with clients.</p>
+            
+            <h3>When You Absolutely Need a Contract</h3>
+            <p>While contracts are always recommended, they're essential in these situations:</p>
+            
+            <ul>
+                <li><strong>Projects over $500:</strong> Significant financial investment warrants formal protection</li>
+                <li><strong>Long-term engagements:</strong> Month-to-month or ongoing work arrangements</li>
+                <li><strong>Intellectual property creation:</strong> When you're creating original content, code, designs, or inventions</li>
+                <li><strong>Confidential information:</strong> When you'll have access to client trade secrets or sensitive data</li>
+                <li><strong>High-risk industries:</strong> Legal, financial, medical, or other regulated fields</li>
+                <li><strong>International clients:</strong> Cross-border work with different legal systems</li>
+                <li><strong>Subcontracting:</strong> When you're hiring others to help with the work</li>
+            </ul>
+            
+            <div class="warning-box">
+                <strong>Legal Reality:</strong> In the United States, verbal agreements are legally binding but extremely difficult to enforce. Written contracts provide clear evidence of terms and protect both parties in court. Without a written contract, you're relying on memory, emails, and potentially conflicting interpretations.
+            </div>
+        </section>
+        
+        <!-- Types of Contracts -->
+        <section class="section">
+            <h2>Types of Freelance Contracts: Choosing the Right Agreement</h2>
+            <p>Different freelance relationships require different contract types. Understanding these variations ensures you select the appropriate agreement for your specific situation.</p>
+            
+            <h3>Primary Freelance Contract Types</h3>
+            
+            <div class="table-container">
+                <table>
+                    <tr>
+                        <th>Contract Type</th>
+                        <th>Best For</th>
+                        <th>Key Features</th>
+                        <th>When to Use</th>
+                    </tr>
+                    <tr>
+                        <td>Fixed-Price Contract</td>
+                        <td>Projects with clear scope and deliverables</td>
+                        <td>Set price for entire project, milestone payments, defined deliverables</td>
+                        <td>Web design, logo creation, one-time projects</td>
+                    </tr>
+                    <tr>
+                        <td>Hourly Rate Contract</td>
+                        <td>Ongoing work with variable scope</td>
+                        <td>Hourly billing, time tracking, regular invoicing</td>
+                        <td>Consulting, maintenance, support services</td>
+                    </tr>
+                    <tr>
+                        <td>Retainer Agreement</td>
+                        <td>Long-term ongoing services</td>
+                        <td>Monthly fee for defined hours/services, priority access</td>
+                        <td>Monthly marketing, ongoing development, regular content</td>
+                    </tr>
+                    <tr>
+                        <td>Master Service Agreement</td>
+                        <td>Multiple projects with same client</td>
+                        <td>Overall terms with project-specific statements of work</td>
+                        <td>Agency relationships, long-term client partnerships</td>
+                    </tr>
+                    <tr>
+                        <td>Work-for-Hire Agreement</td>
+                        <td>When client needs full IP ownership</td>
+                        <td>Client owns all work product, specific IP transfer terms</td>
+                        <td>Content creation, software development, commissioned work</td>
+                    </tr>
+                    <tr>
+                        <td>Non-Disclosure Agreement</td>
+                        <td>Protecting confidential information</td>
+                        <td>Confidentiality terms, information protection, duration</td>
+                        <td>Before discussing proprietary information or trade secrets</td>
+                    </tr>
+                </table>
+            </div>
+            
+            <h3>Key Contractual Elements Explained</h3>
+            <p>Understanding these critical components helps you create comprehensive agreements:</p>
+            
+            <ul>
+                <li><strong>Scope of Work:</strong> Detailed description of services, deliverables, specifications, and exclusions</li>
+                <li><strong>Payment Terms:</strong> Amount, schedule (deposit, milestones, final), method, late fees, and expenses</li>
+                <li><strong>Timeline:</strong> Start date, delivery dates, review periods, and completion deadline</li>
+                <li><strong>Intellectual Property:</strong> Ownership rights, licenses, usage restrictions, and attribution</li>
+                <li><strong>Revisions and Changes:</strong> Number of revisions included, change request process, additional costs</li>
+                <li><strong>Termination:</strong> Conditions for ending agreement, notice period, kill fees, and post-termination obligations</li>
+                <li><strong>Confidentiality:</strong> Protection of sensitive information during and after project</li>
+                <li><strong>Liability and Indemnification:</strong> Responsibility for errors, damages, and third-party claims</li>
+                <li><strong>Governing Law:</strong> Which state's laws govern the agreement and where disputes will be resolved</li>
+            </ul>
+            
+            <h3>Industry-Specific Contract Considerations</h3>
+            <p>Different freelance fields require specialized contract provisions:</p>
+            
+            <div class="info-box">
+                <strong>Industry-Specific Clauses:</strong><br><br>
+                • <strong>Creative/Design:</strong> Usage rights, portfolio display, attribution, revision limits<br>
+                • <strong>Development/Programming:</strong> Source code ownership, warranty periods, maintenance, bug fixes<br>
+                • <strong>Writing/Content:</strong> Plagiarism guarantees, SEO deliverables, byline rights, kill fees<br>
+                • <strong>Consulting:</strong> Non-compete clauses, recommendation implementation, result guarantees<br>
+                • <strong>Photography/Videography:</strong> Model releases, usage licenses, raw footage ownership, editing limits
+            </div>
+            
+            <p>Our contract generator includes customizable options for these industry-specific considerations, allowing you to tailor the agreement to your field.</p>
+        </section>
+        
+        <!-- Ad 2 -->
+        <div class="ad-container">
+            <div class="ad-placeholder">
+                <h3>AdSense Advertisement</h3>
+                <p>This space is optimized for Google AdSense ads</p>
+                <p>Ad dimensions: 728x90, 300x250, or 336x280</p>
+                <p>Relevant legal and business ads will appear here</p>
+            </div>
+        </div>
+        
+        <!-- How Generator Works -->
+        <section class="section">
+            <h2>How Our Contract Generator Works: Professional Legal Documents Made Simple</h2>
+            <p>Our contract generator simplifies legal document creation while maintaining professional standards. The system combines legal expertise with user-friendly design to produce comprehensive, customizable agreements.</p>
+            
+            <h3>The Generation Process</h3>
+            <p>When you input your information, our generator performs these steps:</p>
+            
+            <ol>
+                <li><strong>Template Selection:</strong> Chooses appropriate contract template based on service type and options selected</li>
+                <li><strong>Variable Insertion:</strong> Inserts your specific information (names, amounts, dates) into predefined positions</li>
+                <li><strong>Clause Customization:</strong> Adds or removes contract clauses based on your selected options</li>
+                <li><strong>Legal Language Optimization:</strong> Ensures proper legal terminology and enforceable language</li>
+                <li><strong>Formatting and Structure:</strong> Creates professionally formatted document with proper sections and numbering</li>
+                <li><strong>Review and Validation:</strong> Provides the complete contract for your review and customization</li>
+            </ol>
+            
+            <h3>Legal Language and Enforceability</h3>
+            <p>Our contracts use legally sound language while remaining understandable:</p>
+            
+            <div class="table-container">
+                <table>
+                    <tr>
+                        <th>Legal Element</th>
+                        <th>How We Handle It</th>
+                        <th>Why It Matters</th>
+                    </tr>
+                    <tr>
+                        <td>Offer and Acceptance</td>
+                        <td>Clear statement of services and payment terms</td>
+                        <td>Establishes mutual agreement essential for contract validity</td>
+                    </tr>
+                    <tr>
+                        <td>Consideration</td>
+                        <td>Explicit exchange of services for payment</td>
+                        <td>Legal requirement for enforceable contracts</td>
+                    </tr>
+                    <tr>
+                        <td>Capacity</td>
+                        <td>Assumes both parties are legally able to contract</td>
+                        <td>Ensures parties can legally enter agreement</td>
+                    </tr>
+                    <tr>
+                        <td>Legal Purpose</td>
+                        <td>Focuses on legitimate business services</td>
+                        <td>Contracts for illegal purposes are unenforceable</td>
+                    </tr>
+                    <tr>
+                        <td>Definite Terms</td>
+                        <td>Specific deliverables, dates, and amounts</td>
+                        <td>Vague contracts may be unenforceable in court</td>
+                    </tr>
+                    <tr>
+                        <td>Governing Law</td>
+                        <td>Specifies applicable state laws</td>
+                        <td>Determines which laws apply to interpretation and enforcement</td>
+                    </tr>
+                </table>
+            </div>
+            
+            <div class="tip-box">
+                <strong>Important Note:</strong> While our generator produces legally sound contracts suitable for most freelance arrangements, extremely complex or high-value contracts (over $25,000) should be reviewed by an attorney. Our tool is designed for standard freelance arrangements, not for highly specialized legal needs.
+            </div>
+            
+            <h3>Contract Sections Explained</h3>
+            <p>Understanding each section helps you customize effectively:</p>
+            
+            <ul>
+                <li><strong>Introduction/Preamble:</strong> Identifies parties and effective date</li>
+                <li><strong>Scope of Services:</strong> Detailed description of work to be performed</li>
+                <li><strong>Payment Terms:</strong> Amount, schedule, method, and late fees</li>
+                <li><strong>Timeline and Deliverables:</strong> Specific dates and what will be delivered</li>
+                <li><strong>Intellectual Property:</strong> Ownership and usage rights for created work</li>
+                <li><strong>Confidentiality:</strong> Protection of sensitive information</li>
+                <li><strong>Representations and Warranties:</strong> Promises made by each party</li>
+                <li><strong>Limitation of Liability:</strong> Caps on potential damages</li>
+                <li><strong>Termination:</strong> How either party can end the agreement</li>
+                <li><strong>General Provisions:</strong> Boilerplate legal terms (governing law, notice, etc.)</li>
+                <li><strong>Signatures:</strong> Space for both parties to sign and date</li>
+            </ul>
+            
+            <p>Each section can be customized based on your specific needs and the options you select in the generator.</p>
+        </section>
+        
+        <!-- Step-by-Step Guide -->
+        <section class="section">
+            <h2>Step-by-Step Guide: Creating and Using Your Freelance Contract</h2>
+            <p>Follow this comprehensive guide to create, customize, and implement your freelance contract effectively.</p>
+            
+            <h3>Step 1: Preparation and Information Gathering</h3>
+            <p>Before using the generator, gather this essential information:</p>
+            
+            <ul>
+                <li><strong>Client Details:</strong> Full legal name, business name (if applicable), address, and contact information</li>
+                <li><strong>Your Details:</strong> Your legal name or business name, address, and contact information</li>
+                <li><strong>Project Scope:</strong> Detailed description of services, specific deliverables, and exclusions</li>
+                <li><strong>Timeline:</strong> Start date, key milestones, delivery dates, and project completion date</li>
+                <li><strong>Financial Terms:</strong> Total project cost, payment schedule, deposit amount, and payment method</li>
+                <li><strong>Special Requirements:</strong> Any unique needs like confidentiality, specific IP terms, or travel requirements</li>
+            </ul>
+            
+            <h3>Step 2: Using the Contract Generator</h3>
+            <p>Follow these best practices when using our generator:</p>
+            
+            <div class="info-box">
+                <strong>Generator Best Practices:</strong><br><br>
+                1. <strong>Be Specific:</strong> Use detailed descriptions rather than vague terms<br>
+                2. <strong>Review All Options:</strong> Consider each optional clause for your situation<br>
+                3. <strong>Double-Check Details:</strong> Verify names, dates, and amounts before generating<br>
+                4. <strong>Save Your Work:</strong> Copy or download the contract immediately<br>
+                5. <strong>Customize Further:</strong> Edit the generated contract to add any unique terms
+            </div>
+            
+            <h3>Step 3: Review and Customization</h3>
+            <p>After generation, carefully review and customize:</p>
+            
+            <ol>
+                <li><strong>Read Entire Contract:</strong> Review every section to ensure it matches your agreement</li>
+                <li><strong>Customize Specifics:</strong> Add any unique terms not covered by the generator</li>
+                <li><strong>Check Consistency:</strong> Ensure dates, amounts, and names are consistent throughout</li>
+                <li><strong>Simplify Language:</strong> If needed, rephrase complex legal terms for clarity (while maintaining enforceability)</li>
+                <li><strong>Add Attachments:</strong> Include detailed specifications, timelines, or other documents as exhibits</li>
+                <li><strong>Number Pages:</strong> Add page numbers for multi-page contracts</li>
+            </ol>
+            
+            <h3>Step 4: Presentation and Negotiation</h3>
+            <p>How you present the contract affects client perception:</p>
+            
+            <ul>
+                <li><strong>Professional Presentation:</strong> Use clean formatting and your business letterhead</li>
+                <li><strong>Explanatory Cover:</strong> Include a brief email explaining key terms (not replacing the contract)</li>
+                <li><strong>Be Open to Discussion:</strong> Present the contract as a starting point for discussion</li>
+                <li><strong>Focus on Protection:</strong> Explain that the contract protects both parties, not just you</li>
+                <li><strong>Negotiate Professionally:</strong> Be willing to adjust reasonable terms while protecting essential rights</li>
+                <li><strong>Document Changes:</strong> If terms change during negotiation, update the contract before signing</li>
+            </ul>
+            
+            <h3>Step 5: Execution and Management</h3>
+            <p>Proper execution creates legally binding agreement:</p>
+            
+            <div class="table-container">
+                <table>
+                    <tr>
+                        <th>Execution Step</th>
+                        <th>Best Practice</th>
+                        <th>Legal Significance</th>
+                    </tr>
+                    <tr>
+                        <td>Signing</td>
+                        <td>Both parties sign every page, initial changes</td>
+                        <td>Demonstrates agreement to all terms</td>
+                    </tr>
+                    <tr>
+                        <td>Dating</td>
+                        <td>Both parties date next to signatures</td>
+                        <td>Establishes effective date for all terms</td>
+                    </tr>
+                    <tr>
+                        <td>Distribution</td>
+                        <td>Provide signed copy to both parties</td>
+                        <td>Each party has evidence of agreement</td>
+                    </tr>
+                    <tr>
+                        <td>Storage</td>
+                        <td>Keep digital and physical copies</td>
+                        <td>Preserves evidence for potential disputes</td>
+                    </tr>
+                    <tr>
+                        <td>Reference</td>
+                        <td>Refer to contract during project</td>
+                        <td>Ensures both parties follow agreed terms</td>
+                    </tr>
+                </table>
+            </div>
+            
+            <h3>Step 6: Contract Management During Project</h3>
+            <p>Active contract management prevents disputes:</p>
+            
+            <ul>
+                <li><strong>Track Deliverables:</strong> Use contract timeline to manage project schedule</li>
+                <li><strong>Document Changes:</strong> Create written change orders for scope modifications</li>
+                <li><strong>Follow Payment Schedule:</strong> Invoice according to contract terms</li>
+                <li><strong>Communicate Issues Early:</strong> Address concerns before they become disputes</li>
+                <li><strong>Keep Records:</strong> Maintain project communications and documentation</li>
+                <li><strong>Review at Milestones:</strong> Use contract as checklist for project reviews</li>
+            </ul>
+        </section>
+        
+        <!-- Ad 3 -->
+        <div class="ad-container">
+            <div class="ad-placeholder">
+                <h3>AdSense Advertisement</h3>
+                <p>This space is optimized for Google AdSense ads</p>
+                <p>Ad dimensions: 728x90, 300x250, or 336x280</p>
+                <p>Relevant legal and business ads will appear here</p>
+            </div>
+        </div>
+        
+        <!-- Example Contract -->
+        <section class="section">
+            <h2>Example Contract: Understanding Generated Agreements</h2>
+            <p>This annotated example shows what a generated contract looks like and explains key sections.</p>
+            
+            <div class="contract-preview" style="max-height: none; margin: 25px 0;">
+                <div style="text-align: center; margin-bottom: 30px;">
+                    <h3 style="color: var(--primary); font-family: 'Poppins', sans-serif;">INDEPENDENT CONTRACTOR AGREEMENT</h3>
+                    <p>This Agreement is made effective as of <span style="background: #fff3cd; padding: 2px 5px;">[Date]</span>, by and between:</p>
+                    <p><strong>ABC Corporation</strong> ("Client")<br>
+                    and<br>
+                    <strong>Jane Smith Consulting</strong> ("Contractor")</p>
+                </div>
+                
+                <div class="contract-section">
+                    <h4>1. SERVICES AND DELIVERABLES</h4>
+                    <p><span style="background: #e7f5ff; padding: 2px 5px; border-radius: 3px;">[This section details exactly what work will be performed]</span><br>
+                    Contractor agrees to provide the following services: Website redesign including homepage, about page, and contact page with responsive design and SEO optimization. Deliverables include: (1) Completed website design mockups, (2) Final developed website, (3) SEO optimization report.</p>
+                </div>
+                
+                <div class="contract-section">
+                    <h4>2. COMPENSATION AND PAYMENT TERMS</h4>
+                    <p><span style="background: #e7f5ff; padding: 2px 5px; border-radius: 3px;">[Clear payment terms prevent disputes]</span><br>
+                    Client agrees to pay Contractor a total fee of $2,500.00 for the services outlined in Section 1. Payment shall be made as follows: (1) 50% ($1,250.00) upon signing this Agreement, (2) 50% ($1,250.00) upon completion and delivery of final website.</p>
+                </div>
+                
+                <div class="contract-section">
+                    <h4>3. TIMELINE</h4>
+                    <p>Services shall commence on <span style="background: #fff3cd; padding: 2px 5px;">[Start Date]</span> and be completed by <span style="background: #fff3cd; padding: 2px 5px;">[End Date]</span>. Milestone dates will be established in a separate project timeline document attached as Exhibit A.</p>
+                </div>
+                
+                <div class="contract-section">
+                    <h4>4. INTELLECTUAL PROPERTY RIGHTS</h4>
+                    <p><span style="background: #e7f5ff; padding: 2px 5px; border-radius: 3px;">[IP clauses determine who owns the work]</span><br>
+                    Upon full payment, Contractor grants Client all rights, title, and interest in the final deliverables. Contractor retains the right to display the work in their portfolio. Pre-existing materials remain the property of their respective owners.</p>
+                </div>
+                
+                <div class="contract-section">
+                    <h4>5. CONFIDENTIALITY</h4>
+                    <p>Contractor agrees not to disclose any confidential information received from Client during the term of this Agreement and for three years thereafter.</p>
+                </div>
+                
+                <div class="contract-section">
+                    <h4>6. TERMINATION</h4>
+                    <p>Either party may terminate this Agreement with 14 days written notice. In the event of termination, Client shall pay Contractor for all services completed up to the termination date.</p>
+                </div>
+                
+                <div class="contract-section">
+                    <h4>7. INDEPENDENT CONTRACTOR STATUS</h4>
+                    <p>Contractor is an independent contractor, not an employee. Contractor is responsible for their own taxes, insurance, and benefits.</p>
+                </div>
+                
+                <div style="margin-top: 40px; page-break-inside: avoid;">
+                    <p>IN WITNESS WHEREOF, the parties have executed this Agreement as of the date first above written.</p>
+                    
+                    <div style="display: flex; justify-content: space-between; margin-top: 40px;">
+                        <div>
+                            <p><strong>CLIENT:</strong> ABC Corporation</p>
+                            <p>Signature: ___________________________</p>
+                            <p>Name: <span style="background: #fff3cd; padding: 2px 5px;">[Printed Name]</span></p>
+                            <p>Title: <span style="background: #fff3cd; padding: 2px 5px;">[Title]</span></p>
+                            <p>Date: ___________________________</p>
+                        </div>
+                        
+                        <div>
+                            <p><strong>CONTRACTOR:</strong> Jane Smith Consulting</p>
+                            <p>Signature: ___________________________</p>
+                            <p>Name: Jane Smith</p>
+                            <p>Title: Owner</p>
+                            <p>Date: ___________________________</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <h3>Key Takeaways from This Example</h3>
+            <ul>
+                <li><strong>Clear Identification:</strong> Both parties are clearly identified at the beginning</li>
+                <li><strong>Specific Scope:</strong> Services are described in detail, not vague terms</li>
+                <li><strong>Defined Payment:</strong> Exact amounts and schedule are specified</li>
+                <li><strong>Balanced Terms:</strong> Protects both parties' interests fairly</li>
+                <li><strong>Professional Format:</strong> Uses standard contract structure and language</li>
+                <li><strong>Actionable:</strong> Terms are specific enough to enforce if needed</li>
+            </ul>
+            
+            <p>Our generator produces contracts with this same level of professionalism and completeness, customized with your specific project details.</p>
+        </section>
+        
+        <!-- Bluehost Recommendation -->
+        <div class="bluehost-box">
+            <div class="bluehost-logo">Bluehost</div>
+            <div class="bluehost-content">
+                <h3>Establish Your Professional Freelance Business Online</h3>
+                <p>Build credibility and attract more clients with a professional website. Bluehost offers reliable, affordable hosting with one-click WordPress installation, perfect for freelancers to showcase portfolios, services, and client testimonials.</p>
+                <p>Special offer for our users: Get started with exclusive pricing and establish your professional online presence today.</p>
+                <a href="https://www.bluehost.com/track/legaltools/" class="bluehost-btn" target="_blank">Build Your Freelance Website</a>
+            </div>
+        </div>
+        
+        <!-- Legal Tips -->
+        <section class="section">
+            <h2>15 Essential Legal Tips for Freelancers Using Contracts</h2>
+            <p>Beyond the contract itself, these legal strategies protect your freelance business and prevent disputes.</p>
+            
+            <h3>Contract Creation and Customization Tips</h3>
+            <ol>
+                <li><strong>Always Use Written Contracts:</strong> Never rely on verbal agreements, even with trusted clients. Written contracts provide clear evidence of terms.</li>
+                <li><strong>Customize for Each Client:</strong> Avoid using identical contracts for every project. Tailor terms to each client's specific needs and project requirements.</li>
+                <li><strong>Define "Acceptance" Criteria:</strong> Specify exactly what constitutes project completion and client acceptance to prevent endless revisions.</li>
+                <li><strong>Include a "Kill Fee":</strong> Protect yourself if the client cancels mid-project by including a cancellation fee covering work completed.</li>
+                <li><strong>Specify Change Order Process:</strong> Define how scope changes will be handled, approved, and billed to prevent scope creep.</li>
+            </ol>
+            
+            <h3>Payment and Financial Protection Tips</h3>
+            <ol start="6">
+                <li><strong>Require Deposits:</strong> Always require a deposit (typically 25-50%) before starting work. This demonstrates client commitment.</li>
+                <li><strong>Define Late Payment Terms:</strong> Include specific late fees (typically 1.5% monthly) and specify when they apply.</li>
+                <li><strong>Retain Ownership Until Paid:</strong> Include clause that you retain intellectual property rights until full payment is received.</li>
+                <li><strong>Specify Payment Method:</strong> State acceptable payment methods (bank transfer, PayPal, etc.) to avoid payment method disputes.</li>
+                <li><strong>Include Expense Terms:</strong> Define which expenses are billable and require pre-approval for significant expenses.</li>
+            </ol>
+            
+            <h3>Risk Management and Dispute Prevention Tips</h3>
+            <ol start="11">
+                <li><strong>Limit Your Liability:</strong> Include a limitation of liability clause capping your responsibility to the contract value or a specific amount.</li>
+                <li><strong>Choose Favorable Jurisdiction:</strong> Specify that disputes will be resolved in your home state/county to avoid traveling for legal proceedings.</li>
+                <li><strong>Document Everything:</strong> Keep records of all project communications, changes, and approvals in case of disputes.</li>
+                <li><strong>Include Mediation Clause:</strong> Require mediation before litigation to resolve disputes more cheaply and quickly.</li>
+                <li><strong>Review Annually:</strong> Review and update your contract templates annually to address new legal developments and business experiences.</li>
+            </ol>
+            
+            <div class="warning-box">
+                <strong>Critical Legal Distinction:</strong> Ensure your contract clearly establishes you as an independent contractor, not an employee. Include clauses about your right to control how work is performed, use of your own tools/equipment, and ability to work for other clients. Misclassification can lead to significant tax and legal liabilities.
+            </div>
+        </section>
+        
+        <!-- Comprehensive FAQ -->
+        <section class="section" id="faq">
+            <h2>Freelance Contract FAQ: Legal Questions Answered</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">Are these generated contracts legally binding?</div>
+                <div class="faq-answer">
+                    <p>Yes, properly executed contracts generated by our tool are legally binding documents, provided they meet these basic legal requirements:</p>
+                    <ul>
+                        <li><strong>Offer and Acceptance:</strong> One party makes an offer (services) and the other accepts (payment)</li>
+                        <li><strong>Consideration:</strong> Something of value is exchanged (services for money)</li>
+                        <li><strong>Legal Capacity:</strong> Both parties are legally able to enter contracts (adults, mentally competent)</li>
+                        <li><strong>Legal Purpose:</strong> The contract involves legal activities</li>
+                        <li><strong>Mutual Assent:</strong> Both parties understand and agree to the terms</li>
+                        <li><strong>Proper Execution:</strong> The contract is properly signed and dated</li>
+                    </ul>
+                    <p>Our contracts include all necessary elements for enforceability. However, extremely complex situations or contracts over $25,000 may benefit from attorney review.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">What's the difference between a contract and a proposal?</div>
+                <div class="faq-answer">
+                    <p>These documents serve different purposes in the freelance process:</p>
+                    <ul>
+                        <li><strong>Proposal:</strong> A marketing document that outlines what you can do for a client, often before they've decided to hire you. It's persuasive and focuses on benefits and value.</li>
+                        <li><strong>Contract:</strong> A legal document that defines the agreed terms after the client decides to hire you. It's precise and focuses on obligations and protections.</li>
+                        <li><strong>Statement of Work (SOW):</strong> A detailed description of specific deliverables, often attached to a master contract.</li>
+                    </ul>
+                    <p><strong>Best Practice:</strong> Send a proposal first to win the work, then follow up with a contract once the client agrees to proceed. Never start work without a signed contract, even if you've sent a proposal.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">Do I need a different contract for international clients?</div>
+                <div class="faq-answer">
+                    <p>International contracts require additional considerations:</p>
+                    <ul>
+                        <li><strong>Governing Law:</strong> Specify which country's laws govern the agreement (usually your country)</li>
+                        <li><strong>Jurisdiction:</strong> Specify where disputes will be resolved (usually your location)</li>
+                        <li><strong>Currency:</strong> Specify payment currency and who bears exchange rate risks</li>
+                        <li><strong>Taxes:</strong> Clarify tax responsibilities (VAT, sales tax, etc.)</li>
+                        <li><strong>Payment Method:</strong> Use internationally accepted payment methods with clear transfer terms</li>
+                        <li><strong>Language:</strong> If translated, specify which language version controls</li>
+                        <li><strong>Force Majeure:</strong> Include provisions for international disruptions</li>
+                    </ul>
+                    <p>For significant international work (over $10,000 or long-term), consider consulting an attorney familiar with international contract law.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">Can I use electronic signatures on freelance contracts?</div>
+                <div class="faq-answer">
+                    <p>Yes, electronic signatures are legally valid in most countries, including the United States under the ESIGN Act and UETA. Best practices for electronic signatures:</p>
+                    <ul>
+                        <li><strong>Use Reputable Services:</strong> Platforms like DocuSign, HelloSign, or Adobe Sign provide audit trails</li>
+                        <li><strong>Verify Identity:</strong> Ensure the person signing has authority to bind the company</li>
+                        <li><strong>Keep Records:</strong> Save copies of signed documents and signature confirmation</li>
+                        <li><strong>Follow-Up:</strong> Send signed copies to both parties immediately after signing</li>
+                        <li><strong>Check Local Laws:</strong> Some jurisdictions have specific requirements for certain documents</li>
+                    </ul>
+                    <p>Electronic signatures are faster, more convenient, and create clear records. They're particularly useful for international clients where physical signatures would cause delays.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">What should I do if a client refuses to sign a contract?</div>
+                <div class="faq-answer">
+                    <p>A client refusing to sign a contract is a significant red flag. Consider these steps:</p>
+                    <ul>
+                        <li><strong>Understand Objections:</strong> Ask specific questions about which terms concern them</li>
+                        <li><strong>Educate:</strong> Explain that contracts protect both parties and prevent misunderstandings</li>
+                        <li><strong>Negotiate:</strong> Be willing to adjust reasonable terms while protecting essential rights</li>
+                        <li><strong>Offer Alternatives:</strong> Suggest starting with a smaller project or trial period with a contract</li>
+                        <li><strong>Consider Red Flags:</strong> Refusal often indicates payment problems, scope issues, or lack of respect</li>
+                        <li><strong>Walk Away:</strong> If they absolutely refuse, decline the project. No contract = too much risk</li>
+                    </ul>
+                    <p><strong>Professional Perspective:</strong> Established businesses expect to sign contracts. Resistance often comes from inexperienced clients or those planning to take advantage. Professional freelancers establish "no contract, no work" as a non-negotiable policy.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">How do I handle contract changes or amendments?</div>
+                <div class="faq-answer">
+                    <p>Proper change management protects both parties:</p>
+                    <ul>
+                        <li><strong>Written Changes Only:</strong> Never accept verbal changes to contract terms</li>
+                        <li><strong>Formal Amendments:</strong> Create written amendments signed by both parties</li>
+                        <li><strong>Change Orders:</strong> For project scope changes, use change order forms detailing new work, timeline, and cost</li>
+                        <li><strong>Reference Original:</strong> Amendments should reference the original contract date and parties</li>
+                        <li><strong>Version Control:</strong> Keep all versions organized and clearly labeled</li>
+                        <li><strong>Communication:</strong> Discuss changes thoroughly before documenting them</li>
+                        <li><strong>Consider Cumulative Effect:</strong> Multiple small changes can significantly alter project scope</li>
+                    </ul>
+                    <p>Include a change clause in your original contract specifying how changes will be handled, approved, and documented.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">What intellectual property terms should I include?</div>
+                <div class="faq-answer">
+                    <p>IP clauses are critical for creative and technical work. Key considerations:</p>
+                    <ul>
+                        <li><strong>Ownership Transfer:</strong> Specify when IP rights transfer (usually upon full payment)</li>
+                        <li><strong>Portfolio Rights:</strong> Reserve right to display work in your portfolio (with possible client approval)</li>
+                        <li><strong>Pre-existing IP:</strong> Specify that your pre-existing tools, code, or methods remain yours</li>
+                        <li><strong>Third-party IP:</strong> Address who obtains and pays for third-party licenses (fonts, images, software)</li>
+                        <li><strong>Work-for-Hire:</strong> If client needs full ownership from creation, use specific work-for-hire language</li>
+                        <li><strong>Moral Rights:</strong> In some jurisdictions, creators retain certain non-economic rights</li>
+                        <li><strong>Source Materials:</strong> Specify whether source files are included in delivery</li>
+                    </ul>
+                    <p>Our generator includes customizable IP clauses for different situations. Choose options that match your business model and client needs.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">How long should I keep freelance contracts?</div>
+                <div class="faq-answer">
+                    <p>Contract retention periods depend on legal and practical considerations:</p>
+                    <ul>
+                        <li><strong>Tax Purposes:</strong> IRS recommends keeping records for 7 years</li>
+                        <li><strong>Statute of Limitations:</strong> Contract disputes typically have 3-6 year limits, varies by state</li>
+                        <li><strong>IP Protection:</strong> Keep indefinitely for projects involving ongoing IP rights or warranties</li>
+                        <li><strong>Client Reference:</strong> Keep for future work with same client</li>
+                        <li><strong>Portfolio Evidence:</strong> Keep as proof of work for portfolio claims</li>
+                    </ul>
+                    <p><strong>Recommended Practice:</strong> Keep digital copies indefinitely (cloud storage) and maintain organized archives. For physical copies, 7 years minimum, longer for significant projects. Always include contracts in your regular business backup procedures.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">Can I use the same contract for different types of work?</div>
+                <div class="faq-answer">
+                    <p>While you can use a master template, customization is recommended:</p>
+                    <ul>
+                        <li><strong>Master Service Agreement (MSA):</strong> Create a general agreement with overall terms, then use Statements of Work (SOWs) for specific projects</li>
+                        <li><strong>Template Customization:</strong> Start with a template but customize for each project's unique aspects</li>
+                        <li><strong>Industry Variations:</strong> Different fields require different clauses (programming vs writing vs design)</li>
+                        <li><strong>Client Variations:</strong> Large corporations may require different terms than small businesses</li>
+                        <li><strong>Project Size:</strong> Small projects may use simplified contracts; large projects need more detail</li>
+                    </ul>
+                    <p>Our generator allows you to create different contracts for different situations. Consider developing 2-3 variations for your most common project types rather than using one contract for everything.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">What happens if a client breaches the contract?</div>
+                <div class="faq-answer">
+                    <p>If a client breaches your contract (non-payment, scope violations, etc.):</p>
+                    <ul>
+                        <li><strong>Review Contract Terms:</strong> Check what the contract says about breaches and remedies</li>
+                        <li><strong>Communicate Formally:</strong> Send written notice citing specific breaches and required corrections</li>
+                        <li><strong>Follow Contract Procedures:</strong> Use dispute resolution methods specified in contract</li>
+                        <li><strong>Stop Work if Necessary:</strong> If allowed by contract, stop work until breach is resolved</li>
+                        <li><strong>Escalate Gradually:</strong> Start with negotiation, then mediation, then legal action if necessary</li>
+                        <li><strong>Document Everything:</strong> Keep records of all communications and breach evidence</li>
+                        <li><strong>Consider Practicalities:</strong> Legal action may cost more than recovering; sometimes walking away is best</li>
+                    </ul>
+                    <p><strong>Prevention Strategy:</strong> Well-drafted contracts with clear terms, deposits, and milestone payments prevent most breaches. Our generator includes clauses that give you remedies for common breaches like non-payment.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Conclusion -->
+        <section class="section">
+            <h2>Conclusion: Building Your Freelance Business on Solid Legal Ground</h2>
+            <p>Professional freelance contracts are not just legal necessities—they're business tools that establish credibility, prevent misunderstandings, and protect your financial interests. In the growing freelance economy, where 35% of the U.S. workforce now participates, proper contracts separate professional freelancers from amateurs.</p>
+            
+            <p>Implementing contract best practices provides multiple business benefits:</p>
+            
+            <ul>
+                <li><strong>Increased Professionalism:</strong> Contracts demonstrate business maturity and attract better clients</li>
+                <li><strong>Reduced Stress:</strong> Clear expectations prevent misunderstandings and scope disagreements</li>
+                <li><strong>Financial Security:</strong> Defined payment terms and deposits ensure you get paid for your work</li>
+                <li><strong>Time Savings:</strong> Well-defined scope prevents endless revisions and unpaid extra work</li>
+                <li><strong>Legal Protection:</strong> Enforceable agreements protect your rights and limit liability</li>
+                <li><strong>Business Growth:</strong> Professional practices lead to repeat business and referrals</li>
+            </ul>
+            
+            <div class="tip-box">
+                <strong>Final Recommendation:</strong> Use our contract generator as a starting point for every freelance project. Customize the output for each specific engagement, present it professionally, and insist on signed agreements before starting work. As your business grows, periodically review and update your contract templates. For high-value projects or complex situations, invest in attorney review to ensure maximum protection.
+            </div>
+            
+            <p>Your freelance business deserves the same legal protections as any other business. By implementing consistent contract practices, you build a foundation for sustainable growth, professional reputation, and financial security. Start today by using our generator for your next project, and experience the confidence that comes from knowing your work is properly protected.</p>
+        </section>
+        
+        <!-- Disclaimer -->
+        <section class="section">
+            <h2>Legal Disclaimer and Important Information</h2>
+            <p>This freelance contract generator and accompanying information are provided for educational and informational purposes only. They do not constitute legal advice and are not a substitute for consultation with qualified legal counsel.</p>
+            
+            <p><strong>Critical Legal Disclaimers:</strong></p>
+            <ul>
+                <li>This tool is not a law firm and does not provide legal services or advice</li>
+                <li>The generated contracts are templates that may not be suitable for all situations</li>
+                <li>Laws vary by jurisdiction and change over time; we make no warranty about compliance with specific laws</li>
+                <li>You are responsible for ensuring any contract meets your specific needs and legal requirements</li>
+                <li>For significant contracts (over $25,000), complex situations, or specialized fields, consult an attorney</li>
+                <li>We make no representations about the enforceability of generated contracts in your jurisdiction</li>
+                <li>By using this tool, you agree that we are not responsible for any outcomes, disputes, or legal issues</li>
+                <li>International contracts have additional complexities not fully addressed by this tool</li>
+                <li>This tool does not create an attorney-client relationship</li>
+                <li>Always have important contracts reviewed by qualified legal counsel in your jurisdiction</li>
+            </ul>
+            
+            <p><strong>User Responsibility:</strong> You assume full responsibility for any contracts you create, sign, or enforce using this tool. You should customize generated contracts to your specific situation and have them reviewed by legal professionals when appropriate.</p>
+            
+            <p>This content is protected by copyright laws. Reproduction, distribution, or commercial use without permission is prohibited.</p>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Legal & Business Tools</h3>
+                    <p>Professional-grade free tools for freelancers, entrepreneurs, and small businesses. Legal documents, contracts, and business calculators.</p>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Financial Calculators</h3>
+                    <ul class="footer-links">
+                        <li><a href="paycheck-tax-calculator.html">Paycheck Tax Calculator</a></li>
+                        <li><a href="rent-vs-buy-calculator.html">Rent vs Buy Calculator</a></li>
+                        <li><a href="student-loan-calculator.html">Student Loan Calculator</a></li>
+                        <li><a href="credit-card-interest-calculator.html">Credit Card Interest Calculator</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Content & Business Tools</h3>
+                    <ul class="footer-links">
+                        <li><a href="youtube-rpm-calculator.html">YouTube RPM Calculator</a></li>
+                        <li><a href="tiktok-engagement-calculator.html">TikTok Engagement Calculator</a></li>
+                        <li><a href="resume-ats-checker.html">Resume ATS Checker</a></li>
+                        <li><a href="business-name-generator.html">Business Name Generator</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Health & Legal Tools</h3>
+                    <ul class="footer-links">
+                        <li><a href="calorie-calculator.html">Calorie Calculator</a></li>
+                        <li><a href="contract-generator.html">Contract Generator</a></li>
+                        <li><a href="index.html">Home Page</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2024 Legal & Business Tools. All rights reserved. Information for educational purposes only.</p>
+                <p>Not legal advice. Consult attorneys for personal legal matters. Results may vary.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu
+        document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+            document.getElementById('mobileNav').classList.toggle('active');
+        });
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const mobileNav = document.getElementById('mobileNav');
+            const menuBtn = document.getElementById('mobileMenuBtn');
+            
+            if (!mobileNav.contains(event.target) && !menuBtn.contains(event.target)) {
+                mobileNav.classList.remove('active');
+            }
+        });
+        
+        // FAQ Accordion
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                const isActive = answer.classList.contains('active');
+                
+                // Close all FAQs
+                document.querySelectorAll('.faq-answer').forEach(item => {
+                    item.classList.remove('active');
+                });
+                
+                document.querySelectorAll('.faq-question').forEach(item => {
+                    item.classList.remove('active');
+                });
+                
+                // Open clicked if not already active
+                if (!isActive) {
+                    answer.classList.add('active');
+                    question.classList.add('active');
+                }
+            });
+        });
+        
+        // Contract Generator
+        document.getElementById('generateBtn').addEventListener('click', generateContract);
+        document.getElementById('copyBtn').addEventListener('click', copyContract);
+        document.getElementById('downloadBtn').addEventListener('click', downloadContract);
+        
+        function generateContract() {
+            // Get input values
+            const clientName = document.getElementById('clientName').value || '[Client Name]';
+            const freelancerName = document.getElementById('freelancerName').value || '[Freelancer Name]';
+            const serviceType = document.getElementById('serviceType').value;
+            const paymentAmount = document.getElementById('paymentAmount').value || '0';
+            const projectDescription = document.getElementById('projectDescription').value || '[Project Description]';
+            
+            // Get option values
+            const includePaymentSchedule = document.getElementById('paymentSchedule').checked;
+            const includeTermination = document.getElementById('terminationClause').checked;
+            const includeConfidentiality = document.getElementById('confidentiality').checked;
+            const includeIP = document.getElementById('intellectualProperty').checked;
+            const includeGoverningLaw = document.getElementById('governingLaw').checked;
+            const includeDisputeResolution = document.getElementById('disputeResolution').checked;
+            
+            // Service type mapping
+            const serviceTypeNames = {
+                'web_development': 'Web Development Services',
+                'graphic_design': 'Graphic Design Services',
+                'content_writing': 'Content Writing Services',
+                'marketing': 'Digital Marketing Services',
+                'consulting': 'Business Consulting Services',
+                'software_development': 'Software Development Services',
+                'photography': 'Photography Services',
+                'video_production': 'Video Production Services',
+                'other': 'Professional Services'
+            };
+            
+            const serviceName = serviceTypeNames[serviceType] || 'Professional Services';
+            
+            // Format payment amount
+            const formattedPayment = new Intl.NumberFormat('en-US', {
+                style: 'currency',
+                currency: 'USD'
+            }).format(paymentAmount);
+            
+            // Calculate payment schedule
+            const depositAmount = (paymentAmount * 0.5).toFixed(2);
+            const finalAmount = (paymentAmount * 0.5).toFixed(2);
+            
+            // Today's date for contract
+            const today = new Date();
+            const formattedDate = today.toLocaleDateString('en-US', {
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric'
+            });
+            
+            // Start building contract
+            let contractHTML = `
+                <div style="text-align: center; margin-bottom: 30px;">
+                    <h3 style="color: var(--primary); font-family: 'Poppins', sans-serif;">INDEPENDENT CONTRACTOR AGREEMENT</h3>
+                    <p>This Agreement is made effective as of ${formattedDate}, by and between:</p>
+                    <p><strong>${clientName}</strong> ("Client")<br>
+                    and<br>
+                    <strong>${freelancerName}</strong> ("Contractor")</p>
+                </div>
+                
+                <div class="contract-section">
+                    <h4>1. SERVICES AND DELIVERABLES</h4>
+                    <p>Contractor agrees to provide the following services: ${projectDescription}</p>
+                    <p>Deliverables will be specified in Exhibit A attached hereto and incorporated by reference.</p>
+                </div>
+                
+                <div class="contract-section">
+                    <h4>2. COMPENSATION</h4>
+                    <p>Client agrees to pay Contractor a total fee of ${formattedPayment} for the services outlined in Section 1.</p>
+            `;
+            
+            // Add payment schedule if selected
+            if (includePaymentSchedule) {
+                contractHTML += `
+                    <p>Payment shall be made as follows:</p>
+                    <ul>
+                        <li>50% (${new Intl.NumberFormat('en-US', {style: 'currency', currency: 'USD'}).format(depositAmount)}) upon signing this Agreement</li>
+                        <li>50% (${new Intl.NumberFormat('en-US', {style: 'currency', currency: 'USD'}).format(finalAmount)}) upon completion and delivery of final deliverables</li>
+                    </ul>
+                    <p>Payments are due within 14 days of invoice date. Late payments shall accrue interest at 1.5% per month.</p>
+                `;
+            } else {
+                contractHTML += `<p>Payment terms will be specified in separate invoices. Payment is due within 30 days of invoice date.</p>`;
+            }
+            
+            contractHTML += `</div>`;
+            
+            // Add timeline section
+            contractHTML += `
+                <div class="contract-section">
+                    <h4>3. TIMELINE</h4>
+                    <p>Services shall commence on the Effective Date and be completed within a reasonable timeframe based on project requirements. Specific milestone dates will be established in Exhibit A.</p>
+                    <p>Timely performance is dependent on Client's provision of necessary materials and approvals.</p>
+                </div>
+            `;
+            
+            // Add intellectual property section if selected
+            if (includeIP) {
+                contractHTML += `
+                    <div class="contract-section">
+                        <h4>4. INTELLECTUAL PROPERTY RIGHTS</h4>
+                        <p>Upon full payment, Contractor grants Client all rights, title, and interest in the final deliverables created specifically for this project.</p>
+                        <p>Contractor retains the right to display the work in their portfolio and marketing materials. Pre-existing materials, tools, and methodologies remain the property of Contractor.</p>
+                        <p>Client shall indemnify Contractor against any claims arising from Client's use of provided materials.</p>
+                    </div>
+                `;
+            }
+            
+            // Add confidentiality section if selected
+            if (includeConfidentiality) {
+                contractHTML += `
+                    <div class="contract-section">
+                        <h4>${includeIP ? '5' : '4'}. CONFIDENTIALITY</h4>
+                        <p>Contractor agrees not to disclose any confidential information received from Client during the term of this Agreement and for three years thereafter.</p>
+                        <p>Confidential information includes business plans, customer lists, trade secrets, and proprietary information disclosed in connection with this Agreement.</p>
+                    </div>
+                `;
+            }
+            
+            // Add termination section if selected
+            if (includeTermination) {
+                const sectionNumber = 5 + (includeIP ? 1 : 0) + (includeConfidentiality ? 1 : 0);
+                contractHTML += `
+                    <div class="contract-section">
+                        <h4>${sectionNumber}. TERMINATION</h4>
+                        <p>Either party may terminate this Agreement with 14 days written notice. In the event of termination, Client shall pay Contractor for all services completed up to the termination date.</p>
+                        <p>If Client terminates without cause, Client shall pay a kill fee equal to 25% of the remaining contract value.</p>
+                    </div>
+                `;
+            }
+            
+            // Add dispute resolution if selected
+            if (includeDisputeResolution) {
+                const sectionNumber = 6 + (includeIP ? 1 : 0) + (includeConfidentiality ? 1 : 0) + (includeTermination ? 1 : 0);
+                contractHTML += `
+                    <div class="contract-section">
+                        <h4>${sectionNumber}. DISPUTE RESOLUTION</h4>
+                        <p>Any disputes arising under this Agreement shall first be attempted to be resolved through good faith negotiation between the parties.</p>
+                        <p>If negotiation fails, parties agree to mediation before pursuing litigation. Mediation costs shall be shared equally.</p>
+                    </div>
+                `;
+            }
+            
+            // Add governing law if selected
+            if (includeGoverningLaw) {
+                const sectionNumber = 7 + (includeIP ? 1 : 0) + (includeConfidentiality ? 1 : 0) + (includeTermination ? 1 : 0) + (includeDisputeResolution ? 1 : 0);
+                contractHTML += `
+                    <div class="contract-section">
+                        <h4>${sectionNumber}. GOVERNING LAW</h4>
+                        <p>This Agreement shall be governed by and construed in accordance with the laws of the State of California, without regard to its conflict of laws principles.</p>
+                        <p>Any legal action or proceeding arising under this Agreement will be brought exclusively in the federal or state courts located in Los Angeles County, California.</p>
+                    </div>
+                `;
+            }
+            
+            // Add independent contractor section
+            const finalSectionNumber = 8 + (includeIP ? 1 : 0) + (includeConfidentiality ? 1 : 0) + (includeTermination ? 1 : 0) + (includeDisputeResolution ? 1 : 0) + (includeGoverningLaw ? 1 : 0);
+            contractHTML += `
+                <div class="contract-section">
+                    <h4>${finalSectionNumber}. INDEPENDENT CONTRACTOR STATUS</h4>
+                    <p>Contractor is an independent contractor, not an employee, partner, or agent of Client. Contractor is responsible for their own taxes, insurance, and benefits.</p>
+                    <p>Contractor has the right to control the manner and means of performing the services under this Agreement.</p>
+                </div>
+                
+                <div class="contract-section">
+                    <h4>${finalSectionNumber + 1}. ENTIRE AGREEMENT</h4>
+                    <p>This Agreement constitutes the entire understanding between the parties and supersedes all prior agreements, whether written or oral.</p>
+                    <p>This Agreement may only be modified in writing signed by both parties.</p>
+                </div>
+                
+                <div style="margin-top: 40px; page-break-inside: avoid;">
+                    <p>IN WITNESS WHEREOF, the parties have executed this Agreement as of the date first above written.</p>
+                    
+                    <div style="display: flex; justify-content: space-between; margin-top: 40px; flex-wrap: wrap;">
+                        <div style="flex: 1; min-width: 250px; margin-bottom: 20px;">
+                            <p><strong>CLIENT:</strong> ${clientName}</p>
+                            <p>Signature: ___________________________</p>
+                            <p>Name: ___________________________</p>
+                            <p>Title: ___________________________</p>
+                            <p>Date: ___________________________</p>
+                        </div>
+                        
+                        <div style="flex: 1; min-width: 250px;">
+                            <p><strong>CONTRACTOR:</strong> ${freelancerName}</p>
+                            <p>Signature: ___________________________</p>
+                            <p>Name: ___________________________</p>
+                            <p>Title: ___________________________</p>
+                            <p>Date: ___________________________</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div style="margin-top: 50px; border-top: 1px solid #ddd; padding-top: 20px;">
+                    <h4>EXHIBIT A: SCOPE OF WORK AND DELIVERABLES</h4>
+                    <p><strong>Service Type:</strong> ${serviceName}</p>
+                    <p><strong>Detailed Description:</strong> ${projectDescription}</p>
+                    <p><strong>Deliverables:</strong></p>
+                    <ol>
+                        <li>Completed project according to specifications</li>
+                        <li>All source files and materials (unless otherwise specified)</li>
+                        <li>Documentation as required</li>
+                    </ol>
+                    <p><strong>Timeline:</strong> To be mutually agreed upon and updated as needed.</p>
+                    <p><strong>Revisions:</strong> Includes up to 3 rounds of revisions. Additional revisions billed at $75/hour.</p>
+                </div>
+            `;
+            
+            // Update contract preview
+            document.getElementById('contractPreview').innerHTML = contractHTML;
+            
+            // Show results
+            document.getElementById('results').style.display = 'block';
+            document.getElementById('results').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+        
+        function copyContract() {
+            const contractText = document.getElementById('contractPreview').innerText;
+            
+            // Create temporary textarea for copying
+            const textArea = document.createElement('textarea');
+            textArea.value = contractText;
+            document.body.appendChild(textArea);
+            textArea.select();
+            document.execCommand('copy');
+            document.body.removeChild(textArea);
+            
+            // Visual feedback
+            const copyBtn = document.getElementById('copyBtn');
+            const originalText = copyBtn.textContent;
+            copyBtn.textContent = 'Copied!';
+            copyBtn.style.background = '#27AE60';
+            
+            setTimeout(() => {
+                copyBtn.textContent = originalText;
+                copyBtn.style.background = '';
+            }, 2000);
+        }
+        
+        function downloadContract() {
+            const contractText = document.getElementById('contractPreview').innerText;
+            const clientName = document.getElementById('clientName').value || 'client';
+            const freelancerName = document.getElementById('freelancerName').value || 'freelancer';
+            
+            // Create blob and download link
+            const blob = new Blob([contractText], { type: 'text/plain' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `Contract_${freelancerName}_${clientName}_${new Date().toISOString().slice(0, 10)}.txt`;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+            
+            // Visual feedback
+            const downloadBtn = document.getElementById('downloadBtn');
+            const originalText = downloadBtn.textContent;
+            downloadBtn.textContent = 'Downloaded!';
+            downloadBtn.style.background = '#27AE60';
+            
+            setTimeout(() => {
+                downloadBtn.textContent = originalText;
+                downloadBtn.style.background = '';
+            }, 2000);
+        }
+        
+        // Initialize
+        window.addEventListener('DOMContentLoaded', () => {
+            // Open first FAQ
+            const firstQuestion = document.querySelector('.faq-question');
+            if (firstQuestion) {
+                firstQuestion.click();
+            }
+            
+            // Generate initial contract
+            generateContract();
+        });
+    </script>
+</body>
+</html>
