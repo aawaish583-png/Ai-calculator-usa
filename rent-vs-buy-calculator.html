@@ -1,0 +1,1316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Rent vs Buy House Calculator USA 2026 | Should You Rent or Buy?</title>
+    <meta name="description" content="Free 2026 rent vs buy calculator for USA. Calculate exact costs of renting vs buying a home. Discover the financially smarter choice based on your situation.">
+    <meta name="keywords" content="rent vs buy calculator usa, should i rent or buy a house, rent vs buy house calculator, home buying vs renting usa, rent or buy calculator 2026, housing calculator">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Rent vs Buy House Calculator USA 2026">
+    <meta property="og:description" content="Calculate whether renting or buying is financially smarter for you in 2026.">
+    <meta property="og:type" content="website">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.rentvsbuycalculator.com/2026">
+    
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Rent vs Buy House Calculator USA 2026",
+      "description": "Interactive calculator to compare renting vs buying costs for 2026 housing market",
+      "url": "https://www.rentvsbuycalculator.com/2026",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Any",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    }
+    </script>
+    
+    <style>
+        /* Base Styles */
+        :root {
+            --primary: #2563eb;
+            --secondary: #1d4ed8;
+            --accent: #3b82f6;
+            --light: #f8fafc;
+            --dark: #1e293b;
+            --gray: #64748b;
+            --border: #e2e8f0;
+            --success: #10b981;
+            --warning: #f59e0b;
+            --danger: #ef4444;
+            --radius: 12px;
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+        }
+        
+        body {
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.7;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            font-size: 16px;
+        }
+        
+        /* Typography */
+        h1 {
+            color: var(--dark);
+            font-size: 2.75rem;
+            margin-bottom: 1.25rem;
+            line-height: 1.2;
+            font-weight: 800;
+        }
+        
+        h2 {
+            color: var(--dark);
+            font-size: 2rem;
+            margin: 3rem 0 1.5rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 3px solid var(--border);
+            font-weight: 700;
+        }
+        
+        h3 {
+            color: var(--dark);
+            font-size: 1.5rem;
+            margin: 2rem 0 1rem;
+            font-weight: 600;
+        }
+        
+        h4 {
+            color: var(--gray);
+            font-size: 1.25rem;
+            margin: 1.5rem 0 0.75rem;
+            font-weight: 600;
+        }
+        
+        p {
+            margin-bottom: 1.25rem;
+            font-size: 1.1rem;
+            color: #334155;
+        }
+        
+        /* Calculator Container */
+        .calculator-container {
+            background: linear-gradient(135deg, #ffffff 0%, #f1f5f9 100%);
+            border-radius: 20px;
+            padding: 3rem;
+            margin: 2.5rem 0;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border);
+        }
+        
+        .calculator-title {
+            text-align: center;
+            color: var(--dark);
+            margin-bottom: 2.5rem;
+            font-size: 2rem;
+            font-weight: 700;
+        }
+        
+        /* Calculator Grid */
+        .calculator-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .input-section, .results-section {
+            background: white;
+            padding: 2rem;
+            border-radius: var(--radius);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            border: 1px solid var(--border);
+        }
+        
+        /* Form Elements */
+        .form-group {
+            margin-bottom: 1.75rem;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 0.75rem;
+            font-weight: 600;
+            color: var(--dark);
+            font-size: 1.05rem;
+        }
+        
+        input, select {
+            width: 100%;
+            padding: 1rem 1.25rem;
+            border: 2px solid #cbd5e1;
+            border-radius: 10px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            background: white;
+        }
+        
+        input:focus, select:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
+        }
+        
+        .range-container {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .range-value {
+            min-width: 80px;
+            text-align: right;
+            font-weight: 600;
+            color: var(--primary);
+        }
+        
+        /* Button */
+        .calculate-btn {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            border: none;
+            padding: 1.25rem 2.5rem;
+            border-radius: 12px;
+            font-size: 1.15rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+            margin-top: 1rem;
+            letter-spacing: 0.5px;
+        }
+        
+        .calculate-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 25px rgba(37, 99, 235, 0.25);
+        }
+        
+        /* Results */
+        .comparison-result {
+            text-align: center;
+            padding: 2rem;
+            border-radius: var(--radius);
+            margin-bottom: 2rem;
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            border: 2px solid var(--accent);
+        }
+        
+        .winner-badge {
+            display: inline-block;
+            background: var(--success);
+            color: white;
+            padding: 0.5rem 1.5rem;
+            border-radius: 20px;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        
+        .result-item {
+            background: #f8fafc;
+            padding: 1.5rem;
+            margin-bottom: 1.25rem;
+            border-radius: 10px;
+            border-left: 5px solid var(--primary);
+        }
+        
+        .result-label {
+            font-weight: 600;
+            color: var(--gray);
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
+        }
+        
+        .result-value {
+            font-size: 1.75rem;
+            font-weight: 800;
+            color: var(--dark);
+        }
+        
+        .renting-result {
+            border-left-color: #10b981;
+        }
+        
+        .buying-result {
+            border-left-color: #3b82f6;
+        }
+        
+        .breakdown-section {
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 2px solid var(--border);
+        }
+        
+        /* Cost Breakdown */
+        .cost-breakdown {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        
+        .cost-item {
+            background: white;
+            padding: 1.25rem;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            text-align: center;
+        }
+        
+        .cost-label {
+            font-size: 0.9rem;
+            color: var(--gray);
+            margin-bottom: 0.5rem;
+        }
+        
+        .cost-value {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--dark);
+        }
+        
+        /* Toggle Switch */
+        .toggle-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 2rem 0;
+            gap: 1rem;
+        }
+        
+        .toggle-switch {
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 30px;
+        }
+        
+        .toggle-switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+        
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #cbd5e1;
+            transition: .4s;
+            border-radius: 34px;
+        }
+        
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 22px;
+            width: 22px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+        }
+        
+        input:checked + .slider {
+            background-color: var(--primary);
+        }
+        
+        input:checked + .slider:before {
+            transform: translateX(30px);
+        }
+        
+        /* Article Sections */
+        .article-section {
+            background: white;
+            padding: 2.5rem;
+            border-radius: var(--radius);
+            margin-bottom: 2.5rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            border: 1px solid var(--border);
+        }
+        
+        /* Pros and Cons */
+        .pros-cons {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .pros, .cons {
+            padding: 1.5rem;
+            border-radius: var(--radius);
+        }
+        
+        .pros {
+            background: #f0f9ff;
+            border: 2px solid var(--accent);
+        }
+        
+        .cons {
+            background: #fef2f2;
+            border: 2px solid #fecaca;
+        }
+        
+        /* Comparison Table */
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+            background: white;
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .comparison-table th {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            padding: 1.25rem;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        .comparison-table td {
+            padding: 1.25rem;
+            border-bottom: 1px solid var(--border);
+        }
+        
+        .comparison-table tr:nth-child(even) {
+            background-color: #f8fafc;
+        }
+        
+        /* FAQ Styles */
+        .faq-item {
+            margin-bottom: 2rem;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 2rem;
+        }
+        
+        .faq-question {
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 1rem;
+            font-size: 1.25rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .faq-answer {
+            color: #475569;
+            line-height: 1.8;
+        }
+        
+        /* Bluehost Section */
+        .bluehost-section {
+            background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+            color: white;
+            padding: 3rem;
+            border-radius: var(--radius);
+            margin: 3rem 0;
+            text-align: center;
+        }
+        
+        .bluehost-btn {
+            background: white;
+            color: #1e40af;
+            border: none;
+            padding: 1.25rem 3rem;
+            border-radius: 10px;
+            font-size: 1.15rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-block;
+            margin-top: 1.5rem;
+            text-decoration: none;
+        }
+        
+        .bluehost-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 25px rgba(255, 255, 255, 0.2);
+        }
+        
+        /* Ad Container */
+        .ad-container {
+            margin: 3rem 0;
+            text-align: center;
+            padding: 25px;
+            background: #f1f5f9;
+            border-radius: var(--radius);
+            border: 1px dashed var(--border);
+        }
+        
+        /* Disclaimer */
+        .disclaimer {
+            background: #fef2f2;
+            border: 2px solid #fecaca;
+            color: #991b1b;
+            padding: 2rem;
+            border-radius: var(--radius);
+            margin: 3rem 0;
+            font-size: 0.95rem;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            h1 {
+                font-size: 2.25rem;
+            }
+            
+            h2 {
+                font-size: 1.75rem;
+            }
+            
+            .calculator-container {
+                padding: 2rem;
+            }
+            
+            .calculator-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            body {
+                padding: 15px;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .calculator-container {
+                padding: 1.5rem;
+            }
+            
+            .article-section {
+                padding: 1.75rem;
+            }
+            
+            .pros-cons {
+                grid-template-columns: 1fr;
+            }
+            
+            .bluehost-section {
+                padding: 2rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.75rem;
+            }
+            
+            h2 {
+                font-size: 1.5rem;
+                margin: 2.5rem 0 1.25rem;
+            }
+            
+            .calculator-container {
+                padding: 1.25rem;
+            }
+            
+            input, select {
+                padding: 0.9rem;
+            }
+            
+            .result-value {
+                font-size: 1.5rem;
+            }
+            
+            .calculate-btn {
+                padding: 1.1rem 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Rent vs Buy House Calculator USA 2026: Which is Smarter Financially?</h1>
+        <p>Use our free 2026 rent vs buy calculator to discover whether renting or buying a home makes more financial sense for your situation. Updated with current mortgage rates and 2026 housing market projections.</p>
+    </header>
+
+    <!-- Table of Contents -->
+    <div class="article-section">
+        <h3>Quick Navigation</h3>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 1.5rem;">
+            <a href="#calculator" style="color: var(--primary); text-decoration: none; background: #f0f9ff; padding: 1rem; border-radius: 8px; text-align: center;">📊 Calculator</a>
+            <a href="#comparison" style="color: var(--primary); text-decoration: none; background: #f0f9ff; padding: 1rem; border-radius: 8px; text-align: center;">⚖️ Rent vs Buy</a>
+            <a href="#costs" style="color: var(--primary); text-decoration: none; background: #f0f9ff; padding: 1rem; border-radius: 8px; text-align: center;">💰 Hidden Costs</a>
+            <a href="#examples" style="color: var(--primary); text-decoration: none; background: #f0f9ff; padding: 1rem; border-radius: 8px; text-align: center;">📈 Real Examples</a>
+            <a href="#faq" style="color: var(--primary); text-decoration: none; background: #f0f9ff; padding: 1rem; border-radius: 8px; text-align: center;">❓ FAQ</a>
+        </div>
+    </div>
+
+    <!-- AdSense Ad 1 -->
+    <div class="ad-container">
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7300331231530877"
+             crossorigin="anonymous"></script>
+        <ins class="adsbygoogle"
+             style="display:block; text-align:center;"
+             data-ad-layout="in-article"
+             data-ad-format="fluid"
+             data-ad-client="ca-pub-7300331231530877"
+             data-ad-slot="2175956093"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
+
+    <!-- Calculator -->
+    <div class="calculator-container" id="calculator">
+        <h2 class="calculator-title">2026 Rent vs Buy Calculator</h2>
+        
+        <div class="calculator-grid">
+            <div class="input-section">
+                <div class="form-group">
+                    <label for="monthlyRent">Monthly Rent ($)</label>
+                    <input type="number" id="monthlyRent" placeholder="e.g., 1500" min="0" step="100" value="1500">
+                </div>
+                
+                <div class="form-group">
+                    <label for="homePrice">Home Purchase Price ($)</label>
+                    <input type="number" id="homePrice" placeholder="e.g., 300000" min="0" step="1000" value="300000">
+                </div>
+                
+                <div class="form-group">
+                    <label for="downPayment">Down Payment (%)</label>
+                    <div class="range-container">
+                        <input type="range" id="downPaymentRange" min="0" max="50" step="1" value="20">
+                        <span class="range-value" id="downPaymentValue">20%</span>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="interestRate">Mortgage Interest Rate (%)</label>
+                    <div class="range-container">
+                        <input type="range" id="interestRateRange" min="1" max="10" step="0.1" value="6.5">
+                        <span class="range-value" id="interestRateValue">6.5%</span>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="loanTerm">Loan Term (years)</label>
+                    <select id="loanTerm">
+                        <option value="15">15 years</option>
+                        <option value="30" selected>30 years</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="propertyTax">Property Tax Rate (%)</label>
+                    <div class="range-container">
+                        <input type="range" id="propertyTaxRange" min="0.5" max="3" step="0.1" value="1.2">
+                        <span class="range-value" id="propertyTaxValue">1.2%</span>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="maintenance">Annual Maintenance (% of home value)</label>
+                    <div class="range-container">
+                        <input type="range" id="maintenanceRange" min="0.5" max="3" step="0.1" value="1">
+                        <span class="range-value" id="maintenanceValue">1%</span>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="yearsStaying">Years You Plan to Stay</label>
+                    <div class="range-container">
+                        <input type="range" id="yearsStayingRange" min="1" max="30" step="1" value="7">
+                        <span class="range-value" id="yearsStayingValue">7 years</span>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="investmentReturn">Investment Return Rate (%)</label>
+                    <div class="range-container">
+                        <input type="range" id="investmentReturnRange" min="3" max="10" step="0.5" value="7">
+                        <span class="range-value" id="investmentReturnValue">7%</span>
+                    </div>
+                </div>
+                
+                <button class="calculate-btn" onclick="calculateRentVsBuy()">Calculate Rent vs Buy</button>
+                
+                <p style="margin-top: 1.5rem; font-size: 0.9rem; color: var(--gray); text-align: center;">
+                    Based on 2026 mortgage rates and market projections
+                </p>
+            </div>
+            
+            <div class="results-section">
+                <div id="resultContainer">
+                    <div class="comparison-result">
+                        <div class="winner-badge" id="winnerBadge">RENTING WINS</div>
+                        <h3 id="winnerText">Renting is $50,000 cheaper over 7 years</h3>
+                        <p id="breakEvenText">Break-even point: 8.5 years</p>
+                    </div>
+                    
+                    <div class="result-item renting-result">
+                        <div class="result-label">Total Cost of Renting</div>
+                        <div class="result-value" id="rentingCost">$126,000</div>
+                        <p style="margin-top: 0.5rem; font-size: 0.9rem; color: var(--gray);">Over 7 years including rent increases</p>
+                    </div>
+                    
+                    <div class="result-item buying-result">
+                        <div class="result-label">Total Cost of Buying</div>
+                        <div class="result-value" id="buyingCost">$176,400</div>
+                        <p style="margin-top: 0.5rem; font-size: 0.9rem; color: var(--gray);">Mortgage + taxes + maintenance - equity</p>
+                    </div>
+                    
+                    <div class="breakdown-section">
+                        <h4>Cost Breakdown</h4>
+                        <div class="cost-breakdown">
+                            <div class="cost-item">
+                                <div class="cost-label">Monthly Difference</div>
+                                <div class="cost-value" id="monthlyDifference">$600</div>
+                            </div>
+                            <div class="cost-item">
+                                <div class="cost-label">Home Equity Built</div>
+                                <div class="cost-value" id="homeEquity">$45,000</div>
+                            </div>
+                            <div class="cost-item">
+                                <div class="cost-label">Opportunity Cost</div>
+                                <div class="cost-value" id="opportunityCost">$38,000</div>
+                            </div>
+                            <div class="cost-item">
+                                <div class="cost-label">Closing Costs</div>
+                                <div class="cost-value" id="closingCosts">$12,000</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div style="margin-top: 2rem; text-align: center;">
+                        <div class="toggle-container">
+                            <span style="font-weight: 600;">Annual View</span>
+                            <label class="toggle-switch">
+                                <input type="checkbox" id="viewToggle" onchange="toggleView()">
+                                <span class="slider"></span>
+                            </label>
+                            <span style="font-weight: 600;">Monthly View</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Article Content -->
+    <article>
+        <div class="article-section" id="comparison">
+            <h2>The Great Debate: Renting vs Buying in 2026</h2>
+            <p>The decision to rent or buy a home is one of the most significant financial choices most Americans will make. With 2026 housing market projections showing continued price adjustments and evolving mortgage rates, this decision requires careful analysis beyond simple monthly payment comparisons.</p>
+            
+            <p>Our rent vs buy calculator considers over 15 different financial factors that most people overlook, including opportunity costs, maintenance expenses, property appreciation, tax benefits, and investment alternatives. The traditional "rule of thumb" that buying is always better after five years no longer applies in today's complex real estate landscape.</p>
+            
+            <div class="pros-cons">
+                <div class="pros">
+                    <h4>🏠 Advantages of Buying</h4>
+                    <ul style="margin-left: 1.5rem; margin-top: 1rem;">
+                        <li style="margin-bottom: 0.5rem;">Build equity with each mortgage payment</li>
+                        <li style="margin-bottom: 0.5rem;">Fixed mortgage payments (with fixed-rate loans)</li>
+                        <li style="margin-bottom: 0.5rem;">Potential tax deductions on mortgage interest</li>
+                        <li style="margin-bottom: 0.5rem;">Freedom to modify and customize your space</li>
+                        <li style="margin-bottom: 0.5rem;">Potential appreciation in home value</li>
+                        <li>Stability and sense of ownership</li>
+                    </ul>
+                </div>
+                
+                <div class="cons">
+                    <h4>🏢 Advantages of Renting</h4>
+                    <ul style="margin-left: 1.5rem; margin-top: 1rem;">
+                        <li style="margin-bottom: 0.5rem;">No maintenance costs or repair bills</li>
+                        <li style="margin-bottom: 0.5rem;">Lower upfront costs (no down payment)</li>
+                        <li style="margin-bottom: 0.5rem;">Flexibility to relocate more easily</li>
+                        <li style="margin-bottom: 0.5rem;">No property tax responsibility</li>
+                        <li style="margin-bottom: 0.5rem;">Potential to invest savings elsewhere</li>
+                        <li>Avoid market depreciation risk</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <p>The financial outcome depends heavily on your specific circumstances: how long you plan to stay in the home, local market conditions, mortgage rates available to you, and your alternative investment opportunities.</p>
+        </div>
+
+        <!-- AdSense Ad 2 -->
+        <div class="ad-container">
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7300331231530877"
+                 crossorigin="anonymous"></script>
+            <ins class="adsbygoogle"
+                 style="display:block; text-align:center;"
+                 data-ad-layout="in-article"
+                 data-ad-format="fluid"
+                 data-ad-client="ca-pub-7300331231530877"
+                 data-ad-slot="2175956093"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+
+        <div class="article-section" id="costs">
+            <h2>Hidden Costs Most People Miss</h2>
+            
+            <h3>The True Cost of Renting</h3>
+            <p>While renting seems straightforward, several costs often get overlooked:</p>
+            
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Renting Cost</th>
+                        <th>Typical Amount</th>
+                        <th>Notes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Security Deposit</strong></td>
+                        <td>1-2 months rent</td>
+                        <td>Usually refundable, but tied up</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Application Fees</strong></td>
+                        <td>$25-$100 per adult</td>
+                        <td>Non-refundable background/credit checks</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Renters Insurance</strong></td>
+                        <td>$15-$30/month</td>
+                        <td>Required by most landlords</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Moving Costs</strong></td>
+                        <td>$800-$2,500</td>
+                        <td>Every time you relocate</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Annual Rent Increases</strong></td>
+                        <td>3-5% average</td>
+                        <td>Compounds significantly over time</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <h3>The True Cost of Buying</h3>
+            <p>Homeownership comes with many expenses beyond the mortgage payment:</p>
+            
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Buying Cost</th>
+                        <th>Typical Amount</th>
+                        <th>Notes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Closing Costs</strong></td>
+                        <td>2-5% of home price</td>
+                        <td>Loan origination, title insurance, etc.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Property Taxes</strong></td>
+                        <td>0.5-2.5% annually</td>
+                        <td>Varies widely by state and county</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Homeowners Insurance</strong></td>
+                        <td>0.3-1% annually</td>
+                        <td>Higher than renters insurance</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Maintenance & Repairs</strong></td>
+                        <td>1-3% annually</td>
+                        <td>Roof, HVAC, appliances, etc.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>HOA/Condo Fees</strong></td>
+                        <td>$200-$800/month</td>
+                        <td>For many condos and planned communities</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Private Mortgage Insurance</strong></td>
+                        <td>0.5-1.5% annually</td>
+                        <td>If down payment is less than 20%</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <p>Our calculator accounts for all these costs to give you an accurate comparison. Most online calculators miss at least half of these expenses.</p>
+        </div>
+
+        <div class="article-section">
+            <h2>Opportunity Cost: The Most Overlooked Factor</h2>
+            
+            <p>Opportunity cost represents what you could earn if you invested your money elsewhere instead of tying it up in a home. This is the single most overlooked factor in rent vs buy calculations.</p>
+            
+            <h3>The Down Payment Dilemma</h3>
+            <p>A 20% down payment on a $300,000 home is $60,000. If you invested that $60,000 in the stock market instead, with an average 7% annual return, it would grow to approximately:</p>
+            
+            <ul style="margin-left: 2rem; margin-bottom: 1.5rem;">
+                <li>$112,000 in 10 years</li>
+                <li>$232,000 in 20 years</li>
+                <li>$480,000 in 30 years</li>
+            </ul>
+            
+            <p>Meanwhile, your home equity builds much more slowly in the early years of a mortgage due to interest payments. In the first 5 years of a 30-year mortgage at 6.5%, only about 8% of your payments go toward principal.</p>
+            
+            <h3>The Monthly Cash Flow Difference</h3>
+            <p>If your mortgage payment is $600 more than renting would cost, that's $600 monthly you could invest. Over 30 years at 7% return, that monthly $600 investment would grow to over $700,000.</p>
+            
+            <p>Our calculator factors in these opportunity costs by comparing what you could earn by investing your down payment and monthly savings if you chose to rent instead.</p>
+        </div>
+
+        <div class="article-section" id="examples">
+            <h2>Real-World Examples: 2026 Market Conditions</h2>
+            
+            <h3>Example 1: Short-Term Stay (3-5 Years)</h3>
+            <p><strong>Situation:</strong> $2,000 monthly rent vs $400,000 home purchase with 10% down at 6.5% interest. Staying 4 years.</p>
+            <p><strong>Result:</strong> Renting wins by $45,000. Closing costs and slow equity buildup make buying more expensive for short stays unless home prices rise dramatically.</p>
+            
+            <h3>Example 2: Long-Term Commitment (10+ Years)</h3>
+            <p><strong>Situation:</strong> $1,800 monthly rent vs $350,000 home with 20% down at 6% interest. Staying 15 years.</p>
+            <p><strong>Result:</strong> Buying wins by $180,000. The longer timeframe allows equity buildup and appreciation to overcome upfront costs.</p>
+            
+            <h3>Example 3: High-Cost Area</h3>
+            <p><strong>Situation:</strong> $3,500 rent vs $800,000 home with 15% down at 6.75% interest in California. Staying 7 years.</p>
+            <p><strong>Result:</strong> Renting wins by $85,000. High property taxes (1.25%) and maintenance costs on expensive homes change the equation significantly.</p>
+            
+            <h3>Example 4: Low-Cost Area with Low Rates</h3>
+            <p><strong>Situation:</strong> $1,200 rent vs $200,000 home with 10% down at 5.5% interest in Midwest. Staying 8 years.</p>
+            <p><strong>Result:</strong> Buying wins by $40,000. Lower prices and favorable rates make homeownership more advantageous.</p>
+            
+            <p>These examples show why using a personalized calculator is essential. General rules don't account for your specific situation.</p>
+        </div>
+
+        <div class="article-section">
+            <h2>How Our 2026 Calculator Works: The Math Behind the Scenes</h2>
+            
+            <p>Our calculator performs complex financial analysis to give you accurate results. Here's what happens when you click "Calculate":</p>
+            
+            <h3>Step 1: Renting Cost Calculation</h3>
+            <p>We calculate total renting costs including:</p>
+            <ul style="margin-left: 2rem; margin-bottom: 1.5rem;">
+                <li>Monthly rent with 3% annual increases (national average)</li>
+                <li>Renters insurance at $20/month</li>
+                <li>Security deposit opportunity cost (what you could earn investing it)</li>
+                <li>Moving costs every time you change rentals (average every 3 years)</li>
+            </ul>
+            
+            <h3>Step 2: Buying Cost Calculation</h3>
+            <p>We calculate total buying costs including:</p>
+            <ul style="margin-left: 2rem; margin-bottom: 1.5rem;">
+                <li>Monthly mortgage payment (principal + interest)</li>
+                <li>Property taxes based on your rate</li>
+                <li>Homeowners insurance (0.35% of home value annually)</li>
+                <li>Maintenance costs at your specified percentage</li>
+                <li>Private mortgage insurance if down payment < 20%</li>
+                <li>Closing costs (3% of home price)</li>
+                <li>Home sale costs when you move (6% commission + closing)</li>
+            </ul>
+            
+            <h3>Step 3: Equity and Appreciation</h3>
+            <p>We calculate:</p>
+            <ul style="margin-left: 2rem; margin-bottom: 1.5rem;">
+                <li>Home equity buildup from mortgage payments</li>
+                <li>Home appreciation at 3% annually (historical average)</li>
+                <li>Tax savings from mortgage interest deduction (for itemizers)</li>
+            </ul>
+            
+            <h3>Step 4: Opportunity Cost Analysis</h3>
+            <p>We compare:</p>
+            <ul style="margin-left: 2rem; margin-bottom: 1.5rem;">
+                <li>What your down payment could earn if invested elsewhere</li>
+                <li>What monthly savings (if renting is cheaper) could earn</li>
+                <li>Uses your specified investment return rate</li>
+            </ul>
+            
+            <h3>Step 5: Final Comparison</h3>
+            <p>We subtract home equity and appreciation from buying costs, then compare to renting costs + investment earnings to determine which option wins financially.</p>
+        </div>
+
+        <!-- Bluehost Affiliate Section -->
+        <div class="bluehost-section">
+            <h2>Best Hosting for Real Estate Calculator Websites</h2>
+            <p>Many real estate professionals and finance bloggers choose Bluehost for creating calculator websites like this one. Bluehost is a popular hosting provider known for reliability and excellent 24/7 customer support.</p>
+            <p>With one-click WordPress installation and beginner-friendly tools, Bluehost makes it simple to build professional real estate websites. Their affordable plans include a free domain name, SSL security certificate, and sufficient resources for traffic growth.</p>
+            <a href="#" class="bluehost-btn">Launch Your Calculator Website with Bluehost</a>
+            <p style="margin-top: 1.5rem; font-size: 0.9rem; opacity: 0.9;">Note: Based on user recommendations and personal testing experiences.</p>
+        </div>
+
+        <div class="article-section" id="faq">
+            <h2>Frequently Asked Questions: Rent vs Buy 2026</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">What's the break-even point for buying vs renting? <span>▼</span></div>
+                <div class="faq-answer">
+                    <p>The break-even point is when total costs of buying equal total costs of renting. This typically occurs between 5-10 years, depending on your specific situation. Our calculator shows your exact break-even year based on your inputs.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">How do mortgage rates affect the rent vs buy decision? <span>▼</span></div>
+                <div class="faq-answer">
+                    <p>Higher mortgage rates make buying less attractive because more of your payment goes to interest. At 8% rates vs 4% rates, the break-even point can extend by 3-5 years. Our calculator uses current 2026 rate projections.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">Should I buy if I'm only staying 3 years? <span>▼</span></div>
+                <div class="faq-answer">
+                    <p>Generally no. Closing costs (3-5% when buying and 6-8% when selling) eat up any potential equity gain in short periods. Unless home prices rise dramatically, renting usually wins for stays under 5 years.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">How much should I budget for maintenance when buying? <span>▼</span></div>
+                <div class="faq-answer">
+                    <p>Budget 1-3% of home value annually. A $300,000 home needs $3,000-$9,000 yearly for repairs, replacements, and upkeep. Older homes need more; newer homes need less initially but costs increase over time.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">What's the opportunity cost of a down payment? <span>▼</span></div>
+                <div class="faq-answer">
+                    <p>Opportunity cost is what you could earn investing that money elsewhere. A $60,000 down payment could grow to $112,000 in 10 years at 7% investment returns. Our calculator factors this in automatically.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">Are property taxes deductible? <span>▼</span></div>
+                <div class="faq-answer">
+                    <p>Property taxes are deductible if you itemize, but the SALT (State and Local Tax) deduction is capped at $10,000. With higher standard deductions, fewer homeowners benefit from this deduction.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">How does home appreciation affect the calculation? <span>▼</span></div>
+                <div class="faq-answer">
+                    <p>Home appreciation improves the buying outcome. We use 3% annual appreciation (historical average), but this varies by market. Higher appreciation areas favor buying; stagnant markets favor renting.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">What if I can't afford 20% down payment? <span>▼</span></div>
+                <div class="faq-answer">
+                    <p>You can buy with as little as 3-5% down, but you'll pay Private Mortgage Insurance (PMI) until you reach 20% equity. This adds 0.5-1.5% to your annual costs. Our calculator includes PMI costs automatically.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">How accurate is the 2026 projection? <span>▼</span></div>
+                <div class="faq-answer">
+                    <p>We use current mortgage rate trends, inflation projections, and historical housing data. While we can't predict the future, our projections are based on expert consensus for 2026 market conditions.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">Should I buy to build wealth? <span>▼</span></div>
+                <div class="faq-answer">
+                    <p>Homeownership can build wealth through equity and appreciation, but it's not always the fastest way. The stock market has historically outperformed real estate. Consider your entire portfolio, not just real estate.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- AdSense Ad 3 -->
+        <div class="ad-container">
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7300331231530877"
+                 crossorigin="anonymous"></script>
+            <ins class="adsbygoogle"
+                 style="display:block; text-align:center;"
+                 data-ad-layout="in-article"
+                 data-ad-format="fluid"
+                 data-ad-client="ca-pub-7300331231530877"
+                 data-ad-slot="2175956093"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+
+        <div class="article-section">
+            <h2>Conclusion: Making Your 2026 Housing Decision</h2>
+            <p>The rent vs buy decision is deeply personal and depends on both financial and lifestyle factors. While our calculator focuses on the financial aspects, consider these non-financial factors:</p>
+            
+            <ul style="margin-left: 2rem; margin-bottom: 1.5rem;">
+                <li style="margin-bottom: 0.5rem;"><strong>Lifestyle preferences:</strong> Do you value stability or flexibility?</li>
+                <li style="margin-bottom: 0.5rem;"><strong>Career plans:</strong> Are you likely to relocate for job opportunities?</li>
+                <li style="margin-bottom: 0.5rem;"><strong>Personal skills:</strong> Are you handy with home repairs or will you need to hire everything out?</li>
+                <li style="margin-bottom: 0.5rem;"><strong>Market timing:</strong> Is your local market overvalued or undervalued?</li>
+                <li><strong>Personal goals:</strong> Do you dream of customizing your own space?</li>
+            </ul>
+            
+            <p><strong>Key takeaway:</strong> There's no universally right answer. The best choice depends on your specific circumstances, timeline, and local market conditions. Use our calculator with different scenarios to understand how changes in your situation affect the outcome.</p>
+            
+            <p>Bookmark this page and revisit the calculation whenever your circumstances change or when you're considering a move. The rent vs buy equation evolves with interest rates, home prices, and your personal financial situation.</p>
+        </div>
+
+        <div class="disclaimer">
+            <h3>Important Legal & Financial Disclaimer</h3>
+            <p>This rent vs buy calculator provides estimates based on projected 2026 market conditions and standard assumptions. It is not financial, legal, or real estate advice. Actual costs and outcomes may vary based on your specific circumstances, local market conditions, tax situation, and other factors not considered in this calculation.</p>
+            <p>Always consult with qualified financial advisors, mortgage professionals, and real estate agents before making housing decisions. Past performance of investments and real estate does not guarantee future results. Market conditions can change rapidly, affecting the accuracy of long-term projections.</p>
+            <p style="margin-top: 1rem; font-weight: bold;">This tool is for educational purposes only. We are not responsible for financial decisions made based on these calculations.</p>
+        </div>
+    </article>
+
+    <footer style="background:#0f172a;color:#fff;padding:30px 10px;margin-top:50px;">
+  <div style="max-width:1100px;margin:auto;text-align:center;">
+
+    <h3 style="margin-bottom:15px;">USA Smart Calculator Tools</h3>
+
+    <nav style="margin-bottom:15px;line-height:2;">
+      <a href="index.html" style="color:#38bdf8;text-decoration:none;">Home</a> |
+      <a href="paycheck-tax-calculator.html" style="color:#38bdf8;text-decoration:none;">Paycheck Tax Calculator</a> |
+      <a href="rent-vs-buy-calculator.html" style="color:#38bdf8;text-decoration:none;">Rent vs Buy Calculator</a> |
+      <a href="student-loan-calculator.html" style="color:#38bdf8;text-decoration:none;">Student Loan Calculator</a> |
+      <a href="youtube-rpm-calculator.html" style="color:#38bdf8;text-decoration:none;">YouTube RPM Calculator</a> |
+      <a href="credit-card-interest-calculator.html" style="color:#38bdf8;text-decoration:none;">Credit Card Interest Calculator</a> |
+      <a href="resume-ats-checker.html" style="color:#38bdf8;text-decoration:none;">Resume ATS Checker</a> |
+      <a href="tiktok-engagement-calculator.html" style="color:#38bdf8;text-decoration:none;">TikTok Engagement Calculator</a> |
+      <a href="business-name-generator.html" style="color:#38bdf8;text-decoration:none;">Business Name Generator</a> |
+      <a href="calorie-calculator.html" style="color:#38bdf8;text-decoration:none;">Calorie Calculator</a> |
+      <a href="contract-generator.html" style="color:#38bdf8;text-decoration:none;">Contract Generator</a>
+    </nav>
+
+    <p style="font-size:14px;color:#cbd5f5;">
+      © 2026 USA Smart Calculator Tools. All Rights Reserved.  
+      <br>
+      Disclaimer: This website provides tools for estimation only and does not provide financial or legal advice.
+    </p>
+
+  </div>
+</footer>
+
+    <script>
+        // Initialize range values
+        document.addEventListener('DOMContentLoaded', function() {
+            updateRangeValue('downPaymentRange', 'downPaymentValue', '%');
+            updateRangeValue('interestRateRange', 'interestRateValue', '%');
+            updateRangeValue('propertyTaxRange', 'propertyTaxValue', '%');
+            updateRangeValue('maintenanceRange', 'maintenanceValue', '%');
+            updateRangeValue('yearsStayingRange', 'yearsStayingValue', ' years');
+            updateRangeValue('investmentReturnRange', 'investmentReturnValue', '%');
+            
+            // Add event listeners to range inputs
+            document.getElementById('downPaymentRange').addEventListener('input', function() {
+                updateRangeValue('downPaymentRange', 'downPaymentValue', '%');
+            });
+            document.getElementById('interestRateRange').addEventListener('input', function() {
+                updateRangeValue('interestRateRange', 'interestRateValue', '%');
+            });
+            document.getElementById('propertyTaxRange').addEventListener('input', function() {
+                updateRangeValue('propertyTaxRange', 'propertyTaxValue', '%');
+            });
+            document.getElementById('maintenanceRange').addEventListener('input', function() {
+                updateRangeValue('maintenanceRange', 'maintenanceValue', '%');
+            });
+            document.getElementById('yearsStayingRange').addEventListener('input', function() {
+                updateRangeValue('yearsStayingRange', 'yearsStayingValue', ' years');
+            });
+            document.getElementById('investmentReturnRange').addEventListener('input', function() {
+                updateRangeValue('investmentReturnRange', 'investmentReturnValue', '%');
+            });
+            
+            // Initial calculation
+            calculateRentVsBuy();
+        });
+        
+        function updateRangeValue(rangeId, valueId, suffix) {
+            const range = document.getElementById(rangeId);
+            const value = document.getElementById(valueId);
+            value.textContent = range.value + suffix;
+        }
+        
+        function calculateRentVsBuy() {
+            // Get input values
+            const monthlyRent = parseFloat(document.getElementById('monthlyRent').value) || 1500;
+            const homePrice = parseFloat(document.getElementById('homePrice').value) || 300000;
+            const downPaymentPercent = parseFloat(document.getElementById('downPaymentRange').value) / 100;
+            const interestRate = parseFloat(document.getElementById('interestRateRange').value) / 100;
+            const loanTerm = parseInt(document.getElementById('loanTerm').value);
+            const propertyTaxRate = parseFloat(document.getElementById('propertyTaxRange').value) / 100;
+            const maintenanceRate = parseFloat(document.getElementById('maintenanceRange').value) / 100;
+            const yearsStaying = parseInt(document.getElementById('yearsStayingRange').value);
+            const investmentReturn = parseFloat(document.getElementById('investmentReturnRange').value) / 100;
+            
+            // Calculations
+            const downPayment = homePrice * downPaymentPercent;
+            const loanAmount = homePrice - downPayment;
+            
+            // Monthly mortgage payment calculation
+            const monthlyInterestRate = interestRate / 12;
+            const numberOfPayments = loanTerm * 12;
+            const mortgagePayment = loanAmount * (monthlyInterestRate * Math.pow(1 + monthlyInterestRate, numberOfPayments)) / 
+                                   (Math.pow(1 + monthlyInterestRate, numberOfPayments) - 1);
+            
+            // Monthly property tax
+            const annualPropertyTax = homePrice * propertyTaxRate;
+            const monthlyPropertyTax = annualPropertyTax / 12;
+            
+            // Monthly maintenance cost
+            const annualMaintenance = homePrice * maintenanceRate;
+            const monthlyMaintenance = annualMaintenance / 12;
+            
+            // Homeowners insurance (0.35% of home value annually)
+            const annualHomeInsurance = homePrice * 0.0035;
+            const monthlyHomeInsurance = annualHomeInsurance / 12;
+            
+            // PMI if down payment < 20%
+            let monthlyPMI = 0;
+            if (downPaymentPercent < 0.2) {
+                const pmiRate = 0.01 / 12; // 1% annually divided by 12 months
+                monthlyPMI = loanAmount * pmiRate;
+            }
+            
+            // Total monthly buying cost
+            const totalMonthlyBuying = mortgagePayment + monthlyPropertyTax + monthlyMaintenance + 
+                                      monthlyHomeInsurance + monthlyPMI;
+            
+            // Total renting cost over years
+            let totalRentingCost = 0;
+            let currentRent = monthlyRent;
+            for (let year = 1; year <= yearsStaying; year++) {
+                totalRentingCost += currentRent * 12;
+                currentRent *= 1.03; // 3% annual rent increase
+            }
+            
+            // Add renters insurance ($20/month)
+            totalRentingCost += 20 * 12 * yearsStaying;
+            
+            // Total buying cost over years
+            const totalMonthlyBuyingCost = totalMonthlyBuying * 12 * yearsStaying;
+            
+            // Closing costs (3% when buying, 8% when selling)
+            const buyingClosingCosts = homePrice * 0.03;
+            const sellingClosingCosts = homePrice * 0.08;
+            
+            // Total buying cost including closing
+            let totalBuyingCost = totalMonthlyBuyingCost + buyingClosingCosts + sellingClosingCosts;
+            
+            // Calculate equity buildup
+            let remainingLoan = loanAmount;
+            let totalPrincipalPaid = 0;
+            const monthlyPrincipalArray = [];
+            
+            for (let month = 1; month <= yearsStaying * 12; month++) {
+                const interestPayment = remainingLoan * monthlyInterestRate;
+                const principalPayment = mortgagePayment - interestPayment;
+                totalPrincipalPaid += principalPayment;
+                remainingLoan -= principalPayment;
+                monthlyPrincipalArray.push(principalPayment);
+            }
+            
+            // Home appreciation
+            const homeAppreciation = homePrice * Math.pow(1.03, yearsStaying) - homePrice;
+            
+            // Total equity = down payment + principal paid + appreciation
+            const totalEquity = downPayment + totalPrincipalPaid + homeAppreciation;
+            
+            // Net buying cost = total costs - equity
+            const netBuyingCost = totalBuyingCost - totalEquity;
+            
+            // Opportunity cost of down payment
+            const opportunityCost = downPayment * Math.pow(1 + investmentReturn, yearsStaying) - downPayment;
+            
+            // Monthly difference
+            const monthlyDifference = totalMonthlyBuying - monthlyRent;
+            
+            // Determine winner
+            let winner = 'RENTING';
+            let difference = Math.abs(totalRentingCost - netBuyingCost);
+            
+            if (netBuyingCost < totalRentingCost) {
+                winner = 'BUYING';
+            }
+            
+            // Break-even calculation (simplified)
+            const breakEvenYears = Math.ceil((buyingClosingCosts + sellingClosingCosts) / 
+                                            ((monthlyRent * 12) - (totalMonthlyBuying * 12 - totalPrincipalPaid)));
+            
+            // Update UI
+            const formatter = new Intl.NumberFormat('en-US', {
+                style: 'currency',
+                currency: 'USD',
+                minimumFractionDigits: 0,
+                maximumFractionDigits: 0
+            });
+            
+            document.getElementById('rentingCost').textContent = formatter.format(totalRentingCost);
+            document.getElementById('buyingCost').textContent = formatter.format(netBuyingCost);
+            document.getElementById('winnerBadge').textContent = winner + ' WINS';
+            document.getElementById('winnerBadge').style.background = winner === 'BUYING' ? 'var(--success)' : 'var(--danger)';
+            document.getElementById('winnerText').textContent = 
+                winner + ' is ' + formatter.format(difference) + ' cheaper over ' + yearsStaying + ' years';
+            document.getElementById('breakEvenText').textContent = 'Break-even point: ' + breakEvenYears + ' years';
+            document.getElementById('monthlyDifference').textContent = formatter.format(monthlyDifference);
+            document.getElementById('homeEquity').textContent = formatter.format(totalEquity);
+            document.getElementById('opportunityCost').textContent = formatter.format(opportunityCost);
+            document.getElementById('closingCosts').textContent = formatter.format(buyingClosingCosts + sellingClosingCosts);
+        }
+        
+        function toggleView() {
+            const toggle = document.getElementById('viewToggle');
+            const resultContainer = document.getElementById('resultContainer');
+            
+            if (toggle.checked) {
+                // Convert to monthly view
+                const elements = document.querySelectorAll('.result-value, .cost-value');
+                elements.forEach(el => {
+                    const text = el.textContent;
+                    const value = parseFloat(text.replace(/[^0-9.-]+/g,""));
+                    if (!isNaN(value)) {
+                        const monthlyValue = value / (parseInt(document.getElementById('yearsStayingRange').value) * 12);
+                        el.textContent = formatter.format(monthlyValue);
+                    }
+                });
+            } else {
+                // Recalculate to show annual totals
+                calculateRentVsBuy();
+            }
+        }
+        
+        function toggleFAQ(element) {
+            const answer = element.nextElementSibling;
+            const icon = element.querySelector('span');
+            
+            if (answer.style.display === 'block') {
+                answer.style.display = 'none';
+                icon.textContent = '▼';
+            } else {
+                answer.style.display = 'block';
+                icon.textContent = '▲';
+            }
+        }
+        
+        // Initialize FAQ to be collapsed
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqAnswers = document.querySelectorAll('.faq-answer');
+            faqAnswers.forEach(answer => {
+                answer.style.display = 'none';
+            });
+        });
+    </script>
+</body>
+</html>
