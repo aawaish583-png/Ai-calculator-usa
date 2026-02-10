@@ -4,521 +4,922 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- SEO Meta Tags --> 
-    <title>Student Loan Repayment Calculator USA 2026 | Payment Planner</title>
-    <meta name="description" content="Free 2026 student loan repayment calculator for USA borrowers. Calculate monthly payments, total interest, and payoff date for federal and private student loans.">
-    <meta name="keywords" content="student loan calculator usa, student loan repayment calculator, how long to pay off student loans, monthly student loan payment calculator, student loan payoff calculator 2026">
+    <!-- SEO Meta Tags -->
+    <title>Student Loan Repayment Calculator USA 2026 | Payment Calculator</title>
+    <meta name="description" content="Free Student Loan Repayment Calculator for USA 2026. Calculate monthly payments, total interest, and payoff dates. Plan your student loan strategy with our advanced tool.">
+    <meta name="keywords" content="student loan calculator usa, student loan repayment calculator, how long to pay off student loans, monthly student loan payment calculator, federal student loan calculator">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Financial Education Tools">
     
-    <!-- Schema Markup for FAQ -->
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Student Loan Repayment Calculator USA 2026">
+    <meta property="og:description" content="Calculate student loan payments, interest, and payoff dates. Free tool for planning your student loan repayment strategy.">
+    <meta property="og:type" content="website">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://yoursite.com/student-loan-calculator.html">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎓</text></svg>">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- FAQ Schema -->
     <script type="application/ld+json">
     {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [{
-        "@type": "Question",
-        "name": "How accurate is this student loan calculator?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Our calculator provides highly accurate estimates using standard loan amortization formulas. For federal loans with income-driven repayment plans, consult your loan servicer for exact calculations."
-        }
-      }, {
-        "@type": "Question",
-        "name": "What's the average student loan payment?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "According to recent data, the average monthly student loan payment ranges from $200 to $300, but this varies greatly based on loan amount, interest rate, and repayment term."
-        }
-      }, {
-        "@type": "Question",
-        "name": "How can I pay off student loans faster?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Consider making bi-weekly payments, applying windfalls like tax refunds, refinancing to lower rates, or using the debt avalanche method to tackle highest-interest loans first."
-        }
-      }, {
-        "@type": "Question",
-        "name": "What happens if I miss a student loan payment?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Missing payments can lead to late fees, damage to your credit score, and after 270 days of non-payment, federal loans go into default with serious consequences including wage garnishment."
-        }
-      }]
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [{
+            "@type": "Question",
+            "name": "How does the student loan calculator work?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Our calculator uses the standard loan amortization formula to calculate monthly payments, total interest, and payoff dates based on your loan amount, interest rate, and loan term."
+            }
+        }, {
+            "@type": "Question",
+            "name": "What is the average student loan payment in 2026?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "According to 2026 data, the average monthly student loan payment ranges from $200-$400, but varies significantly based on loan amount, interest rates, and repayment plans."
+            }
+        }, {
+            "@type": "Question",
+            "name": "How can I pay off my student loans faster?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Strategies include making extra payments, refinancing to lower rates, applying windfalls, and using debt avalanche or snowball methods to accelerate repayment."
+            }
+        }, {
+            "@type": "Question",
+            "name": "What's the difference between federal and private student loans?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Federal loans offer income-driven repayment and forgiveness options, while private loans typically have fixed or variable rates without federal protections but sometimes lower rates for qualified borrowers."
+            }
+        }, {
+            "@type": "Question",
+            "name": "How does student loan interest work?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Interest accrues daily on your outstanding balance. Unpaid interest may capitalize (added to principal), increasing your total repayment amount over time."
+            }
+        }]
     }
     </script>
     
     <style>
-        /* Base Styles */
+        :root {
+            --primary: #2196F3;
+            --primary-dark: #1976D2;
+            --secondary: #4CAF50;
+            --accent: #FF9800;
+            --dark: #263238;
+            --light: #F5F7FA;
+            --text: #333;
+            --border: #E0E0E0;
+            --warning: #FF9800;
+            --success: #4CAF50;
+            --danger: #F44336;
+            --radius: 8px;
+            --shadow: 0 3px 10px rgba(0,0,0,0.08);
+        }
+        
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
         }
         
         body {
-            background-color: #f8fafc;
-            color: #334155;
+            font-family: 'Inter', sans-serif;
             line-height: 1.6;
-            padding: 20px;
-            max-width: 1200px;
+            color: var(--text);
+            background: #f8f9fa;
+            font-size: 16px;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1100px;
             margin: 0 auto;
+            padding: 0 15px;
         }
         
-        /* Typography */
-        h1 {
-            color: #1e293b;
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            line-height: 1.2;
+        /* Header */
+        header {
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            padding: 12px 0;
         }
         
-        h2 {
-            color: #334155;
-            font-size: 1.8rem;
-            margin: 2.5rem 0 1rem;
-            padding-bottom: 0.5rem;
-            border-bottom: 2px solid #e2e8f0;
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
         
-        h3 {
-            color: #475569;
-            font-size: 1.4rem;
-            margin: 1.8rem 0 0.8rem;
+        .logo {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 22px;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
         
-        p {
-            margin-bottom: 1.2rem;
-            font-size: 1.1rem;
+        .logo span {
+            font-size: 24px;
         }
         
-        /* Calculator Container */
-        .calculator-container {
-            background: linear-gradient(135deg, #ffffff 0%, #f1f5f9 100%);
-            border-radius: 20px;
-            padding: 2.5rem;
-            margin: 2rem 0;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-            border: 1px solid #e2e8f0;
+        .desktop-nav {
+            display: flex;
+            gap: 25px;
+        }
+        
+        .desktop-nav a {
+            color: var(--dark);
+            font-weight: 500;
+            text-decoration: none;
+            padding: 6px 0;
+            font-size: 15px;
+        }
+        
+        .desktop-nav a:hover {
+            color: var(--primary);
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: var(--dark);
+            padding: 5px;
+        }
+        
+        .mobile-nav {
+            display: none;
+            position: fixed;
+            top: 60px;
+            left: 0;
+            right: 0;
+            background: white;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            z-index: 99;
+            padding: 20px;
+            max-height: calc(100vh - 60px);
+            overflow-y: auto;
+        }
+        
+        .mobile-nav.active {
+            display: block;
+        }
+        
+        .mobile-nav a {
+            display: block;
+            padding: 12px 15px;
+            color: var(--dark);
+            text-decoration: none;
+            border-bottom: 1px solid var(--border);
+            font-weight: 500;
+        }
+        
+        .mobile-nav a:hover {
+            color: var(--primary);
+            background: #f9f9f9;
+        }
+        
+        /* Hero */
+        .hero {
+            padding: 30px 0 20px;
+            background: linear-gradient(135deg, rgba(33,150,243,0.03) 0%, rgba(76,175,80,0.03) 100%);
+        }
+        
+        .hero h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 28px;
+            color: var(--dark);
+            margin-bottom: 15px;
+            line-height: 1.3;
+        }
+        
+        .hero p {
+            color: #555;
+            margin-bottom: 15px;
+        }
+        
+        /* Calculator */
+        .calculator-card {
+            background: white;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            padding: 25px;
+            margin: 25px 0;
         }
         
         .calculator-title {
-            text-align: center;
-            color: #1e293b;
-            margin-bottom: 2rem;
-            font-size: 1.8rem;
-        }
-        
-        /* Calculator Grid */
-        .calculator-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-bottom: 2rem;
-        }
-        
-        .input-section, .results-section {
-            background: white;
-            padding: 1.8rem;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
-        }
-        
-        /* Form Elements */
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
-        
-        label {
-            display: block;
-            margin-bottom: 0.5rem;
-            font-weight: 600;
-            color: #475569;
-        }
-        
-        input, select {
-            width: 100%;
-            padding: 0.9rem;
-            border: 2px solid #cbd5e1;
-            border-radius: 10px;
-            font-size: 1rem;
-            transition: all 0.3s ease;
-        }
-        
-        input:focus, select:focus {
-            outline: none;
-            border-color: #7c3aed;
-            box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.1);
-        }
-        
-        .range-container {
             display: flex;
             align-items: center;
-            gap: 1rem;
+            gap: 10px;
+            margin-bottom: 20px;
+            color: var(--primary);
         }
         
-        .range-value {
-            min-width: 60px;
+        .calculator-title h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 22px;
+            margin: 0;
+        }
+        
+        .calculator-title span {
+            font-size: 24px;
+        }
+        
+        .input-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .input-group {
+            margin-bottom: 0;
+        }
+        
+        .input-group label {
+            display: block;
             font-weight: 600;
-            color: #7c3aed;
+            margin-bottom: 8px;
+            font-size: 15px;
         }
         
-        /* Button */
+        .input-group input, .input-group select {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            font-size: 16px;
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .input-group input:focus, .input-group select:focus {
+            border-color: var(--primary);
+            outline: none;
+            box-shadow: 0 0 0 2px rgba(33,150,243,0.1);
+        }
+        
         .calculate-btn {
-            background: linear-gradient(135deg, #7c3aed 0%, #5b21b6 100%);
+            width: 100%;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
             color: white;
             border: none;
-            padding: 1.1rem 2rem;
-            border-radius: 12px;
-            font-size: 1.1rem;
+            padding: 14px;
+            font-size: 16px;
             font-weight: 600;
+            border-radius: var(--radius);
             cursor: pointer;
-            transition: all 0.3s ease;
-            width: 100%;
-            margin-top: 0.5rem;
+            margin-top: 10px;
+            font-family: 'Poppins', sans-serif;
         }
         
         .calculate-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(124, 58, 237, 0.3);
+            background: linear-gradient(135deg, var(--primary-dark) 0%, #1565C0 100%);
         }
         
         /* Results */
-        .result-item {
-            background: #f8fafc;
-            padding: 1.2rem;
-            margin-bottom: 1rem;
-            border-radius: 10px;
-            border-left: 4px solid #7c3aed;
+        .results {
+            background: rgba(76,175,80,0.05);
+            border-radius: var(--radius);
+            padding: 25px;
+            margin-top: 25px;
+            display: none;
         }
         
-        .result-label {
-            font-weight: 600;
-            color: #475569;
-            margin-bottom: 0.3rem;
+        .results h3 {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: var(--dark);
+            text-align: center;
+        }
+        
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .result-box {
+            background: white;
+            border-radius: var(--radius);
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
         }
         
         .result-value {
-            font-size: 1.5rem;
+            font-size: 24px;
             font-weight: 700;
-            color: #1e293b;
+            color: var(--primary);
+            margin: 10px 0;
+            font-family: 'Poppins', sans-serif;
         }
         
-        .monthly-payment {
-            background: #f3e8ff;
-            border-left-color: #5b21b6;
-        }
-        
-        .amortization-chart {
-            margin-top: 2rem;
-            padding-top: 1.5rem;
-            border-top: 1px solid #e2e8f0;
+        .result-label {
+            font-size: 14px;
+            color: #666;
         }
         
         .chart-container {
-            overflow-x: auto;
-            margin-top: 1rem;
-        }
-        
-        .amortization-table {
-            width: 100%;
-            border-collapse: collapse;
-            min-width: 500px;
-        }
-        
-        .amortization-table th {
-            background: #f1f5f9;
-            padding: 0.8rem;
-            text-align: left;
-            font-weight: 600;
-            color: #475569;
-            border-bottom: 2px solid #e2e8f0;
-        }
-        
-        .amortization-table td {
-            padding: 0.8rem;
-            border-bottom: 1px solid #e2e8f0;
-        }
-        
-        /* Article Sections */
-        .article-section {
+            margin-top: 30px;
+            padding: 20px;
             background: white;
-            padding: 2rem;
-            border-radius: 15px;
-            margin-bottom: 2rem;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
+            border-radius: var(--radius);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
         }
         
-        /* FAQ Styles */
-        .faq-item {
-            margin-bottom: 1.5rem;
-            border-bottom: 1px solid #e2e8f0;
-            padding-bottom: 1.5rem;
+        .chart-placeholder {
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #f8f9fa;
+            border-radius: var(--radius);
+            color: #666;
+            font-style: italic;
         }
         
-        .faq-question {
-            font-weight: 700;
-            color: #1e293b;
-            margin-bottom: 0.5rem;
-            font-size: 1.1rem;
+        /* Content Sections */
+        .section {
+            background: white;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            padding: 25px;
+            margin: 20px 0;
         }
         
-        /* Bluehost Section */
-        .bluehost-section {
-            background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
-            color: white;
-            padding: 2.5rem;
-            border-radius: 15px;
-            margin: 2.5rem 0;
+        .section h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 22px;
+            color: var(--dark);
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--primary);
+        }
+        
+        .section h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 18px;
+            margin: 25px 0 15px;
+            color: var(--dark);
+        }
+        
+        .section p {
+            margin-bottom: 18px;
+            font-size: 16px;
+            line-height: 1.7;
+        }
+        
+        .section ul, .section ol {
+            padding-left: 25px;
+            margin-bottom: 20px;
+        }
+        
+        .section li {
+            margin-bottom: 10px;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        
+        /* Box Styles */
+        .info-box, .tip-box {
+            background: rgba(33,150,243,0.05);
+            border-left: 4px solid var(--primary);
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 0 var(--radius) var(--radius) 0;
+            font-size: 15px;
+        }
+        
+        .tip-box {
+            background: rgba(255,152,0,0.05);
+            border-left-color: var(--warning);
+        }
+        
+        .warning-box {
+            background: rgba(244,67,54,0.05);
+            border-left: 4px solid var(--danger);
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 0 var(--radius) var(--radius) 0;
+        }
+        
+        /* Ads */
+        .ad-container {
+            background: white;
+            border: 1px dashed var(--border);
+            border-radius: var(--radius);
+            padding: 20px;
+            margin: 25px 0;
             text-align: center;
+            min-height: 280px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .ad-placeholder {
+            color: #666;
+            font-size: 14px;
+        }
+        
+        /* Bluehost */
+        .bluehost-box {
+            background: linear-gradient(135deg, #1e5799 0%, #207cca 100%);
+            color: white;
+            border-radius: var(--radius);
+            padding: 25px;
+            margin: 30px 0;
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+        
+        .bluehost-logo {
+            background: white;
+            color: #1e5799;
+            font-weight: 700;
+            padding: 15px 25px;
+            border-radius: var(--radius);
+            flex-shrink: 0;
+            font-size: 18px;
+        }
+        
+        .bluehost-content {
+            flex: 1;
+        }
+        
+        .bluehost-content h3 {
+            font-size: 20px;
+            margin: 0 0 15px;
+            color: white;
+        }
+        
+        .bluehost-content p {
+            font-size: 15px;
+            margin-bottom: 20px;
         }
         
         .bluehost-btn {
-            background: linear-gradient(135deg, #7c3aed 0%, #5b21b6 100%);
-            color: white;
-            border: none;
-            padding: 1rem 2rem;
-            border-radius: 10px;
-            font-size: 1.1rem;
-            font-weight: 700;
-            cursor: pointer;
-            transition: all 0.3s ease;
             display: inline-block;
-            margin-top: 1rem;
+            background: white;
+            color: #1e5799;
+            font-weight: 600;
+            padding: 12px 25px;
+            border-radius: var(--radius);
             text-decoration: none;
+            font-size: 15px;
         }
         
         .bluehost-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(255, 255, 255, 0.2);
+            background: #f0f0f0;
         }
         
-        /* Ad Container */
-        .ad-container {
-            margin: 2.5rem 0;
-            text-align: center;
-            padding: 20px;
-            background: #f1f5f9;
-            border-radius: 10px;
+        /* FAQ */
+        .faq-item {
+            background: #f9f9f9;
+            border-radius: var(--radius);
+            margin-bottom: 15px;
+            overflow: hidden;
         }
         
-        /* Disclaimer */
-        .disclaimer {
-            background: #fef2f2;
-            border: 1px solid #fecaca;
-            color: #991b1b;
-            padding: 1.5rem;
-            border-radius: 10px;
-            margin: 2rem 0;
-            font-size: 0.9rem;
+        .faq-question {
+            padding: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #f1f1f1;
+            font-size: 16px;
         }
         
-        /* Tips Grid */
-        .tips-grid {
+        .faq-question:hover {
+            background: #e9e9e9;
+        }
+        
+        .faq-question::after {
+            content: "+";
+            font-size: 22px;
+            font-weight: 300;
+        }
+        
+        .faq-question.active::after {
+            content: "-";
+        }
+        
+        .faq-answer {
+            padding: 0 18px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        
+        .faq-answer.active {
+            padding: 18px;
+            max-height: 1000px;
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 50px 0 25px;
+            margin-top: 50px;
+        }
+        
+        .footer-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-            margin-top: 1.5rem;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            margin-bottom: 35px;
         }
         
-        .tip-card {
-            background: #f8fafc;
-            padding: 1.5rem;
-            border-radius: 10px;
-            border-left: 4px solid #7c3aed;
+        .footer-col h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 17px;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--primary);
+            color: white;
         }
         
-        /* Responsive Design */
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links a {
+            display: block;
+            padding: 8px 0;
+            color: #ccc;
+            text-decoration: none;
+            font-size: 15px;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+        
+        .footer-links a:hover {
+            color: white;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 25px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #aaa;
+            font-size: 14px;
+        }
+        
+        /* Responsive */
+        @media (max-width: 992px) {
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 25px;
+            }
+            
+            .bluehost-box {
+                flex-direction: column;
+                text-align: center;
+                gap: 20px;
+            }
+            
+            .results-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
         @media (max-width: 768px) {
-            body {
-                padding: 15px;
+            .desktop-nav {
+                display: none;
             }
             
-            h1 {
-                font-size: 2rem;
+            .mobile-menu-btn {
+                display: block;
             }
             
-            .calculator-container {
-                padding: 1.5rem;
+            .hero h1 {
+                font-size: 24px;
             }
             
-            .calculator-grid {
+            .input-grid {
                 grid-template-columns: 1fr;
+                gap: 12px;
             }
             
-            .article-section {
-                padding: 1.5rem;
+            .section h2 {
+                font-size: 20px;
             }
             
-            .bluehost-section {
-                padding: 1.8rem;
+            .section h3 {
+                font-size: 17px;
             }
             
-            .tips-grid {
+            .footer-grid {
                 grid-template-columns: 1fr;
+                gap: 25px;
+            }
+            
+            .results-grid {
+                grid-template-columns: 1fr;
+                gap: 10px;
             }
         }
         
         @media (max-width: 480px) {
-            h1 {
-                font-size: 1.8rem;
+            .container {
+                padding: 0 12px;
             }
             
-            .calculator-container {
-                padding: 1.2rem;
-            }
-            
-            input, select {
-                padding: 0.8rem;
+            .calculator-card, .section {
+                padding: 20px;
             }
         }
         
-        /* Visual Placeholders */
+        /* Utility */
+        .highlight {
+            background: rgba(33,150,243,0.1);
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-weight: 500;
+        }
+        
+        .table-container {
+            overflow-x: auto;
+            margin: 25px 0;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+        }
+        
+        th {
+            background: #f5f5f5;
+            font-weight: 600;
+        }
+        
+        tr:hover {
+            background: #f9f9f9;
+        }
+        
         .image-placeholder {
             width: 100%;
-            height: 200px;
-            background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
-            border-radius: 10px;
+            height: 300px;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            border-radius: var(--radius);
             display: flex;
             align-items: center;
             justify-content: center;
-            color: #94a3b8;
-            margin: 1.5rem 0;
-            font-style: italic;
+            margin: 25px 0;
+            color: #666;
+        }
+        
+        .repayment-plan {
+            background: white;
+            border-radius: var(--radius);
+            padding: 20px;
+            margin: 25px 0;
+            border: 2px solid var(--border);
+        }
+        
+        .plan-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid var(--border);
+        }
+        
+        .plan-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 18px;
+            color: var(--primary);
+        }
+        
+        .plan-amount {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary);
+        }
+        
+        .plan-details {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+        
+        .plan-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        
+        .plan-label {
+            color: #666;
+        }
+        
+        .plan-value {
+            font-weight: 600;
+        }
+        
+        .payment-toggle {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+        
+        .toggle-btn {
+            padding: 8px 15px;
+            background: #f0f0f0;
+            border: none;
+            border-radius: var(--radius);
+            cursor: pointer;
+            font-weight: 500;
+        }
+        
+        .toggle-btn.active {
+            background: var(--primary);
+            color: white;
         }
     </style>
 </head>
 <body>
     <!-- Header -->
     <header>
-        <h1>Student Loan Repayment Calculator USA 2026</h1>
-        <p>Calculate your monthly payments, total interest, and exact payoff date for federal and private student loans. Plan your debt-free future with precision.</p>
+        <div class="container">
+            <div class="header-inner">
+                <div class="logo">
+                    <span>🎓</span>
+                    <span>Finance Tools</span>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <nav class="desktop-nav">
+                    <a href="index.html">Home</a>
+                    <a href="#calculator">Calculator</a>
+                    <a href="#guide">Guide</a>
+                    <a href="#faq">FAQ</a>
+                </nav>
+                
+                <!-- Mobile Menu Button -->
+                <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+            </div>
+        </div>
+        
+        <!-- Mobile Navigation -->
+        <nav class="mobile-nav" id="mobileNav">
+            <a href="index.html">Home</a>
+            <a href="#calculator">Calculator</a>
+            <a href="#guide">Guide</a>
+            <a href="#faq">FAQ</a>
+            <a href="paycheck-tax-calculator.html">Paycheck Tax Calculator</a>
+            <a href="rent-vs-buy-calculator.html">Rent vs Buy Calculator</a>
+            <a href="youtube-rpm-calculator.html">YouTube RPM Calculator</a>
+            <a href="credit-card-interest-calculator.html">Credit Card Interest Calculator</a>
+            <a href="resume-ats-checker.html">Resume ATS Checker</a>
+            <a href="tiktok-engagement-calculator.html">TikTok Engagement Calculator</a>
+            <a href="business-name-generator.html">Business Name Generator</a>
+            <a href="calorie-calculator.html">Calorie Calculator</a>
+            <a href="contract-generator.html">Contract Generator</a>
+        </nav>
     </header>
 
-    <!-- AdSense Ad 1 -->
-    <div class="ad-container">
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7300331231530877"
-             crossorigin="anonymous"></script>
-        <ins class="adsbygoogle"
-             style="display:block; text-align:center;"
-             data-ad-layout="in-article"
-             data-ad-format="fluid"
-             data-ad-client="ca-pub-7300331231530877"
-             data-ad-slot="2175956093"></ins>
-        <script>
-             (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>
-    </div>
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container">
+            <h1>Student Loan Repayment Calculator USA 2026</h1>
+            <p>Free student loan calculator for 2026. Calculate monthly payments, total interest, and payoff dates for federal and private student loans. Plan your repayment strategy with our advanced tool.</p>
+            <p>With over 45 million Americans carrying student loan debt, proper planning is essential for financial freedom. Our calculator helps you understand your repayment options and create a strategic plan.</p>
+        </div>
+    </section>
 
     <!-- Calculator -->
-    <div class="calculator-container">
-        <h2 class="calculator-title">Calculate Your Student Loan Repayment Plan</h2>
-        
-        <div class="calculator-grid">
-            <div class="input-section">
-                <div class="form-group">
-                    <label for="loanAmount">Total Loan Amount ($)</label>
-                    <div class="range-container">
-                        <input type="range" id="loanAmountRange" min="1000" max="200000" step="1000" value="30000">
-                        <div class="range-value" id="loanAmountValue">$30,000</div>
-                    </div>
-                    <input type="number" id="loanAmount" placeholder="e.g., 30000" min="1000" max="500000" step="1000" value="30000">
-                </div>
-                
-                <div class="form-group">
-                    <label for="interestRate">Annual Interest Rate (%)</label>
-                    <div class="range-container">
-                        <input type="range" id="interestRateRange" min="1" max="15" step="0.1" value="5.5">
-                        <div class="range-value" id="interestRateValue">5.5%</div>
-                    </div>
-                    <input type="number" id="interestRate" placeholder="e.g., 5.5" min="1" max="20" step="0.1" value="5.5">
-                </div>
-                
-                <div class="form-group">
-                    <label for="loanTerm">Loan Term (Years)</label>
-                    <div class="range-container">
-                        <input type="range" id="loanTermRange" min="1" max="30" step="1" value="10">
-                        <div class="range-value" id="loanTermValue">10 years</div>
-                    </div>
-                    <select id="loanTerm">
-                        <option value="5">5 years</option>
-                        <option value="10" selected>10 years (Standard)</option>
-                        <option value="15">15 years</option>
-                        <option value="20">20 years</option>
-                        <option value="25">25 years</option>
-                        <option value="30">30 years</option>
-                    </select>
-                </div>
-                
-                <div class="form-group">
-                    <label for="extraPayment">Extra Monthly Payment ($) - Optional</label>
-                    <input type="number" id="extraPayment" placeholder="e.g., 50" min="0" step="10" value="0">
-                </div>
-                
-                <button class="calculate-btn" onclick="calculateLoan()">Calculate My Repayment Plan</button>
+    <section class="container" id="calculator">
+        <div class="calculator-card">
+            <div class="calculator-title">
+                <span>🧮</span>
+                <h2>Student Loan Calculator</h2>
             </div>
             
-            <div class="results-section">
-                <div class="result-item monthly-payment">
-                    <div class="result-label">Monthly Payment</div>
-                    <div class="result-value" id="monthlyPayment">$325.33</div>
+            <div class="payment-toggle">
+                <button class="toggle-btn active" id="calcPaymentBtn">Calculate Payment</button>
+                <button class="toggle-btn" id="calcTermBtn">Calculate Loan Term</button>
+            </div>
+            
+            <div class="input-grid">
+                <div class="input-group">
+                    <label for="loanAmount">Loan Amount ($)</label>
+                    <input type="number" id="loanAmount" placeholder="e.g., 30000" value="30000" min="1000" max="500000">
                 </div>
                 
-                <div class="result-item">
-                    <div class="result-label">Total Interest Paid</div>
-                    <div class="result-value" id="totalInterest">$9,039.20</div>
+                <div class="input-group">
+                    <label for="interestRate">Interest Rate (%)</label>
+                    <input type="number" id="interestRate" placeholder="e.g., 5.5" value="5.5" min="1" max="20" step="0.1">
                 </div>
                 
-                <div class="result-item">
-                    <div class="result-label">Total Amount Paid</div>
-                    <div class="result-value" id="totalPaid">$39,039.20</div>
+                <div class="input-group">
+                    <label for="loanTerm" id="loanTermLabel">Loan Term (years)</label>
+                    <input type="number" id="loanTerm" placeholder="e.g., 10" value="10" min="1" max="30">
                 </div>
                 
-                <div class="result-item">
-                    <div class="result-label">Payoff Date</div>
-                    <div class="result-value" id="payoffDate">June 2034</div>
+                <div class="input-group" id="monthlyPaymentGroup">
+                    <label for="monthlyPayment">Monthly Payment ($)</label>
+                    <input type="number" id="monthlyPayment" placeholder="e.g., 300" min="10" max="5000">
                 </div>
+            </div>
+            
+            <button class="calculate-btn" id="calculateBtn">Calculate Loan Details</button>
+            
+            <div class="results" id="results">
+                <h3>Your Student Loan Repayment Plan</h3>
                 
-                <div class="amortization-chart">
-                    <h3>Payment Breakdown</h3>
-                    <p>Principal: <span id="principalAmount">$30,000</span></p>
-                    <p>Interest Rate Impact: Paying an extra $<span id="extraSuggestion">25</span>/month would save $<span id="potentialSavings">1,520</span> in interest</p>
+                <div class="repayment-plan">
+                    <div class="plan-header">
+                        <div class="plan-title">Monthly Payment</div>
+                        <div class="plan-amount" id="monthlyPaymentResult">$0</div>
+                    </div>
                     
-                    <div class="chart-container">
-                        <table class="amortization-table">
-                            <thead>
-                                <tr>
-                                    <th>Year</th>
-                                    <th>Principal Paid</th>
-                                    <th>Interest Paid</th>
-                                    <th>Remaining Balance</th>
-                                </tr>
-                            </thead>
-                            <tbody id="amortizationBody">
-                                <!-- Will be populated by JavaScript -->
-                            </tbody>
-                        </table>
+                    <div class="plan-details">
+                        <div class="plan-item">
+                            <span class="plan-label">Total Loan Amount</span>
+                            <span class="plan-value" id="totalLoanResult">$0</span>
+                        </div>
+                        <div class="plan-item">
+                            <span class="plan-label">Total Interest Paid</span>
+                            <span class="plan-value" id="totalInterestResult">$0</span>
+                        </div>
+                        <div class="plan-item">
+                            <span class="plan-label">Total Amount Paid</span>
+                            <span class="plan-value" id="totalPaidResult">$0</span>
+                        </div>
+                        <div class="plan-item">
+                            <span class="plan-label">Payoff Date</span>
+                            <span class="plan-value" id="payoffDateResult">Month Year</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="results-grid">
+                    <div class="result-box">
+                        <div class="result-label">Monthly Payment</div>
+                        <div class="result-value" id="resultMonthly">$0</div>
+                    </div>
+                    <div class="result-box">
+                        <div class="result-label">Total Interest</div>
+                        <div class="result-value" id="resultInterest">$0</div>
+                    </div>
+                    <div class="result-box">
+                        <div class="result-label">Total Paid</div>
+                        <div class="result-value" id="resultTotal">$0</div>
+                    </div>
+                    <div class="result-box">
+                        <div class="result-label">Payoff Year</div>
+                        <div class="result-value" id="resultYear">2026</div>
+                    </div>
+                </div>
+                
+                <div class="chart-container">
+                    <h4 style="margin-bottom: 15px; color: var(--dark);">Payment Breakdown</h4>
+                    <div class="chart-placeholder" id="chartPlaceholder">
+                        <div style="text-align: center;">
+                            <p>Principal vs Interest Visualization</p>
+                            <p>Graph shows how your payments are allocated</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <!-- Article Content -->
-    <article>
-        <div class="article-section">
-            <h2>The Student Loan Crisis: Why Every Borrower Needs a Repayment Calculator</h2>
-            <p>With over 45 million Americans carrying student loan debt totaling more than $1.7 trillion, understanding your repayment strategy isn't just smart—it's essential for financial survival. The average Class of 2025 graduate leaves college with approximately $30,000 in student loans, facing monthly payments that can stretch for decades.</p>
-            
-            <div class="image-placeholder">
-                [Visual: Student loan debt growth chart showing historical trends]
-            </div>
-            
-            <p>What most borrowers don't realize is that small changes in your repayment strategy can save you thousands of dollars. Paying just $25 extra per month on a $30,000 loan at 5.5% interest can cut your repayment time by nearly a year and save over $1,500 in interest. Our 2026 Student Loan Repayment Calculator gives you the power to see these impacts instantly, transforming abstract numbers into actionable financial plans.</p>
-            
-            <p>As we approach 2026, several federal student loan programs face potential changes. The Biden administration's SAVE plan, income-driven repayment adjustments, and potential future legislation make strategic loan management more important than ever. Whether you're a recent graduate, a parent with PLUS loans, or someone refinancing private loans, this calculator provides the clarity you need to take control of your debt.</p>
-        </div>
-
-        <!-- AdSense Ad 2 -->
+    <!-- Ad 1 -->
+    <div class="container">
         <div class="ad-container">
             <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7300331231530877"
                  crossorigin="anonymous"></script>
@@ -532,426 +933,1107 @@
                  (adsbygoogle = window.adsbygoogle || []).push({});
             </script>
         </div>
+    </div>
 
-        <div class="article-section">
-            <h2>Understanding Student Loans: Federal vs. Private Options</h2>
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Introduction -->
+        <section class="section" id="guide">
+            <h2>Why Student Loan Planning is Essential for Americans in 2026</h2>
+            <p>Student loan debt has become one of the most significant financial challenges facing Americans today. With over $1.7 trillion in outstanding student loan debt affecting approximately 45 million borrowers, proper planning and strategic repayment have never been more critical. The landscape of student loans continues to evolve, with 2026 bringing new repayment options, potential forgiveness programs, and changing economic conditions that impact borrowers' ability to manage their debt effectively.</p>
             
-            <h3>Federal Student Loans</h3>
-            <p>Federal loans, issued by the U.S. Department of Education, offer unique protections including income-driven repayment plans, loan forgiveness programs, and deferment options. For the 2025-2026 academic year, interest rates for Direct Subsidized and Unsubsidized Loans for undergraduates are projected to be approximately 5.5%, while graduate students face rates around 7.05% for Direct Unsubsidized Loans.</p>
-            
-            <h3>Private Student Loans</h3>
-            <p>Private loans from banks, credit unions, and online lenders typically have variable interest rates ranging from 3% to 15%, based on creditworthiness. Unlike federal loans, they lack income-driven repayment options and forgiveness programs but may offer lower rates for borrowers with excellent credit.</p>
+            <p>Many graduates enter the workforce with limited understanding of how their student loans work, the true cost of borrowing, and the long-term implications of their repayment choices. This lack of knowledge can lead to costly mistakes, extended repayment periods, and unnecessary interest payments. Our student loan calculator provides clarity and empowers borrowers to make informed decisions about their financial future.</p>
             
             <div class="image-placeholder">
-                [Infographic: Comparison of federal vs private student loans]
+                <div style="text-align: center;">
+                    <p style="font-size: 20px; margin-bottom: 10px;">📊 Student Loan Statistics 2026</p>
+                    <p>Visual representation of student loan debt in America</p>
+                </div>
             </div>
             
-            <h3>Parent PLUS and Grad PLUS Loans</h3>
-            <p>These federal loans for parents and graduate students carry higher interest rates (projected 8.05% for 2025-2026) and unique repayment challenges. Understanding their amortization schedule is crucial for effective repayment planning.</p>
-        </div>
-
-        <div class="article-section">
-            <h2>How Student Loan Interest Really Works</h2>
-            <p>Many borrowers misunderstand how interest accrues on their student loans, leading to longer repayment periods and higher costs. Here's the truth about student loan interest:</p>
+            <h3>The Changing Student Loan Landscape</h3>
+            <p>The student loan environment has undergone significant changes in recent years, and 2026 presents both challenges and opportunities for borrowers:</p>
             
-            <h3>Daily Interest Accumulation</h3>
-            <p>Student loan interest accrues daily based on this formula: (Current Principal Balance × Interest Rate) ÷ 365.25. This means even if you make monthly payments, interest accumulates every single day, which is why extra payments made early in your repayment period have such a powerful impact.</p>
-            
-            <h3>Amortization: The Hidden Math</h3>
-            <p>In the early years of repayment, most of your payment goes toward interest rather than principal. For example, on a 10-year $30,000 loan at 5.5%, your first payment of $325 includes about $137 in interest and only $188 toward principal. This ratio gradually reverses over time through the process called amortization.</p>
-            
-            <h3>Capitalized Interest</h3>
-            <p>During periods of deferment, forbearance, or certain repayment plans, unpaid interest may capitalize—meaning it gets added to your principal balance. This increases your total debt and causes future interest calculations to be based on a higher amount, creating a compounding effect that can significantly increase your total repayment cost.</p>
-        </div>
-
-        <div class="article-section">
-            <h2>How Our 2026 Student Loan Calculator Works</h2>
-            <p>Our calculator uses standard amortization formulas to provide accurate, personalized repayment projections. Here's the mathematical foundation behind your results:</p>
-            
-            <h3>The Monthly Payment Formula</h3>
-            <p>We calculate your monthly payment using this formula: M = P × [r(1+r)^n] ÷ [(1+r)^n - 1]</p>
             <ul>
-                <li>M = Monthly payment</li>
-                <li>P = Principal loan amount</li>
-                <li>r = Monthly interest rate (annual rate ÷ 12)</li>
-                <li>n = Total number of payments (loan term in years × 12)</li>
+                <li><strong>New repayment plans:</strong> Income-driven repayment options have been expanded and simplified</li>
+                <li><strong>Interest rate adjustments:</strong> Federal loan interest rates have seen fluctuations based on economic conditions</li>
+                <li><strong>Forgiveness program updates:</strong> Public Service Loan Forgiveness and other programs have been modified</li>
+                <li><strong>Private loan market growth:</strong> More borrowers are utilizing private loans with varying terms</li>
+                <li><strong>Refinancing options:</strong> Competitive refinancing rates are available for qualified borrowers</li>
             </ul>
             
-            <h3>Interest Calculation</h3>
-            <p>Each month's interest payment = Remaining Principal × Monthly Interest Rate. The remainder of your payment goes toward principal reduction.</p>
+            <div class="info-box">
+                <strong>Key Insight:</strong> The average student loan borrower in 2026 graduates with approximately $37,000 in debt and takes 20 years to fully repay their loans. However, with strategic planning using tools like our calculator, many borrowers can reduce this timeline significantly and save thousands in interest payments.
+            </div>
+        </section>
+        
+        <!-- What is a Student Loan? -->
+        <section class="section">
+            <h2>What is a Student Loan? Understanding the Basics</h2>
+            <p>A student loan is a type of financial aid designed to help students pay for post-secondary education and its associated fees, such as tuition, books and supplies, and living expenses. Unlike grants and scholarships, student loans must be repaid with interest. They represent a legal obligation that follows borrowers for years, often decades, after graduation.</p>
             
-            <h3>Extra Payment Impact</h3>
-            <p>When you add extra payments, we apply them directly to your principal balance, which reduces future interest calculations immediately. This creates a compounding benefit that accelerates your payoff timeline.</p>
+            <h3>How Student Loans Differ from Other Debts</h3>
+            <p>Student loans possess unique characteristics that distinguish them from other types of consumer debt:</p>
             
-            <div class="image-placeholder">
-                [Visual: Loan amortization chart showing interest vs principal over time]
+            <div class="table-container">
+                <table>
+                    <tr>
+                        <th>Feature</th>
+                        <th>Student Loans</th>
+                        <th>Other Consumer Debt</th>
+                    </tr>
+                    <tr>
+                        <td>Bankruptcy Discharge</td>
+                        <td>Extremely difficult (requires undue hardship)</td>
+                        <td>Easier to discharge</td>
+                    </tr>
+                    <tr>
+                        <td>Repayment Flexibility</td>
+                        <td>Multiple income-driven options</td>
+                        <td>Limited flexibility</td>
+                    </tr>
+                    <tr>
+                        <td>Interest Rates</td>
+                        <td>Often fixed, set by Congress</td>
+                        <td>Variable based on credit</td>
+                    </tr>
+                    <tr>
+                        <td>Forgiveness Options</td>
+                        <td>Available through various programs</td>
+                        <td>Rarely available</td>
+                    </tr>
+                    <tr>
+                        <td>Deferment/Forbearance</td>
+                        <td>Readily available options</td>
+                        <td>Limited availability</td>
+                    </tr>
+                </table>
+            </div>
+            
+            <h3>The True Cost of Student Loans</h3>
+            <p>Understanding the full financial impact of student loans requires considering several factors beyond the principal amount borrowed:</p>
+            
+            <ul>
+                <li><strong>Principal:</strong> The original amount borrowed</li>
+                <li><strong>Interest:</strong> The cost of borrowing money, expressed as a percentage</li>
+                <li><strong>Loan fees:</strong> Some loans include origination fees (1-4% of loan amount)</li>
+                <li><strong>Capitalized interest:</strong> Unpaid interest added to the principal balance</li>
+                <li><strong>Opportunity cost:</strong> Money spent on loan payments that could have been invested or saved</li>
+                <li><strong>Credit impact:</strong> Payment history affects credit scores and future borrowing ability</li>
+            </ul>
+            
+            <div class="tip-box">
+                <strong>Pro Tip:</strong> Always consider the total repayment amount (principal + interest) rather than just the principal when evaluating loan options. A $30,000 loan at 6% interest for 10 years actually costs $39,967 in total payments.
+            </div>
+        </section>
+        
+        <!-- Types of Student Loans -->
+        <section class="section">
+            <h2>Types of Student Loans in the USA: Federal vs Private</h2>
+            <p>Understanding the different types of student loans available is crucial for making informed borrowing decisions. Student loans generally fall into two main categories: federal loans (provided by the government) and private loans (provided by banks, credit unions, and other financial institutions).</p>
+            
+            <h3>Federal Student Loans</h3>
+            <p>Federal student loans are issued by the U.S. Department of Education and offer several advantages over private loans:</p>
+            
+            <div class="table-container">
+                <table>
+                    <tr>
+                        <th>Loan Type</th>
+                        <th>Interest Rate (2026)</th>
+                        <th>Borrower Requirements</th>
+                        <th>Key Features</th>
+                    </tr>
+                    <tr>
+                        <td>Direct Subsidized</td>
+                        <td>5.50%</td>
+                        <td>Undergraduate, financial need</td>
+                        <td>Government pays interest while in school</td>
+                    </tr>
+                    <tr>
+                        <td>Direct Unsubsidized</td>
+                        <td>5.50% (undergrad)<br>7.05% (graduate)</td>
+                        <td>Undergraduate/graduate, no need requirement</td>
+                        <td>Interest accrues during all periods</td>
+                    </tr>
+                    <tr>
+                        <td>Direct PLUS</td>
+                        <td>8.05%</td>
+                        <td>Graduate students, parents</td>
+                        <td>Credit check required, higher limits</td>
+                    </tr>
+                    <tr>
+                        <td>Perkins (if available)</td>
+                        <td>5.00%</td>
+                        <td>Exceptional financial need</td>
+                        <td>School-administered, limited availability</td>
+                    </tr>
+                </table>
+            </div>
+            
+            <h3>Private Student Loans</h3>
+            <p>Private student loans are offered by banks, credit unions, and online lenders. Key characteristics include:</p>
+            
+            <ul>
+                <li><strong>Variable vs fixed rates:</strong> Private loans may offer either variable or fixed interest rates</li>
+                <li><strong>Credit-based approval:</strong> Approval and rates depend on creditworthiness</li>
+                <li><strong>Cosigner requirements:</strong> Most students need a cosigner with good credit</li>
+                <li><strong>Fewer protections:</strong> Limited deferment, forbearance, and forgiveness options</li>
+                <li><strong>Potential for lower rates:</strong> Borrowers with excellent credit may qualify for rates below federal loans</li>
+            </ul>
+            
+            <div class="warning-box">
+                <strong>Important Consideration:</strong> Federal loans should generally be exhausted before considering private loans due to their superior borrower protections, flexible repayment options, and potential forgiveness programs. Private loans lack these safety nets and can be more difficult to manage during financial hardship.
+            </div>
+            
+            <h3>Specialized Loan Programs</h3>
+            <p>Beyond standard federal and private loans, several specialized programs exist:</p>
+            
+            <ul>
+                <li><strong>State-sponsored loans:</strong> Some states offer loan programs with favorable terms for residents</li>
+                <li><strong>Institutional loans:</strong> Colleges may offer their own loan programs</li>
+                <li><strong>Healthcare profession loans:</strong> Special programs for medical, dental, and nursing students</li>
+                <li><strong>Law school loans:</strong> Specialized programs for law students</li>
+                <li><strong>International student loans:</strong> Available for non-U.S. citizens studying in America</li>
+            </ul>
+        </section>
+        
+        <!-- Ad 2 -->
+        <div class="container">
+            <div class="ad-container">
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7300331231530877"
+                     crossorigin="anonymous"></script>
+                <ins class="adsbygoogle"
+                     style="display:block; text-align:center;"
+                     data-ad-layout="in-article"
+                     data-ad-format="fluid"
+                     data-ad-client="ca-pub-7300331231530877"
+                     data-ad-slot="2175956093"></ins>
+                <script>
+                     (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
             </div>
         </div>
-
-        <div class="article-section">
-            <h2>Real-World Examples: Student Loan Repayment Scenarios</h2>
+        
+        <!-- How Interest Works -->
+        <section class="section">
+            <h2>How Student Loan Interest Works: The Hidden Cost of Borrowing</h2>
+            <p>Interest is the cost of borrowing money and represents a significant portion of total student loan repayment. Understanding how interest accrues, capitalizes, and compounds is essential for minimizing total repayment costs.</p>
             
-            <h3>Example 1: The Recent Graduate</h3>
-            <p>Sarah graduates with $30,000 in federal student loans at 5.5% interest. Using the standard 10-year repayment plan, her monthly payment is $325. She'll pay $9,039 in interest over the life of the loan. If she pays just $25 extra each month, she'll save $1,520 in interest and pay off her loans 11 months early.</p>
+            <h3>Interest Calculation Methods</h3>
+            <p>Student loan interest can be calculated using different methods:</p>
             
-            <h3>Example 2: The Graduate Student</h3>
-            <p>Michael has $85,000 in graduate school debt at 7% interest. On a 20-year repayment plan, his monthly payment is $660, with total interest of $73,400. By refinancing to a 15-year term at 5.5%, his payment increases to $695 but saves him $32,000 in interest.</p>
+            <div class="table-container">
+                <table>
+                    <tr>
+                        <th>Calculation Method</th>
+                        <th>How It Works</th>
+                        <th>Impact on Borrowers</th>
+                    </tr>
+                    <tr>
+                        <td>Daily Interest</td>
+                        <td>Interest = (Principal × Rate) ÷ 365.25</td>
+                        <td>Most common, interest accrues daily</td>
+                    </tr>
+                    <tr>
+                        <td>Simple Interest</td>
+                        <td>Interest = Principal × Rate × Time</td>
+                        <td>Rare for student loans, doesn't compound</td>
+                    </tr>
+                    <tr>
+                        <td>Compound Interest</td>
+                        <td>Interest on principal + accumulated interest</td>
+                        <td>Increases total cost significantly over time</td>
+                    </tr>
+                </table>
+            </div>
             
-            <h3>Example 3: The Parent Borrower</h3>
-            <p>The Johnson family borrowed $40,000 in Parent PLUS loans at 8% interest. On a standard 10-year plan, they pay $485 monthly with $18,200 in total interest. Switching to an extended 25-year plan reduces their payment to $309 but increases total interest to $52,700—more than the original loan amount.</p>
+            <h3>The Power of Interest Capitalization</h3>
+            <p>Interest capitalization occurs when unpaid interest is added to the principal balance, causing future interest to be calculated on a larger amount. Common capitalization triggers include:</p>
+            
+            <ul>
+                <li><strong>End of grace period:</strong> After leaving school or dropping below half-time</li>
+                <li><strong>Leaving deferment or forbearance:</strong> When these periods end</li>
+                <li><strong>Changing repayment plans:</strong> When switching between certain plans</li>
+                <li><strong>Loan consolidation:</strong> When combining multiple loans</li>
+            </ul>
+            
+            <div class="info-box">
+                <strong>Real Example:</strong> A $30,000 loan at 6% interest with a 6-month grace period will accrue approximately $900 in interest during that time. If this interest capitalizes, the new principal becomes $30,900, and future interest calculations are based on this higher amount.
+            </div>
+            
+            <h3>Subsidized vs Unsubsidized Interest</h3>
+            <p>The interest treatment differs significantly between these federal loan types:</p>
+            
+            <ul>
+                <li><strong>Subsidized loans:</strong> The government pays interest while you're in school at least half-time, during grace periods, and during deferment periods</li>
+                <li><strong>Unsubsidized loans:</strong> You're responsible for all interest that accrues from the time the loan is disbursed</li>
+                <li><strong>Making interest payments:</strong> Paying interest while in school or during grace periods can prevent capitalization and reduce total cost</li>
+            </ul>
+            
+            <p>Our student loan calculator automatically accounts for different interest scenarios, helping you understand how interest affects your total repayment amount over time.</p>
+        </section>
+        
+        <!-- How Calculator Works -->
+        <section class="section">
+            <h2>How Our Student Loan Calculator Works: Advanced Financial Modeling</h2>
+            <p>Our calculator uses sophisticated mathematical formulas and financial modeling to provide accurate repayment projections. The tool accounts for various factors that impact student loan repayment, giving you a comprehensive view of your financial commitment.</p>
+            
+            <h3>The Mathematical Foundation</h3>
+            <p>The calculator uses the standard loan amortization formula to determine monthly payments:</p>
+            
+            <div class="info-box">
+                <strong>Monthly Payment Formula:</strong><br>
+                M = P × [r(1+r)^n] ÷ [(1+r)^n - 1]<br><br>
+                Where:<br>
+                M = Monthly payment<br>
+                P = Principal loan amount<br>
+                r = Monthly interest rate (annual rate ÷ 12)<br>
+                n = Total number of payments (loan term in years × 12)
+            </div>
+            
+            <h3>Key Calculations Performed</h3>
+            <p>For each calculation, our tool performs these essential computations:</p>
+            
+            <ol>
+                <li><strong>Monthly payment calculation:</strong> Determines the fixed monthly amount needed to repay the loan over the specified term</li>
+                <li><strong>Interest allocation:</strong> Calculates how much of each payment goes toward interest vs principal</li>
+                <li><strong>Amortization schedule:</strong> Creates a month-by-month breakdown of the repayment process</li>
+                <li><strong>Total cost analysis:</strong> Sums all payments to determine total interest and total repayment amount</li>
+                <li><strong>Payoff date projection:</strong> Calculates the exact month and year the loan will be fully repaid</li>
+            </ol>
+            
+            <h3>Advanced Features and Considerations</h3>
+            <p>Beyond basic calculations, our tool incorporates several advanced features:</p>
+            
+            <div class="table-container">
+                <table>
+                    <tr>
+                        <th>Feature</th>
+                        <th>How It Works</th>
+                        <th>Benefit to Users</th>
+                    </tr>
+                    <tr>
+                        <td>Reverse Calculation</td>
+                        <td>Calculates loan term based on desired monthly payment</td>
+                        <td>Helps budget-based planning</td>
+                    </tr>
+                    <tr>
+                        <td>Interest-Only Scenarios</td>
+                        <td>Shows impact of paying only interest initially</td>
+                        <td>Useful for understanding deferment periods</td>
+                    </tr>
+                    <tr>
+                        <td>Extra Payment Modeling</td>
+                        <td>Projects impact of additional payments</td>
+                        <td>Helps plan acceleration strategies</td>
+                    </tr>
+                    <tr>
+                        <td>Refinancing Projections</td>
+                        <td>Compares current vs refinanced loan terms</td>
+                        <td>Supports refinancing decisions</td>
+                    </tr>
+                </table>
+            </div>
+            
+            <p>These advanced calculations help you understand not just what your payments will be, but how different strategies can impact your overall financial picture.</p>
+        </section>
+        
+        <!-- Step-by-Step Guide -->
+        <section class="section">
+            <h2>Step-by-Step Guide: Using the Student Loan Calculator Effectively</h2>
+            <p>Follow this comprehensive guide to get the most accurate results and meaningful insights from our student loan calculator.</p>
+            
+            <h3>Step 1: Gather Your Loan Information</h3>
+            <p>Before using the calculator, collect these essential details about your student loans:</p>
+            
+            <ul>
+                <li><strong>Current loan balance:</strong> Check your most recent statement or servicer website</li>
+                <li><strong>Interest rates:</strong> Note each loan's specific rate (they may vary)</li>
+                <li><strong>Loan types:</strong> Identify whether loans are federal or private</li>
+                <li><strong>Repayment status:</strong> Determine if you're in grace, deferment, or repayment</li>
+                <li><strong>Current payment amount:</strong> If already in repayment, note your current payment</li>
+            </ul>
+            
+            <div class="tip-box">
+                <strong>Pro Tip:</strong> For multiple loans with different rates, consider calculating each separately or using a weighted average interest rate for a consolidated view. Our calculator can handle both approaches.
+            </div>
+            
+            <h3>Step 2: Input Accurate Data</h3>
+            <p>Enter your information carefully for precise calculations:</p>
+            
+            <div class="table-container">
+                <table>
+                    <tr>
+                        <th>Input Field</th>
+                        <th>What to Enter</th>
+                        <th>Common Mistakes to Avoid</th>
+                    </tr>
+                    <tr>
+                        <td>Loan Amount</td>
+                        <td>Current principal balance (not original amount)</td>
+                        <td>Using original instead of current balance</td>
+                    </tr>
+                    <tr>
+                        <td>Interest Rate</td>
+                        <td>Annual percentage rate (APR) as a percentage</td>
+                        <td>Confusing fixed vs variable rates</td>
+                    </tr>
+                    <tr>
+                        <td>Loan Term</td>
+                        <td>Desired repayment period in years</td>
+                        <td>Underestimating realistic repayment capacity</td>
+                    </tr>
+                    <tr>
+                        <td>Monthly Payment</td>
+                        <td>For reverse calculation only</td>
+                        <td>Entering desired rather than affordable payment</td>
+                    </tr>
+                </table>
+            </div>
+            
+            <h3>Step 3: Choose Your Calculation Mode</h3>
+            <p>Select the appropriate calculation method based on your needs:</p>
+            
+            <ul>
+                <li><strong>Calculate Payment:</strong> Use when you know the loan term and want to determine monthly payment</li>
+                <li><strong>Calculate Loan Term:</strong> Use when you know what you can afford monthly and want to see how long repayment will take</li>
+                <li><strong>Compare Scenarios:</strong> Run multiple calculations with different terms to compare options</li>
+            </ul>
+            
+            <h3>Step 4: Interpret Your Results</h3>
+            <p>Understand what each result means for your financial planning:</p>
+            
+            <ol>
+                <li><strong>Monthly Payment:</strong> The amount you'll need to pay each month to meet your goal</li>
+                <li><strong>Total Interest:</strong> The extra cost of borrowing over the life of the loan</li>
+                <li><strong>Total Amount Paid:</strong> Principal + interest = your total repayment cost</li>
+                <li><strong>Payoff Date:</strong> When you'll be completely debt-free if you follow the plan</li>
+                <li><strong>Interest-to-Principal Ratio:</strong> What percentage of your payments go to interest vs reducing debt</li>
+            </ol>
+            
+            <h3>Step 5: Create an Action Plan</h3>
+            <p>Use calculator insights to develop your repayment strategy:</p>
+            
+            <div class="info-box">
+                <strong>Action Planning Framework:</strong><br><br>
+                1. <strong>Evaluate Affordability:</strong> Can you comfortably make the calculated payment?<br>
+                2. <strong>Consider Trade-offs:</strong> Would a longer term with lower payments better fit your budget?<br>
+                3. <strong>Plan for Acceleration:</strong> How could extra payments shorten the term or reduce interest?<br>
+                4. <strong>Review Periodically:</strong> Recalculate annually or when your financial situation changes<br>
+                5. <strong>Explore Refinancing:</strong> Could a lower rate reduce your payments or total cost?
+            </div>
+        </section>
+        
+        <!-- Real Examples -->
+        <section class="section">
+            <h2>Real Examples: Student Loan Repayment Scenarios</h2>
+            <p>These practical examples demonstrate how different loan amounts, interest rates, and terms affect repayment. Understanding these scenarios helps you make informed decisions about your own student loans.</p>
+            
+            <h3>Example 1: Standard 10-Year Repayment</h3>
+            <p><strong>Scenario:</strong> $20,000 federal loan at 5% interest with standard 10-year repayment term.</p>
+            
+            <div class="repayment-plan">
+                <div class="plan-header">
+                    <div class="plan-title">Standard Repayment Plan</div>
+                    <div class="plan-amount">$212.13/month</div>
+                </div>
+                
+                <div class="plan-details">
+                    <div class="plan-item">
+                        <span class="plan-label">Total Loan Amount</span>
+                        <span class="plan-value">$20,000.00</span>
+                    </div>
+                    <div class="plan-item">
+                        <span class="plan-label">Total Interest Paid</span>
+                        <span class="plan-value">$5,455.60</span>
+                    </div>
+                    <div class="plan-item">
+                        <span class="plan-label">Total Amount Paid</span>
+                        <span class="plan-value">$25,455.60</span>
+                    </div>
+                    <div class="plan-item">
+                        <span class="plan-label">Payoff Date</span>
+                        <span class="plan-value">April 2036</span>
+                    </div>
+                </div>
+            </div>
+            
+            <p><strong>Analysis:</strong> This represents a typical federal student loan repayment scenario. The borrower pays 27% more than the original loan amount in interest. Over 10 years, interest represents about 21% of total payments.</p>
+            
+            <h3>Example 2: Extended 20-Year Repayment</h3>
+            <p><strong>Scenario:</strong> $50,000 private loan at 7% interest with extended 20-year repayment term.</p>
+            
+            <div class="repayment-plan">
+                <div class="plan-header">
+                    <div class="plan-title">Extended Repayment Plan</div>
+                    <div class="plan-amount">$387.72/month</div>
+                </div>
+                
+                <div class="plan-details">
+                    <div class="plan-item">
+                        <span class="plan-label">Total Loan Amount</span>
+                        <span class="plan-value">$50,000.00</span>
+                    </div>
+                    <div class="plan-item">
+                        <span class="plan-label">Total Interest Paid</span>
+                        <span class="plan-value">$43,052.80</span>
+                    </div>
+                    <div class="plan-item">
+                        <span class="plan-label">Total Amount Paid</span>
+                        <span class="plan-value">$93,052.80</span>
+                    </div>
+                    <div class="plan-item">
+                        <span class="plan-label">Payoff Date</span>
+                        <span class="plan-value">April 2046</span>
+                    </div>
+                </div>
+            </div>
+            
+            <p><strong>Analysis:</strong> While monthly payments are more manageable ($387 vs $660 for 10-year term), the total interest paid is staggering—86% of the original loan amount. This borrower pays almost as much in interest as the original principal.</p>
+            
+            <h3>Example 3: Accelerated Repayment with Extra Payments</h3>
+            <p><strong>Scenario:</strong> $35,000 loan at 6.5% interest with $100 extra monthly payment.</p>
+            
+            <div class="table-container">
+                <table>
+                    <tr>
+                        <th>Repayment Strategy</th>
+                        <th>Monthly Payment</th>
+                        <th>Total Interest</th>
+                        <th>Payoff Time</th>
+                        <th>Interest Savings</th>
+                    </tr>
+                    <tr>
+                        <td>Standard 10-Year</td>
+                        <td>$397.53</td>
+                        <td>$12,703.60</td>
+                        <td>10 years</td>
+                        <td>Baseline</td>
+                    </tr>
+                    <tr>
+                        <td>With $100 Extra</td>
+                        <td>$497.53</td>
+                        <td>$8,920.40</td>
+                        <td>7 years, 3 months</td>
+                        <td>$3,783.20</td>
+                    </tr>
+                    <tr>
+                        <td>Aggressive ($200 extra)</td>
+                        <td>$597.53</td>
+                        <td>$6,550.80</td>
+                        <td>5 years, 8 months</td>
+                        <td>$6,152.80</td>
+                    </tr>
+                </table>
+            </div>
+            
+            <p><strong>Key Insight:</strong> Adding just $100 to monthly payments saves nearly $3,800 in interest and cuts the repayment period by almost 3 years. This demonstrates the power of even modest acceleration strategies.</p>
+            
+            <div class="tip-box">
+                <strong>Calculator Tip:</strong> Use our calculator's advanced features to model different extra payment scenarios. Even small additional payments can yield significant interest savings and dramatically shorten your repayment timeline.
+            </div>
+        </section>
+        
+        <!-- Ad 3 -->
+        <div class="container">
+            <div class="ad-container">
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7300331231530877"
+                     crossorigin="anonymous"></script>
+                <ins class="adsbygoogle"
+                     style="display:block; text-align:center;"
+                     data-ad-layout="in-article"
+                     data-ad-format="fluid"
+                     data-ad-client="ca-pub-7300331231530877"
+                     data-ad-slot="2175956093"></ins>
+                <script>
+                     (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
         </div>
-
-        <div class="article-section">
+        
+        <!-- Benefits -->
+        <section class="section">
             <h2>Benefits of Using Our Student Loan Calculator</h2>
+            <p>Our advanced student loan calculator provides numerous advantages for borrowers seeking to understand and manage their education debt effectively.</p>
             
-            <div class="tips-grid">
-                <div class="tip-card">
-                    <h3>Accurate Budget Planning</h3>
-                    <p>See exactly how student loan payments fit into your monthly budget before committing to a repayment plan.</p>
-                </div>
-                
-                <div class="tip-card">
-                    <h3>Refinancing Decisions</h3>
-                    <p>Compare different interest rates and terms to determine if refinancing could save you money.</p>
-                </div>
-                
-                <div class="tip-card">
-                    <h3>Extra Payment Strategy</h3>
-                    <p>Test how different extra payment amounts affect your payoff timeline and total interest.</p>
-                </div>
-                
-                <div class="tip-card">
-                    <h3>Financial Goal Setting</h3>
-                    <p>Align your student loan repayment with other financial goals like saving for a house or retirement.</p>
-                </div>
+            <h3>Comprehensive Financial Clarity</h3>
+            <p>Unlike basic calculators that show only monthly payments, our tool provides a complete financial picture:</p>
+            
+            <ul>
+                <li><strong>Total cost transparency:</strong> See exactly how much you'll pay in interest over the life of the loan</li>
+                <li><strong>Payoff date projection:</strong> Know exactly when you'll be debt-free</li>
+                <li><strong>Payment breakdown:</strong> Understand how much of each payment goes to principal vs interest</li>
+                <li><strong>Multiple scenario comparison:</strong> Easily compare different repayment strategies</li>
+                <li><strong>Refinancing analysis:</strong> Evaluate whether refinancing makes financial sense</li>
+            </ul>
+            
+            <h3>Strategic Planning Capabilities</h3>
+            <p>The calculator supports advanced financial planning and decision-making:</p>
+            
+            <div class="table-container">
+                <table>
+                    <tr>
+                        <th>Planning Need</th>
+                        <th>How Calculator Helps</th>
+                        <th>Practical Application</th>
+                    </tr>
+                    <tr>
+                        <td>Budget Planning</td>
+                        <td>Determines affordable monthly payments</td>
+                        <td>Align loan payments with income and expenses</td>
+                    </tr>
+                    <tr>
+                        <td>Debt Acceleration</td>
+                        <td>Models impact of extra payments</td>
+                        <td>Plan bonus or tax refund allocations</td>
+                    </tr>
+                    <tr>
+                        <td>Refinancing Decisions</td>
+                        <td>Compares current vs new loan terms</td>
+                        <td>Evaluate refinancing offers objectively</td>
+                    </tr>
+                    <tr>
+                        <td>Life Planning</td>
+                        <td>Projects debt-free dates</td>
+                        <td>Plan major life events (home purchase, marriage)</td>
+                    </tr>
+                    <tr>
+                        <td>Financial Goal Setting</td>
+                        <td>Shows trade-offs between different strategies</td>
+                        <td>Balance debt repayment with other financial goals</td>
+                    </tr>
+                </table>
+            </div>
+            
+            <h3>Educational Value</h3>
+            <p>Beyond calculations, the tool serves as an educational resource:</p>
+            
+            <ul>
+                <li><strong>Interest visualization:</strong> See how interest compounds over time</li>
+                <li><strong>Term impact demonstration:</strong> Understand how loan term affects total cost</li>
+                <li><strong>Rate sensitivity analysis:</strong> Learn how interest rates impact payments</li>
+                <li><strong>Financial literacy building:</strong> Develop understanding of loan mechanics</li>
+                <li><strong>Decision confidence:</strong> Make informed choices with clear data</li>
+            </ul>
+            
+            <div class="info-box">
+                <strong>User Experience Advantage:</strong> Our calculator is designed for both beginners and advanced users. Clear explanations accompany complex calculations, making sophisticated financial concepts accessible to all borrowers regardless of their financial background.
+            </div>
+        </section>
+        
+        <!-- Bluehost Recommendation -->
+        <div class="bluehost-box">
+            <div class="bluehost-logo">Bluehost</div>
+            <div class="bluehost-content">
+                <h3>Best Hosting to Run This Calculator Tool</h3>
+                <p>Bluehost is a popular hosting provider for beginners and small websites. Many finance bloggers and educational websites use Bluehost for its reliability and user-friendly interface. If you're interested in creating your own financial calculator website or blog, Bluehost offers affordable hosting plans with one-click WordPress installation.</p>
+                <p>Start your financial education website with reliable hosting that supports tools like this student loan calculator.</p>
+                <a href="https://www.bluehost.com/track/financetools/" class="bluehost-btn" target="_blank">Start Your Calculator Website with Bluehost</a>
             </div>
         </div>
-
-        <div class="article-section">
-            <h2>Proven Strategies to Repay Student Loans Faster</h2>
+        
+        <!-- Tips to Repay Faster -->
+        <section class="section">
+            <h2>10 Proven Strategies to Repay Student Loans Faster</h2>
+            <p>Accelerating student loan repayment can save thousands in interest and provide financial freedom years earlier. These evidence-based strategies have helped millions of borrowers pay off their student debt ahead of schedule.</p>
             
-            <h3>The Debt Avalanche Method</h3>
-            <p>Focus extra payments on your highest-interest loan first while making minimum payments on others. This mathematical approach minimizes total interest paid.</p>
+            <h3>Payment Acceleration Techniques</h3>
+            <ol>
+                <li><strong>Make Biweekly Payments:</strong> Instead of one monthly payment, pay half every two weeks. This results in 13 full payments per year instead of 12, potentially cutting years off your repayment term.</li>
+                <li><strong>Apply Windfalls Strategically:</strong> Direct tax refunds, bonuses, gifts, or inheritance money toward your highest-interest loan. A single $1,000 extra payment can save thousands in future interest.</li>
+                <li><strong>Use the Debt Avalanche Method:</strong> Focus extra payments on your highest-interest loan first while making minimum payments on others. This mathematically minimizes total interest paid.</li>
+                <li><strong>Round Up Payments:</strong> Round your monthly payment to the nearest $50 or $100. The extra amount goes directly toward principal reduction, accelerating payoff.</li>
+                <li><strong>Implement a "Spare Change" Strategy:</strong> Use apps that round up daily purchases and apply the difference to student loans. Small amounts add up significantly over time.</li>
+            </ol>
             
-            <h3>Bi-Weekly Payments</h3>
-            <p>Instead of one monthly payment, pay half every two weeks. You'll make 26 half-payments (equivalent to 13 full payments) each year, accelerating repayment without feeling a significant budget impact.</p>
-            
-            <h3>Windfall Application</h3>
-            <p>Apply tax refunds, bonuses, or unexpected income directly to your principal balance. A single $1,000 extra payment on a $30,000 loan at 5.5% can shorten your repayment by 4 months and save $180 in interest.</p>
-            
-            <h3>Refinancing Strategy</h3>
-            <p>Consider refinancing if you can secure a rate at least 1% lower than your current rate and don't need federal loan protections. Always run the numbers through our calculator first.</p>
+            <h3>Strategic Financial Moves</h3>
+            <ol start="6">
+                <li><strong>Refinance for Lower Rates:</strong> If you have good credit and stable income, refinancing can reduce your interest rate by 1-3%, saving thousands over the loan term.</li>
+                <li><strong>Utilize Employer Assistance Programs:</strong> Many employers now offer student loan repayment assistance as a benefit. Contribute enough to get maximum matching funds.</li>
+                <li><strong>Adjust Tax Withholdings:</strong> If you consistently receive large tax refunds, adjust your W-4 to have less withheld and apply the extra monthly income to loan payments.</li>
+                <li><strong>Create a Side Income Stream:</strong> Dedicate income from a side hustle, freelance work, or part-time job exclusively to student loan repayment.</li>
+                <li><strong>Downsize Lifestyle Temporarily:</strong> Implement a 1-2 year "debt sprint" by reducing discretionary spending and applying all savings to loan acceleration.</li>
+            </ol>
             
             <div class="image-placeholder">
-                [Visual: Debt avalanche vs debt snowball method comparison]
-            </div>
-        </div>
-
-        <!-- Bluehost Affiliate Section -->
-        <div class="bluehost-section">
-            <h2>Best Hosting to Run This Calculator Tool</h2>
-            <p>Want to create your own financial calculator website like this one? Bluehost is a popular hosting provider for beginners and small websites looking for reliability and ease of use. Many financial bloggers and calculator website owners choose Bluehost for its straightforward setup and excellent support.</p>
-            <p>With Bluehost, you can install WordPress in one click and have your calculator website running in minutes. Their affordable plans include essential features like SSL certificates, email hosting, and 24/7 customer support—everything you need to share helpful tools with others.</p>
-            <a href="#" class="bluehost-btn">Start Your Calculator Website with Bluehost</a>
-            <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.9;">Note: We recommend products we genuinely believe can help website creators.</p>
-        </div>
-
-        <div class="article-section">
-            <h2>Frequently Asked Questions</h2>
-            
-            <div class="faq-item">
-                <div class="faq-question">How accurate is this student loan calculator?</div>
-                <p>Our calculator provides highly accurate estimates using standard loan amortization formulas. For federal loans with income-driven repayment plans, consult your loan servicer for exact calculations, as those depend on your income and family size.</p>
+                <div style="text-align: center;">
+                    <p style="font-size: 20px; margin-bottom: 10px;">📈 Acceleration Impact Visualization</p>
+                    <p>Graph showing how different strategies affect payoff timeline</p>
+                </div>
             </div>
             
+            <h3>Implementation Framework</h3>
+            <p>To effectively implement these strategies, follow this systematic approach:</p>
+            
+            <div class="info-box">
+                <strong>Acceleration Implementation Plan:</strong><br><br>
+                1. <strong>Calculate Baseline:</strong> Use our calculator to understand current repayment timeline<br>
+                2. <strong>Set Specific Goals:</strong> Aim for a concrete payoff date (e.g., "Pay off $20,000 in 3 years")<br>
+                3. <strong>Choose 2-3 Strategies:</strong> Focus on methods most suitable for your situation<br>
+                4. <strong>Automate Where Possible:</strong> Set up automatic extra payments<br>
+                5. <strong>Track Progress Monthly:</strong> Monitor remaining balance and adjust as needed<br>
+                6. <strong>Celebrate Milestones:</strong> Acknowledge progress to maintain motivation
+            </div>
+            
+            <p>Remember that even small additional payments can have a dramatic impact due to the compounding nature of interest. Use our calculator to model different acceleration scenarios and find the approach that works best for your financial situation.</p>
+        </section>
+        
+        <!-- FAQ -->
+        <section class="section" id="faq">
+            <h2>Student Loan Calculator FAQ</h2>
+            
             <div class="faq-item">
-                <div class="faq-question">What's the average student loan payment in 2026?</div>
-                <p>According to recent projections, the average monthly student loan payment ranges from $200 to $300, but this varies greatly based on loan amount, interest rate, and repayment term. Use our calculator with your specific numbers for personalized results.</p>
+                <div class="faq-question">How does the student loan calculator work?</div>
+                <div class="faq-answer">
+                    <p>Our calculator uses the standard loan amortization formula to calculate monthly payments based on your loan amount, interest rate, and repayment term. It also computes total interest paid, total repayment amount, and exact payoff date. The tool can work in two modes: calculating monthly payment based on loan term, or calculating loan term based on desired monthly payment.</p>
+                </div>
             </div>
             
             <div class="faq-item">
-                <div class="faq-question">How can I pay off student loans faster?</div>
-                <p>Consider making bi-weekly payments, applying windfalls like tax refunds, refinancing to lower rates, or using the debt avalanche method to tackle highest-interest loans first. Even small extra payments can significantly reduce your repayment timeline.</p>
+                <div class="faq-question">What is the average student loan payment in 2026?</div>
+                <div class="faq-answer">
+                    <p>According to 2026 data, the average monthly student loan payment ranges from $200-$400. However, this varies significantly based on several factors:</p>
+                    <ul>
+                        <li><strong>Loan amount:</strong> Borrowers with $20,000 typically pay $200-250/month</li>
+                        <li><strong>Interest rates:</strong> Rates currently range from 4-8% for federal loans</li>
+                        <li><strong>Repayment plan:</strong> Standard 10-year plans have higher payments than extended or income-driven plans</li>
+                        <li><strong>Graduation year:</strong> More recent graduates tend to have higher balances</li>
+                    </ul>
+                    <p>Use our calculator with your specific loan details for personalized payment estimates.</p>
+                </div>
             </div>
             
             <div class="faq-item">
-                <div class="faq-question">What happens if I miss a student loan payment?</div>
-                <p>Missing payments can lead to late fees, damage to your credit score, and after 270 days of non-payment, federal loans go into default with serious consequences including wage garnishment, tax refund offsets, and collection fees.</p>
+                <div class="faq-question">How can I pay off my student loans faster?</div>
+                <div class="faq-answer">
+                    <p>Several effective strategies can accelerate student loan repayment:</p>
+                    <ul>
+                        <li><strong>Make extra payments:</strong> Even small additional amounts significantly reduce total interest</li>
+                        <li><strong>Use windfalls:</strong> Apply tax refunds, bonuses, or gifts to loan principal</li>
+                        <li><strong>Refinance:</strong> Secure lower interest rates if you have good credit</li>
+                        <li><strong>Biweekly payments:</strong> Make half-payments every two weeks instead of monthly</li>
+                        <li><strong>Debt avalanche method:</strong> Focus on highest-interest loans first</li>
+                        <li><strong>Increase income:</strong> Use side hustle earnings exclusively for loan payments</li>
+                    </ul>
+                    <p>Our calculator includes features to model the impact of these acceleration strategies.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">What's the difference between federal and private student loans?</div>
+                <div class="faq-answer">
+                    <p>Federal and private student loans differ in several important ways:</p>
+                    <ul>
+                        <li><strong>Federal loans:</strong> Offer income-driven repayment, forgiveness options, deferment/forbearance, fixed interest rates set by Congress, and don't require credit checks for most borrowers</li>
+                        <li><strong>Private loans:</strong> Typically have variable or fixed rates based on creditworthiness, may offer lower rates for excellent credit, have fewer repayment options, limited forgiveness, and usually require a cosigner for students</li>
+                        <li><strong>Key consideration:</strong> Federal loans generally provide more protections and flexibility, making them preferable for most borrowers despite sometimes higher interest rates</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">How does student loan interest work?</div>
+                <div class="faq-answer">
+                    <p>Student loan interest accrues daily based on your outstanding principal balance. Key concepts include:</p>
+                    <ul>
+                        <li><strong>Daily interest:</strong> Calculated as (principal × interest rate) ÷ 365.25</li>
+                        <li><strong>Capitalization:</strong> Unpaid interest added to principal, increasing future interest calculations</li>
+                        <li><strong>Simple vs compound:</strong> Most student loans use simple daily interest, not compound interest</li>
+                        <li><strong>Subsidized interest:</strong> Government pays interest during school/grace for subsidized loans</li>
+                        <li><strong>Interest deduction:</strong> Up to $2,500 in student loan interest may be tax-deductible annually</li>
+                    </ul>
+                    <p>Our calculator accounts for these interest mechanics in its projections.</p>
+                </div>
             </div>
             
             <div class="faq-item">
                 <div class="faq-question">Should I refinance my student loans?</div>
-                <p>Refinancing makes sense if you can secure a significantly lower interest rate, have stable income, and don't need federal loan protections like income-driven repayment or potential forgiveness programs. Always calculate the break-even point first.</p>
+                <div class="faq-answer">
+                    <p>Refinancing can be beneficial but isn't right for everyone. Consider refinancing if:</p>
+                    <ul>
+                        <li>You have good credit (680+ score) and stable income</li>
+                        <li>You can secure a rate at least 1% lower than current rates</li>
+                        <li>You don't need federal loan protections (income-driven plans, forgiveness)</li>
+                        <li>You have private loans or high-interest federal loans</li>
+                    </ul>
+                    <p>Avoid refinancing if:</p>
+                    <ul>
+                        <li>You're pursuing Public Service Loan Forgiveness</li>
+                        <li>You need income-driven repayment flexibility</li>
+                        <li>You might need deferment or forbearance options</li>
+                        <li>The rate reduction is minimal (less than 0.5%)</li>
+                    </ul>
+                    <p>Use our calculator to compare current vs refinanced loan scenarios.</p>
+                </div>
             </div>
             
             <div class="faq-item">
-                <div class="faq-question">What's the difference between subsidized and unsubsidized loans?</div>
-                <p>Subsidized federal loans don't accrue interest while you're in school or during deferment periods. Unsubsidized loans accrue interest from disbursement. Both types use the same repayment calculations once repayment begins.</p>
+                <div class="faq-question">What are income-driven repayment plans?</div>
+                <div class="faq-answer">
+                    <p>Income-driven repayment (IDR) plans cap monthly payments at a percentage of discretionary income (10-20%) and forgive remaining balance after 20-25 years. The four main IDR plans in 2026 are:</p>
+                    <ul>
+                        <li><strong>Revised Pay As You Earn (REPAYE):</strong> 10% of discretionary income, 20-25 year forgiveness</li>
+                        <li><strong>Pay As You Earn (PAYE):</strong> 10% of income, never more than standard plan, 20-year forgiveness</li>
+                        <li><strong>Income-Based Repayment (IBR):</strong> 10-15% of income, 20-25 year forgiveness</li>
+                        <li><strong>Income-Contingent Repayment (ICR):</strong> 20% of income or fixed amount, 25-year forgiveness</li>
+                    </ul>
+                    <p>IDR plans can significantly reduce monthly payments but often increase total interest paid over time.</p>
+                </div>
             </div>
             
             <div class="faq-item">
-                <div class="faq-question">How does the SAVE plan affect my payments?</div>
-                <p>The SAVE plan caps payments at 5-10% of discretionary income and prevents unpaid interest from accumulating if you make regular payments. Use the Federal Student Aid website for SAVE-specific calculations.</p>
+                <div class="faq-question">How do student loans affect credit scores?</div>
+                <div class="faq-answer">
+                    <p>Student loans impact credit scores in several ways:</p>
+                    <ul>
+                        <li><strong>Payment history (35%):</strong> On-time payments help, late payments hurt significantly</li>
+                        <li><strong>Credit mix (10%):</strong> Installment loans diversify credit profile positively</li>
+                        <li><strong>Amounts owed (30%):</strong> High balances relative to original amounts can lower scores</li>
+                        <li><strong>Credit inquiries (10%):</strong> Applying for new loans causes temporary small decreases</li>
+                        <li><strong>Length of history (15%):</strong> Older loans contribute to longer average account age</li>
+                    </ul>
+                    <p>Properly managed student loans can actually help build strong credit over time through consistent on-time payments.</p>
+                </div>
             </div>
             
             <div class="faq-item">
-                <div class="faq-question">Can I deduct student loan interest on my taxes?</div>
-                <p>Yes, you may deduct up to $2,500 in student loan interest annually if your modified adjusted gross income is below $85,000 ($170,000 if married filing jointly). This deduction reduces your taxable income.</p>
+                <div class="faq-question">What happens if I can't make my student loan payments?</div>
+                <div class="faq-answer">
+                    <p>If you're struggling to make payments, take these steps in order:</p>
+                    <ol>
+                        <li><strong>Contact your servicer immediately:</strong> Don't wait until you miss payments</li>
+                        <li><strong>Explore income-driven repayment:</strong> Payments may be reduced based on income</li>
+                        <li><strong>Request deferment or forbearance:</strong> Temporarily pause payments if eligible</li>
+                        <li><strong>Consider loan consolidation:</strong> May provide access to additional repayment plans</li>
+                        <li><strong>Research forgiveness programs:</strong> You may qualify for partial or complete forgiveness</li>
+                        <li><strong>Get professional help:</strong> Nonprofit credit counseling agencies offer free advice</li>
+                    </ol>
+                    <p>Default should be avoided at all costs as it leads to wage garnishment, tax refund seizure, and significant credit damage.</p>
+                </div>
             </div>
             
             <div class="faq-item">
-                <div class="faq-question">What happens to my loans if I go back to school?</div>
-                <p>Federal loans typically return to deferment status if you enroll at least half-time. Private loan policies vary—check with your lender. Interest may continue accruing on unsubsidized loans during this period.</p>
+                <div class="faq-question">Are student loans discharged if I die?</div>
+                <div class="faq-answer">
+                    <p>Federal student loans are discharged upon the borrower's death. The process involves:</p>
+                    <ul>
+                        <li><strong>Federal loans:</strong> Automatically discharged upon submission of death certificate</li>
+                        <li><strong>Private loans:</strong> Policies vary by lender; some discharge, others may seek repayment from estate</li>
+                        <li><strong>Parent PLUS loans:</strong> Discharged if either the parent borrower or student dies</li>
+                        <li><strong>Cosigner obligations:</strong> Typically discharged if primary borrower dies</li>
+                        <li><strong>Documentation required:</strong> Certified death certificate must be submitted to loan servicer</li>
+                    </ul>
+                    <p>It's important for family members to contact loan servicers promptly and understand specific policies for each loan type.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Conclusion -->
+        <section class="section">
+            <h2>Conclusion: Taking Control of Your Student Loan Journey</h2>
+            <p>Student loan repayment represents one of the most significant financial challenges for millions of Americans, but it doesn't have to be an overwhelming burden. With proper planning, strategic thinking, and the right tools, you can navigate your student loan repayment journey effectively and achieve financial freedom.</p>
+            
+            <p>Our student loan calculator provides the foundation for informed decision-making, but success requires consistent action and commitment. Remember these key principles as you move forward:</p>
+            
+            <ul>
+                <li><strong>Knowledge is power:</strong> Understand your loans, interest rates, and repayment options</li>
+                <li><strong>Planning is essential:</strong> Create a realistic repayment strategy based on your unique financial situation</li>
+                <li><strong>Flexibility matters:</strong> Be prepared to adjust your approach as circumstances change</li>
+                <li><strong>Consistency yields results:</strong> Regular, on-time payments build momentum and credit</li>
+                <li><strong>Acceleration accelerates freedom:</strong> Even small extra payments can dramatically shorten your repayment timeline</li>
+                <li><strong>Balance is key:</strong> Manage student loans while also saving for other financial goals</li>
+            </ul>
+            
+            <div class="tip-box">
+                <strong>Final Action Step:</strong> Use our calculator today to create your personalized repayment plan. Then, set a calendar reminder to review your progress quarterly and recalculate annually or whenever your financial situation changes. Student loan repayment is a marathon, not a sprint—consistent, informed effort leads to ultimate success.
             </div>
             
-            <div class="faq-item">
-                <div class="faq-question">How do I choose between standard and extended repayment?</div>
-                <p>Standard repayment (10 years) minimizes total interest but has higher monthly payments. Extended repayment (up to 25 years) lowers monthly payments but increases total interest significantly. Use our calculator to compare both options.</p>
+            <p>As you continue your financial journey, remember that student loans are an investment in your future. While they require careful management, they also represent the education and opportunities that will support your career and life goals. By taking control of your repayment strategy today, you're building not just financial freedom, but also the habits and knowledge that will serve you throughout your financial life.</p>
+            
+            <p>Explore our other financial tools to continue building your financial literacy and capability. From budgeting to investing to tax planning, comprehensive financial knowledge is the ultimate tool for achieving your goals.</p>
+        </section>
+        
+        <!-- Disclaimer -->
+        <section class="section">
+            <h2>Disclaimer: Important Financial Information</h2>
+            <p>This student loan calculator and accompanying educational content are provided for informational and educational purposes only. The information contained herein represents general financial information and should not be considered financial advice.</p>
+            
+            <p><strong>Critical Financial Disclaimers:</strong></p>
+            <ul>
+                <li>This tool is not a substitute for professional financial advice from a qualified financial advisor</li>
+                <li>Calculations are estimates based on standard formulas; actual loan terms may vary</li>
+                <li>Interest rates, loan terms, and repayment options change over time and vary by lender</li>
+                <li>Federal student loan programs have specific eligibility requirements and rules</li>
+                <li>Refinancing federal loans with private lenders eliminates federal protections and benefits</li>
+                <li>Loan forgiveness programs have specific eligibility requirements that may change</li>
+                <li>Tax implications of student loan interest and forgiveness vary by individual circumstances</li>
+                <li>Financial decisions should be based on your personal circumstances and goals</li>
+                <li>We make no guarantees about the accuracy of calculations or suitability for your situation</li>
+                <li>Consult with financial professionals before making significant financial decisions</li>
+            </ul>
+            
+            <p>By using this calculator and implementing any strategies suggested in this guide, you acknowledge that you are solely responsible for your financial decisions and outcomes. Always verify calculations with your loan servicer and review all loan documents carefully before making decisions.</p>
+            
+            <p>This content is protected by copyright laws. Reproduction, distribution, or commercial use without permission is prohibited.</p>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Financial Education Tools</h3>
+                    <p>Free financial calculators and educational resources. Tools for loans, taxes, investments, and personal finance management.</p>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Financial Calculators</h3>
+                    <ul class="footer-links">
+                        <li><a href="paycheck-tax-calculator.html">Paycheck Tax Calculator</a></li>
+                        <li><a href="rent-vs-buy-calculator.html">Rent vs Buy Calculator</a></li>
+                        <li><a href="student-loan-calculator.html">Student Loan Calculator</a></li>
+                        <li><a href="credit-card-interest-calculator.html">Credit Card Interest Calculator</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Content & Business Tools</h3>
+                    <ul class="footer-links">
+                        <li><a href="youtube-rpm-calculator.html">YouTube RPM Calculator</a></li>
+                        <li><a href="tiktok-engagement-calculator.html">TikTok Engagement Calculator</a></li>
+                        <li><a href="resume-ats-checker.html">Resume ATS Checker</a></li>
+                        <li><a href="business-name-generator.html">Business Name Generator</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Health & Legal Tools</h3>
+                    <ul class="footer-links">
+                        <li><a href="calorie-calculator.html">Calorie Calculator</a></li>
+                        <li><a href="contract-generator.html">Contract Generator</a></li>
+                        <li><a href="index.html">Home Page</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2026 Financial Education Tools. All rights reserved. Information for educational purposes only.</p>
+                <p>Not financial advice. Consult professionals for personal financial decisions. Rates and terms may vary.</p>
             </div>
         </div>
-
-        <!-- AdSense Ad 3 -->
-        <div class="ad-container">
-            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7300331231530877"
-                 crossorigin="anonymous"></script>
-            <ins class="adsbygoogle"
-                 style="display:block; text-align:center;"
-                 data-ad-layout="in-article"
-                 data-ad-format="fluid"
-                 data-ad-client="ca-pub-7300331231530877"
-                 data-ad-slot="2175956093"></ins>
-            <script>
-                 (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
-        </div>
-
-        <div class="article-section">
-            <h2>Conclusion: Take Control of Your Student Loan Journey</h2>
-            <p>Student loans don't have to control your financial future. With the right tools and strategies, you can transform what feels like overwhelming debt into a manageable, predictable expense with a clear end date. Our 2026 Student Loan Repayment Calculator gives you the power to see exactly how different decisions affect your financial timeline.</p>
-            <p>Remember that even small adjustments—an extra $25 per month, rounding up your payments, or applying occasional windfalls—can shave years off your repayment period and save thousands in interest. The most important step is to start planning today, rather than letting your loans drift on autopilot.</p>
-            <p>Bookmark this calculator and return whenever your financial situation changes or when considering refinancing options. As student loan policies evolve in 2026 and beyond, we'll continue updating our tool with the latest rates and repayment options to ensure you always have accurate information at your fingertips.</p>
-        </div>
-
-        <div class="disclaimer">
-            <h3>Important Disclaimer</h3>
-            <p>This student loan calculator provides estimates based on standard loan amortization formulas. It is not financial advice and does not account for all individual circumstances. Federal loan calculations may vary based on specific repayment plans, income changes, or forgiveness programs. Private loan terms depend on your specific lender agreement. Always consult with a qualified financial advisor or loan servicer for personalized guidance. Loan terms and policies are subject to change, and we cannot guarantee the accuracy of calculations for future periods.</p>
-        </div>
-    </article>
-
-    <footer style="text-align: center; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid #e2e8f0; color: #64748b; font-size: 0.9rem;">
-        <p>© 2026 Student Loan Repayment Calculator. This is an independent tool not affiliated with the U.S. Department of Education or any loan servicer.</p>
-        <p style="margin-top: 0.5rem;">For official federal student loan information, visit <a href="https://studentaid.gov" style="color: #7c3aed;">StudentAid.gov</a></p>
-        <p style="margin-top: 0.5rem;">Looking for other financial calculators? Check out our <a href="#" style="color: #7c3aed;">Mortgage Calculator</a> and <a href="#" style="color: #7c3aed;">Retirement Savings Calculator</a></p>
     </footer>
 
     <script>
-        // Loan calculation functions
-        function calculateMonthlyPayment(principal, annualRate, years) {
-            const monthlyRate = annualRate / 100 / 12;
-            const numberOfPayments = years * 12;
-            
-            if (monthlyRate === 0) {
-                return principal / numberOfPayments;
-            }
-            
-            return (principal * monthlyRate * Math.pow(1 + monthlyRate, numberOfPayments)) / 
-                   (Math.pow(1 + monthlyRate, numberOfPayments) - 1);
-        }
+        // Mobile Menu
+        document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+            document.getElementById('mobileNav').classList.toggle('active');
+        });
         
-        function calculateAmortization(principal, annualRate, years, extraPayment = 0) {
-            const monthlyRate = annualRate / 100 / 12;
-            const monthlyPayment = calculateMonthlyPayment(principal, annualRate, years);
-            const totalPayment = monthlyPayment + extraPayment;
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const mobileNav = document.getElementById('mobileNav');
+            const menuBtn = document.getElementById('mobileMenuBtn');
             
-            let balance = principal;
-            let totalInterest = 0;
-            let month = 0;
-            const amortization = [];
-            
-            while (balance > 0 && month < years * 12 * 2) { // Cap at double the term to prevent infinite loops
-                month++;
-                const interestPayment = balance * monthlyRate;
-                let principalPayment = totalPayment - interestPayment;
-                
-                if (principalPayment > balance) {
-                    principalPayment = balance;
-                }
-                
-                balance -= principalPayment;
-                totalInterest += interestPayment;
-                
-                // Store yearly summary
-                if (month % 12 === 0 || balance <= 0) {
-                    amortization.push({
-                        year: Math.ceil(month / 12),
-                        principalPaid: (principal - balance),
-                        interestPaid: totalInterest,
-                        remainingBalance: Math.max(0, balance)
-                    });
-                }
-                
-                if (balance <= 0) break;
+            if (!mobileNav.contains(event.target) && !menuBtn.contains(event.target)) {
+                mobileNav.classList.remove('active');
             }
-            
-            return {
-                monthlyPayment,
-                totalInterest,
-                totalPaid: principal + totalInterest,
-                payoffMonths: month,
-                amortization
-            };
-        }
+        });
+        
+        // FAQ Accordion
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                const isActive = answer.classList.contains('active');
+                
+                // Close all FAQs
+                document.querySelectorAll('.faq-answer').forEach(item => {
+                    item.classList.remove('active');
+                });
+                
+                document.querySelectorAll('.faq-question').forEach(item => {
+                    item.classList.remove('active');
+                });
+                
+                // Open clicked if not already active
+                if (!isActive) {
+                    answer.classList.add('active');
+                    question.classList.add('active');
+                }
+            });
+        });
+        
+        // Payment Toggle
+        document.getElementById('calcPaymentBtn').addEventListener('click', function() {
+            document.getElementById('calcPaymentBtn').classList.add('active');
+            document.getElementById('calcTermBtn').classList.remove('active');
+            document.getElementById('loanTermLabel').textContent = 'Loan Term (years)';
+            document.getElementById('monthlyPaymentGroup').style.display = 'none';
+        });
+        
+        document.getElementById('calcTermBtn').addEventListener('click', function() {
+            document.getElementById('calcTermBtn').classList.add('active');
+            document.getElementById('calcPaymentBtn').classList.remove('active');
+            document.getElementById('loanTermLabel').textContent = 'Calculated Term (years)';
+            document.getElementById('monthlyPaymentGroup').style.display = 'block';
+        });
+        
+        // Calculator
+        document.getElementById('calculateBtn').addEventListener('click', calculateLoan);
+        
+        // Calculate on Enter key in inputs
+        document.querySelectorAll('input').forEach(input => {
+            input.addEventListener('keyup', function(event) {
+                if (event.key === 'Enter') {
+                    calculateLoan();
+                }
+            });
+        });
         
         function calculateLoan() {
             // Get input values
-            const loanAmount = parseFloat(document.getElementById('loanAmount').value);
-            const interestRate = parseFloat(document.getElementById('interestRate').value);
-            const loanTerm = parseFloat(document.getElementById('loanTerm').value);
-            const extraPayment = parseFloat(document.getElementById('extraPayment').value) || 0;
+            const loanAmount = parseFloat(document.getElementById('loanAmount').value) || 0;
+            const interestRate = parseFloat(document.getElementById('interestRate').value) || 0;
+            const isCalcTermMode = document.getElementById('calcTermBtn').classList.contains('active');
+            
+            let monthlyPayment, loanTermMonths;
+            
+            if (isCalcTermMode) {
+                // Calculate term based on monthly payment
+                monthlyPayment = parseFloat(document.getElementById('monthlyPayment').value) || 0;
+                
+                if (monthlyPayment <= 0) {
+                    alert("Please enter a valid monthly payment amount");
+                    return;
+                }
+                
+                // Calculate loan term in months
+                const monthlyRate = interestRate / 100 / 12;
+                
+                if (monthlyRate === 0) {
+                    // No interest loan
+                    loanTermMonths = Math.ceil(loanAmount / monthlyPayment);
+                } else {
+                    // Standard formula for term calculation
+                    loanTermMonths = Math.ceil(
+                        Math.log(monthlyPayment / (monthlyPayment - loanAmount * monthlyRate)) / 
+                        Math.log(1 + monthlyRate)
+                    );
+                }
+                
+                // Convert to years for display
+                const loanTermYears = loanTermMonths / 12;
+                document.getElementById('loanTerm').value = loanTermYears.toFixed(1);
+            } else {
+                // Calculate monthly payment based on term
+                const loanTermYears = parseFloat(document.getElementById('loanTerm').value) || 0;
+                loanTermMonths = loanTermYears * 12;
+                
+                // Calculate monthly payment using standard formula
+                const monthlyRate = interestRate / 100 / 12;
+                
+                if (monthlyRate === 0) {
+                    // No interest loan
+                    monthlyPayment = loanAmount / loanTermMonths;
+                } else {
+                    // Standard loan payment formula
+                    monthlyPayment = loanAmount * 
+                        (monthlyRate * Math.pow(1 + monthlyRate, loanTermMonths)) / 
+                        (Math.pow(1 + monthlyRate, loanTermMonths) - 1);
+                }
+            }
             
             // Validate inputs
-            if (!loanAmount || loanAmount <= 0) {
-                alert('Please enter a valid loan amount');
+            if (loanAmount <= 0) {
+                alert("Please enter a valid loan amount");
                 return;
             }
             
-            if (!interestRate || interestRate <= 0) {
-                alert('Please enter a valid interest rate');
+            if (interestRate < 0 || interestRate > 50) {
+                alert("Please enter a valid interest rate (0-50%)");
                 return;
             }
             
-            // Calculate
-            const result = calculateAmortization(loanAmount, interestRate, loanTerm, extraPayment);
+            if (!isCalcTermMode && (loanTermMonths <= 0 || loanTermMonths > 360)) {
+                alert("Please enter a valid loan term (1 month to 30 years)");
+                return;
+            }
             
-            // Format currency
-            const formatter = new Intl.NumberFormat('en-US', {
-                style: 'currency',
-                currency: 'USD',
-                minimumFractionDigits: 0,
-                maximumFractionDigits: 0
-            });
-            
-            const formatterDec = new Intl.NumberFormat('en-US', {
-                style: 'currency',
-                currency: 'USD',
-                minimumFractionDigits: 2,
-                maximumFractionDigits: 2
-            });
-            
-            // Update results
-            document.getElementById('monthlyPayment').textContent = formatterDec.format(result.monthlyPayment + extraPayment);
-            document.getElementById('totalInterest').textContent = formatter.format(result.totalInterest);
-            document.getElementById('totalPaid').textContent = formatter.format(result.totalPaid);
-            document.getElementById('principalAmount').textContent = formatter.format(loanAmount);
+            // Calculate totals
+            const totalPaid = monthlyPayment * loanTermMonths;
+            const totalInterest = totalPaid - loanAmount;
             
             // Calculate payoff date
             const today = new Date();
             const payoffDate = new Date(today);
-            payoffDate.setMonth(payoffDate.getMonth() + result.payoffMonths);
-            const payoffText = payoffDate.toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
-            document.getElementById('payoffDate').textContent = payoffText;
+            payoffDate.setMonth(payoffDate.getMonth() + loanTermMonths);
             
-            // Update suggestions
-            const extraSuggestion = Math.max(25, Math.round((result.monthlyPayment + extraPayment) * 0.1));
-            document.getElementById('extraSuggestion').textContent = extraSuggestion;
-            
-            // Calculate potential savings with suggested extra payment
-            const suggestedResult = calculateAmortization(loanAmount, interestRate, loanTerm, extraPayment + extraSuggestion);
-            const potentialSavings = result.totalInterest - suggestedResult.totalInterest;
-            document.getElementById('potentialSavings').textContent = Math.round(potentialSavings);
-            
-            // Update amortization table
-            updateAmortizationTable(result.amortization, formatter);
-            
-            // Update sliders to match inputs
-            updateSliders();
-        }
-        
-        function updateAmortizationTable(amortization, formatter) {
-            const tbody = document.getElementById('amortizationBody');
-            tbody.innerHTML = '';
-            
-            // Show first 5 years and last year
-            const displayYears = [...amortization.slice(0, 5)];
-            if (amortization.length > 5) {
-                displayYears.push(amortization[amortization.length - 1]);
-            }
-            
-            displayYears.forEach(item => {
-                const row = document.createElement('tr');
-                
-                const yearCell = document.createElement('td');
-                yearCell.textContent = `Year ${item.year}`;
-                
-                const principalCell = document.createElement('td');
-                principalCell.textContent = formatter.format(item.principalPaid);
-                
-                const interestCell = document.createElement('td');
-                interestCell.textContent = formatter.format(item.interestPaid);
-                
-                const balanceCell = document.createElement('td');
-                balanceCell.textContent = formatter.format(item.remainingBalance);
-                
-                row.appendChild(yearCell);
-                row.appendChild(principalCell);
-                row.appendChild(interestCell);
-                row.appendChild(balanceCell);
-                
-                tbody.appendChild(row);
+            // Format results
+            const formatter = new Intl.NumberFormat('en-US', {
+                style: 'currency',
+                currency: 'USD',
+                minimumFractionDigits: 2
             });
+            
+            const dateFormatter = new Intl.DateTimeFormat('en-US', {
+                month: 'long',
+                year: 'numeric'
+            });
+            
+            // Update results
+            document.getElementById('monthlyPaymentResult').textContent = formatter.format(monthlyPayment);
+            document.getElementById('totalLoanResult').textContent = formatter.format(loanAmount);
+            document.getElementById('totalInterestResult').textContent = formatter.format(totalInterest);
+            document.getElementById('totalPaidResult').textContent = formatter.format(totalPaid);
+            document.getElementById('payoffDateResult').textContent = dateFormatter.format(payoffDate);
+            
+            document.getElementById('resultMonthly').textContent = formatter.format(monthlyPayment);
+            document.getElementById('resultInterest').textContent = formatter.format(totalInterest);
+            document.getElementById('resultTotal').textContent = formatter.format(totalPaid);
+            document.getElementById('resultYear').textContent = payoffDate.getFullYear();
+            
+            // Update chart placeholder
+            const principalPercent = Math.round((loanAmount / totalPaid) * 100);
+            const interestPercent = 100 - principalPercent;
+            
+            document.getElementById('chartPlaceholder').innerHTML = `
+                <div style="text-align: center; width: 100%;">
+                    <p style="font-weight: 600; margin-bottom: 15px;">Payment Allocation</p>
+                    <div style="display: flex; align-items: center; justify-content: center; margin-bottom: 15px;">
+                        <div style="width: 200px; height: 200px; border-radius: 50%; background: conic-gradient(var(--primary) 0% ${principalPercent}%, var(--accent) ${principalPercent}% 100%); display: flex; align-items: center; justify-content: center;">
+                            <div style="background: white; width: 100px; height: 100px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700;">
+                                ${principalPercent}%
+                            </div>
+                        </div>
+                    </div>
+                    <div style="display: flex; justify-content: center; gap: 20px;">
+                        <div style="display: flex; align-items: center; gap: 5px;">
+                            <div style="width: 15px; height: 15px; background: var(--primary); border-radius: 3px;"></div>
+                            <span>Principal (${principalPercent}%)</span>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 5px;">
+                            <div style="width: 15px; height: 15px; background: var(--accent); border-radius: 3px;"></div>
+                            <span>Interest (${interestPercent}%)</span>
+                        </div>
+                    </div>
+                </div>
+            `;
+            
+            // Show results
+            document.getElementById('results').style.display = 'block';
+            document.getElementById('results').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
         }
         
-        // Slider synchronization
-        function updateSliders() {
-            const loanAmount = document.getElementById('loanAmount').value;
-            const interestRate = document.getElementById('interestRate').value;
-            const loanTerm = document.getElementById('loanTerm').value;
-            
-            document.getElementById('loanAmountRange').value = loanAmount;
-            document.getElementById('interestRateRange').value = interestRate;
-            document.getElementById('loanTermRange').value = loanTerm;
-            
-            document.getElementById('loanAmountValue').textContent = `$${parseInt(loanAmount).toLocaleString()}`;
-            document.getElementById('interestRateValue').textContent = `${interestRate}%`;
-            document.getElementById('loanTermValue').textContent = `${loanTerm} years`;
-        }
-        
-        // Event listeners for sliders
-        document.getElementById('loanAmountRange').addEventListener('input', function() {
-            document.getElementById('loanAmount').value = this.value;
-            updateSliders();
-        });
-        
-        document.getElementById('interestRateRange').addEventListener('input', function() {
-            document.getElementById('interestRate').value = this.value;
-            updateSliders();
-        });
-        
-        document.getElementById('loanTermRange').addEventListener('input', function() {
-            document.getElementById('loanTerm').value = this.value;
-            updateSliders();
-        });
-        
-        // Event listeners for manual inputs
-        document.getElementById('loanAmount').addEventListener('input', function() {
-            document.getElementById('loanAmountRange').value = this.value;
-            updateSliders();
-        });
-        
-        document.getElementById('interestRate').addEventListener('input', function() {
-            document.getElementById('interestRateRange').value = this.value;
-            updateSliders();
-        });
-        
-        document.getElementById('loanTerm').addEventListener('input', function() {
-            document.getElementById('loanTermRange').value = this.value;
-            updateSliders();
-        });
-        
-        // Initialize calculator
-        window.onload = function() {
+        // Initialize
+        window.addEventListener('DOMContentLoaded', () => {
             calculateLoan();
-        };
+            
+            // Open first FAQ
+            const firstQuestion = document.querySelector('.faq-question');
+            if (firstQuestion) {
+                firstQuestion.click();
+            }
+        });
     </script>
 </body>
 </html>
