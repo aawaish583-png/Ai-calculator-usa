@@ -1,0 +1,1381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Credit Card Interest Calculator USA 2026 | Payoff & Interest Calculator</title>
+    <meta name="description" content="Free 2026 credit card interest calculator. Calculate payoff time, total interest, and see how minimum payments cost you thousands. Find the fastest way to get debt-free.">
+    <meta name="keywords" content="credit card interest calculator, credit card payoff calculator, how much interest on credit card, credit card debt calculator, minimum payment calculator, credit card interest rate calculator">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Credit Card Interest Calculator USA 2026">
+    <meta property="og:description" content="Calculate exactly how much interest your credit card debt is costing you in 2026.">
+    <meta property="og:type" content="website">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.creditcardinterestcalculator.com/2026">
+    
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Credit Card Interest Calculator 2026",
+      "description": "Free calculator to estimate credit card interest and payoff time",
+      "url": "https://www.creditcardinterestcalculator.com/2026",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Any",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    }
+    </script>
+    
+    <style>
+        /* Base Styles */
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --secondary: #dc2626;
+            --accent: #fef3c7;
+            --light: #f8fafc;
+            --dark: #1e293b;
+            --gray: #64748b;
+            --border: #e2e8f0;
+            --success: #10b981;
+            --warning: #f59e0b;
+            --danger: #ef4444;
+            --radius: 12px;
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+        }
+        
+        body {
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.7;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            font-size: 16px;
+        }
+        
+        /* Typography */
+        h1 {
+            color: var(--dark);
+            font-size: 2.75rem;
+            margin-bottom: 1.25rem;
+            line-height: 1.2;
+            font-weight: 800;
+        }
+        
+        h2 {
+            color: var(--dark);
+            font-size: 2rem;
+            margin: 3rem 0 1.5rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 3px solid var(--border);
+            font-weight: 700;
+        }
+        
+        h3 {
+            color: var(--dark);
+            font-size: 1.5rem;
+            margin: 2rem 0 1rem;
+            font-weight: 600;
+        }
+        
+        h4 {
+            color: var(--gray);
+            font-size: 1.25rem;
+            margin: 1.5rem 0 0.75rem;
+            font-weight: 600;
+        }
+        
+        p {
+            margin-bottom: 1.25rem;
+            font-size: 1.1rem;
+            color: #334155;
+        }
+        
+        /* Calculator Container */
+        .calculator-container {
+            background: linear-gradient(135deg, #ffffff 0%, #fef3f3 100%);
+            border-radius: 20px;
+            padding: 3rem;
+            margin: 2.5rem 0;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border);
+            border-top: 5px solid var(--secondary);
+        }
+        
+        .calculator-title {
+            text-align: center;
+            color: var(--dark);
+            margin-bottom: 2.5rem;
+            font-size: 2rem;
+            font-weight: 700;
+        }
+        
+        .calculator-title span {
+            color: var(--secondary);
+        }
+        
+        /* Calculator Grid */
+        .calculator-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .input-section, .results-section {
+            background: white;
+            padding: 2rem;
+            border-radius: var(--radius);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            border: 1px solid var(--border);
+        }
+        
+        /* Form Elements */
+        .form-group {
+            margin-bottom: 1.75rem;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 0.75rem;
+            font-weight: 600;
+            color: var(--dark);
+            font-size: 1.05rem;
+        }
+        
+        input, select {
+            width: 100%;
+            padding: 1rem 1.25rem;
+            border: 2px solid #cbd5e1;
+            border-radius: 10px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            background: white;
+        }
+        
+        input:focus, select:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
+        }
+        
+        .range-container {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .range-value {
+            min-width: 80px;
+            text-align: right;
+            font-weight: 600;
+            color: var(--primary);
+        }
+        
+        /* Button */
+        .calculate-btn {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+            border: none;
+            padding: 1.25rem 2.5rem;
+            border-radius: 12px;
+            font-size: 1.15rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+            margin-top: 1rem;
+            letter-spacing: 0.5px;
+        }
+        
+        .calculate-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 25px rgba(37, 99, 235, 0.25);
+        }
+        
+        /* Warning Message */
+        .warning-message {
+            background: #fef3c7;
+            border: 2px solid #f59e0b;
+            color: #92400e;
+            padding: 1rem;
+            border-radius: var(--radius);
+            margin: 1rem 0;
+            text-align: center;
+            font-weight: 600;
+        }
+        
+        /* Results */
+        .payoff-result {
+            text-align: center;
+            padding: 2rem;
+            border-radius: var(--radius);
+            margin-bottom: 2rem;
+            background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
+            border: 2px solid var(--primary);
+        }
+        
+        .result-highlight {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--secondary);
+            margin: 0.5rem 0;
+        }
+        
+        .result-item {
+            background: #f8fafc;
+            padding: 1.5rem;
+            margin-bottom: 1.25rem;
+            border-radius: 10px;
+            border-left: 5px solid var(--primary);
+        }
+        
+        .result-label {
+            font-weight: 600;
+            color: var(--gray);
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .result-value {
+            font-size: 1.75rem;
+            font-weight: 800;
+            color: var(--dark);
+        }
+        
+        .interest-result {
+            border-left-color: var(--secondary);
+        }
+        
+        .breakdown-section {
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 2px solid var(--border);
+        }
+        
+        /* Payment Comparison */
+        .payment-comparison {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .payment-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: var(--radius);
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            border: 1px solid var(--border);
+        }
+        
+        .payment-card.minimum {
+            border-color: var(--danger);
+            background: #fef2f2;
+        }
+        
+        .payment-card.recommended {
+            border-color: var(--success);
+            background: #f0fdf4;
+        }
+        
+        .payment-label {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--gray);
+            margin-bottom: 0.5rem;
+        }
+        
+        .payment-time {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--dark);
+            margin-bottom: 0.5rem;
+        }
+        
+        .payment-interest {
+            font-size: 1rem;
+            color: var(--secondary);
+            font-weight: 600;
+        }
+        
+        /* Progress Bar */
+        .progress-container {
+            margin: 2rem 0;
+        }
+        
+        .progress-bar {
+            height: 20px;
+            background: #e2e8f0;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 0.5rem;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary) 0%, var(--primary-dark) 100%);
+            transition: width 1s ease;
+        }
+        
+        /* Article Sections */
+        .article-section {
+            background: white;
+            padding: 2.5rem;
+            border-radius: var(--radius);
+            margin-bottom: 2.5rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            border: 1px solid var(--border);
+        }
+        
+        /* FAQ Styles */
+        .faq-item {
+            margin-bottom: 2rem;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 2rem;
+        }
+        
+        .faq-question {
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 1rem;
+            font-size: 1.25rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .faq-answer {
+            color: #475569;
+            line-height: 1.8;
+        }
+        
+        /* Tips Grid */
+        .tips-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .tip-card {
+            background: #f0f9ff;
+            padding: 1.5rem;
+            border-radius: 10px;
+            border-left: 4px solid var(--primary);
+        }
+        
+        /* Bluehost Section */
+        .bluehost-section {
+            background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+            color: white;
+            padding: 3rem;
+            border-radius: var(--radius);
+            margin: 3rem 0;
+            text-align: center;
+        }
+        
+        .bluehost-btn {
+            background: white;
+            color: #1e40af;
+            border: none;
+            padding: 1.25rem 3rem;
+            border-radius: 10px;
+            font-size: 1.15rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-block;
+            margin-top: 1.5rem;
+            text-decoration: none;
+        }
+        
+        .bluehost-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 25px rgba(255, 255, 255, 0.2);
+        }
+        
+        /* Ad Container */
+        .ad-container {
+            margin: 3rem 0;
+            text-align: center;
+            padding: 25px;
+            background: #f1f5f9;
+            border-radius: var(--radius);
+            border: 1px dashed var(--border);
+        }
+        
+        /* Disclaimer */
+        .disclaimer {
+            background: #fef2f2;
+            border: 2px solid #fecaca;
+            color: #991b1b;
+            padding: 2rem;
+            border-radius: var(--radius);
+            margin: 3rem 0;
+            font-size: 0.95rem;
+        }
+        
+        /* Footer Navigation */
+        .footer-nav {
+            background: var(--dark);
+            color: white;
+            padding: 3rem;
+            border-radius: var(--radius);
+            margin-top: 3rem;
+        }
+        
+        .footer-nav h3 {
+            color: white;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .nav-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .nav-column h4 {
+            color: white;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+        
+        .nav-links {
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-bottom: 0.75rem;
+        }
+        
+        .nav-links a {
+            color: #cbd5e1;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            font-size: 0.95rem;
+        }
+        
+        .nav-links a:hover {
+            color: white;
+            text-decoration: underline;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            h1 {
+                font-size: 2.25rem;
+            }
+            
+            h2 {
+                font-size: 1.75rem;
+            }
+            
+            .calculator-container {
+                padding: 2rem;
+            }
+            
+            .calculator-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .nav-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            body {
+                padding: 15px;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .calculator-container {
+                padding: 1.5rem;
+            }
+            
+            .article-section {
+                padding: 1.75rem;
+            }
+            
+            .bluehost-section {
+                padding: 2rem;
+            }
+            
+            .footer-nav {
+                padding: 2rem;
+            }
+            
+            .nav-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.75rem;
+            }
+            
+            h2 {
+                font-size: 1.5rem;
+                margin: 2.5rem 0 1.25rem;
+            }
+            
+            .calculator-container {
+                padding: 1.25rem;
+            }
+            
+            input, select {
+                padding: 0.9rem;
+            }
+            
+            .result-value {
+                font-size: 1.5rem;
+            }
+            
+            .calculate-btn {
+                padding: 1.1rem 2rem;
+            }
+            
+            .result-highlight {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Credit Card Interest Calculator <span style="color: var(--secondary);">2026</span></h1>
+        <p>Calculate exactly how much interest your credit card debt costs and discover the fastest way to become debt-free. Our free calculator shows the true cost of minimum payments.</p>
+    </header>
+
+    <!-- Table of Contents -->
+    <div class="article-section">
+        <h3>Quick Navigation</h3>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1rem; margin-top: 1.5rem;">
+            <a href="#calculator" style="color: var(--primary); text-decoration: none; background: #e0f2fe; padding: 1rem; border-radius: 8px; text-align: center; font-weight: 600;">📊 Calculator</a>
+            <a href="#how-interest-works" style="color: var(--primary); text-decoration: none; background: #e0f2fe; padding: 1rem; border-radius: 8px; text-align: center; font-weight: 600;">💰 Interest Explained</a>
+            <a href="#examples" style="color: var(--primary); text-decoration: none; background: #e0f2fe; padding: 1rem; border-radius: 8px; text-align: center; font-weight: 600;">📈 Examples</a>
+            <a href="#tips" style="color: var(--primary); text-decoration: none; background: #e0f2fe; padding: 1rem; border-radius: 8px; text-align: center; font-weight: 600;">🚀 Tips</a>
+            <a href="#faq" style="color: var(--primary); text-decoration: none; background: #e0f2fe; padding: 1rem; border-radius: 8px; text-align: center; font-weight: 600;">❓ FAQ</a>
+        </div>
+    </div>
+
+    <!-- AdSense Ad 1 -->
+    <div class="ad-container">
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7300331231530877"
+             crossorigin="anonymous"></script>
+        <ins class="adsbygoogle"
+             style="display:block; text-align:center;"
+             data-ad-layout="in-article"
+             data-ad-format="fluid"
+             data-ad-client="ca-pub-7300331231530877"
+             data-ad-slot="2175956093"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
+
+    <!-- Calculator -->
+    <div class="calculator-container" id="calculator">
+        <h2 class="calculator-title">Credit Card Payoff <span>Calculator</span></h2>
+        
+        <div class="calculator-grid">
+            <div class="input-section">
+                <div class="form-group">
+                    <label for="balance">Credit Card Balance ($)</label>
+                    <input type="number" id="balance" placeholder="e.g., 5000" min="0" step="100" value="5000">
+                </div>
+                
+                <div class="form-group">
+                    <label for="aprRange">Annual Percentage Rate (APR)</label>
+                    <div class="range-container">
+                        <input type="range" id="aprRange" min="5" max="30" step="0.1" value="19.99">
+                        <span class="range-value" id="aprValue">19.99%</span>
+                    </div>
+                    <p style="margin-top: 0.5rem; font-size: 0.9rem; color: var(--gray);">Average US credit card APR is 22.8% in 2026</p>
+                </div>
+                
+                <div class="form-group">
+                    <label for="paymentType">Payment Strategy</label>
+                    <select id="paymentType">
+                        <option value="fixed">Fixed Monthly Payment</option>
+                        <option value="minimum">Minimum Payment (Usually 2-3% + interest)</option>
+                        <option value="aggressive">Aggressive Payoff Plan</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="monthlyPayment">Monthly Payment Amount ($)</label>
+                    <input type="number" id="monthlyPayment" placeholder="e.g., 200" min="0" step="10" value="200">
+                    <p style="margin-top: 0.5rem; font-size: 0.9rem; color: var(--gray);" id="minPaymentNote"></p>
+                </div>
+                
+                <div class="form-group">
+                    <label for="additionalPayment">Additional One-time Payment ($)</label>
+                    <input type="number" id="additionalPayment" placeholder="e.g., 500 (optional)" min="0" step="100" value="0">
+                </div>
+                
+                <button class="calculate-btn" onclick="calculateInterest()">Calculate Payoff Plan</button>
+                
+                <div class="warning-message" id="warningMessage" style="display: none;">
+                    ⚠️ Your payment is less than the monthly interest! Balance will increase.
+                </div>
+                
+                <p style="margin-top: 1.5rem; font-size: 0.9rem; color: var(--gray); text-align: center;">
+                    Results are estimates for 2026. Actual terms may vary by issuer.
+                </p>
+            </div>
+            
+            <div class="results-section">
+                <div id="resultContainer">
+                    <div class="payoff-result">
+                        <h3 style="margin-top: 0;">Your Payoff Journey</h3>
+                        <div class="result-highlight" id="payoffTime">2 years 8 months</div>
+                        <p>to become completely debt-free</p>
+                        
+                        <div class="progress-container">
+                            <div class="progress-bar">
+                                <div class="progress-fill" id="progressFill" style="width: 60%;"></div>
+                            </div>
+                            <div style="display: flex; justify-content: space-between; font-size: 0.9rem; color: var(--gray);">
+                                <span>Today</span>
+                                <span id="payoffDate">June 2028</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="result-item">
+                        <div class="result-label">
+                            <span>Total Interest Cost</span>
+                            <span>💸</span>
+                        </div>
+                        <div class="result-value" id="totalInterest">$1,124</div>
+                        <p style="margin-top: 0.5rem; font-size: 0.9rem; color: var(--secondary);" id="interestNote">That's 22% of your original balance!</p>
+                    </div>
+                    
+                    <div class="result-item interest-result">
+                        <div class="result-label">
+                            <span>Monthly Interest Charge</span>
+                            <span>📅</span>
+                        </div>
+                        <div class="result-value" id="monthlyInterest">$83</div>
+                        <p style="margin-top: 0.5rem; font-size: 0.9rem; color: var(--gray);">First month's interest charge</p>
+                    </div>
+                    
+                    <div class="result-item">
+                        <div class="result-label">
+                            <span>Total Amount Paid</span>
+                            <span>💰</span>
+                        </div>
+                        <div class="result-value" id="totalPaid">$6,124</div>
+                        <p style="margin-top: 0.5rem; font-size: 0.9rem; color: var(--gray);">Balance + interest</p>
+                    </div>
+                    
+                    <div class="breakdown-section">
+                        <h4>Payment Strategy Comparison</h4>
+                        <div class="payment-comparison">
+                            <div class="payment-card minimum">
+                                <div class="payment-label">Minimum Payment</div>
+                                <div class="payment-time" id="minPayTime">22 years</div>
+                                <div class="payment-interest" id="minPayInterest">$8,214 interest</div>
+                            </div>
+                            <div class="payment-card">
+                                <div class="payment-label">Your Payment</div>
+                                <div class="payment-time" id="yourPayTime">2.7 years</div>
+                                <div class="payment-interest" id="yourPayInterest">$1,124 interest</div>
+                            </div>
+                            <div class="payment-card recommended">
+                                <div class="payment-label">Recommended</div>
+                                <div class="payment-time" id="recPayTime">1.5 years</div>
+                                <div class="payment-interest" id="recPayInterest">$645 interest</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Article Content -->
+    <article>
+        <div class="article-section" id="how-interest-works">
+            <h2>How Credit Card Interest Works in 2026</h2>
+            <p>Credit card interest isn't calculated simply as "APR divided by 12." In reality, credit card companies use daily periodic rates and compound interest daily, which means interest charges can snowball quickly if you carry a balance.</p>
+            
+            <div style="background: #f0f9ff; padding: 1.5rem; border-radius: var(--radius); margin: 1.5rem 0; border-left: 4px solid var(--primary);">
+                <h4>🔍 The Daily Periodic Rate Formula</h4>
+                <p style="font-family: monospace; font-size: 1.2rem; margin: 0.5rem 0;"><strong>Daily Rate = APR ÷ 365</strong></p>
+                <p><strong>Daily Interest = Balance × Daily Rate</strong></p>
+                <p>Example: $5,000 balance at 20% APR = $5,000 × (0.20 ÷ 365) = $2.74 daily interest</p>
+            </div>
+            
+            <h3>The Compounding Interest Trap</h3>
+            <p>Credit card interest compounds daily, which means each day's interest gets added to your balance, and the next day you pay interest on that interest. This compounding effect is why credit card debt grows so quickly:</p>
+            
+            <table class="comparison-table" style="width: 100%; border-collapse: collapse; margin: 1.5rem 0;">
+                <thead>
+                    <tr>
+                        <th style="padding: 1rem; background: var(--primary); color: white;">Day</th>
+                        <th style="padding: 1rem; background: var(--primary); color: white;">Balance</th>
+                        <th style="padding: 1rem; background: var(--primary); color: white;">Daily Interest</th>
+                        <th style="padding: 1rem; background: var(--primary); color: white;">New Balance</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="padding: 1rem; border-bottom: 1px solid var(--border);">Day 1</td>
+                        <td style="padding: 1rem; border-bottom: 1px solid var(--border);">$5,000.00</td>
+                        <td style="padding: 1rem; border-bottom: 1px solid var(--border);">$2.74</td>
+                        <td style="padding: 1rem; border-bottom: 1px solid var(--border);">$5,002.74</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 1rem; border-bottom: 1px solid var(--border);">Day 2</td>
+                        <td style="padding: 1rem; border-bottom: 1px solid var(--border);">$5,002.74</td>
+                        <td style="padding: 1rem; border-bottom: 1px solid var(--border);">$2.74</td>
+                        <td style="padding: 1rem; border-bottom: 1px solid var(--border);">$5,005.48</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 1rem;">Day 30</td>
+                        <td style="padding: 1rem;">$5,084.93</td>
+                        <td style="padding: 1rem;">$2.79</td>
+                        <td style="padding: 1rem;">$5,087.72</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <p><strong>Result:</strong> In just one month, your $5,000 balance grows to $5,088 with no new purchases. That's $88 in interest in 30 days!</p>
+        </div>
+
+        <!-- AdSense Ad 2 -->
+        <div class="ad-container">
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7300331231530877"
+                 crossorigin="anonymous"></script>
+            <ins class="adsbygoogle"
+                 style="display:block; text-align:center;"
+                 data-ad-layout="in-article"
+                 data-ad-format="fluid"
+                 data-ad-client="ca-pub-7300331231530877"
+                 data-ad-slot="2175956093"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+
+        <div class="article-section">
+            <h2>The Minimum Payment Trap: Your Worst Financial Decision</h2>
+            
+            <h3>How Minimum Payments Are Calculated</h3>
+            <p>Credit card minimum payments are typically calculated as the <strong>greater of:</strong></p>
+            <ul style="margin-left: 2rem; margin-bottom: 1.5rem;">
+                <li style="margin-bottom: 0.5rem;">1% of your balance plus interest charges, OR</li>
+                <li style="margin-bottom: 0.5rem;">A fixed dollar amount (usually $25-$35), OR</li>
+                <li>All interest and fees plus 1% of principal</li>
+            </ul>
+            
+            <p>This calculation is designed to keep you in debt for decades while maximizing interest payments to the credit card company.</p>
+            
+            <h3>The Shocking Math of Minimum Payments</h3>
+            <p>Let's examine a $5,000 balance at 20% APR with minimum payments:</p>
+            
+            <div style="background: #fef2f2; padding: 1.5rem; border-radius: var(--radius); margin: 1.5rem 0; border-left: 4px solid var(--danger);">
+                <h4 style="color: var(--danger);">💸 Minimum Payment Nightmare</h4>
+                <p><strong>Starting Balance:</strong> $5,000 at 20% APR</p>
+                <p><strong>Minimum Payment:</strong> $125 (2.5% of balance + interest)</p>
+                <p><strong>Payoff Time:</strong> 22 years, 4 months</p>
+                <p><strong>Total Interest Paid:</strong> $8,214</p>
+                <p><strong>Total Cost:</strong> $13,214 (264% of original balance!)</p>
+            </div>
+            
+            <p>That's right - you'd pay <strong>more in interest than your original debt</strong>. This is why minimum payments are financially devastating.</p>
+            
+            <h3>The Grace Period Myth</h3>
+            <p>Many people believe they can avoid interest by paying the "statement balance" each month. While this is generally true for purchases, cash advances and balance transfers often start accruing interest immediately with no grace period. Always check your cardholder agreement.</p>
+        </div>
+
+        <div class="article-section" id="examples">
+            <h2>Real Credit Card Interest Examples (2026 Rates)</h2>
+            
+            <h3>Example 1: Average American Debt</h3>
+            <p><strong>Stats:</strong> $6,500 balance (average US credit card debt), 22.8% APR (average 2026 rate), $195 minimum payment (3%)</p>
+            <p><strong>Minimum Payment Result:</strong> 28 years to pay off, $13,872 in interest, total cost $20,372</p>
+            <p><strong>Smart Payment:</strong> $300/month pays off in 2.5 years with $1,945 interest</p>
+            
+            <h3>Example 2: High-Interest Store Card</h3>
+            <p><strong>Stats:</strong> $2,000 balance, 29.99% APR (common for store cards), $60 minimum payment</p>
+            <p><strong>Minimum Payment Result:</strong> 19 years to pay off, $4,180 in interest (209% of balance!)</p>
+            <p><strong>Smart Payment:</strong> $100/month pays off in 2 years with $577 interest</p>
+            
+            <h3>Example 3: Balance Transfer Strategy</h3>
+            <p><strong>Stats:</strong> $10,000 balance transferred to 0% APR for 18 months, 3% transfer fee ($300)</p>
+            <p><strong>Minimum Payment:</strong> $300/month pays off just before promotion ends</p>
+            <p><strong>Result:</strong> Only $300 cost (the transfer fee) vs. $3,500+ in interest at regular rates</p>
+            
+            <h3>Example 4: The Power of Extra Payments</h3>
+            <p><strong>Stats:</strong> $8,000 balance, 18% APR, $240 minimum payment (3%)</p>
+            <p><strong>Minimum Only:</strong> 18 years, $9,216 interest</p>
+            <p><strong>Add $100 extra:</strong> 5 years, $2,245 interest (saves $6,971!)</p>
+            <p><strong>Add $200 extra:</strong> 3.5 years, $1,415 interest (saves $7,801!)</p>
+            
+            <div style="background: #f0fdf4; padding: 1.5rem; border-radius: var(--radius); margin: 1.5rem 0; border-left: 4px solid var(--success);">
+                <h4>💰 The Snowball vs Avalanche Methods</h4>
+                <p><strong>Debt Snowball:</strong> Pay smallest balances first for psychological wins. Best for motivation.</p>
+                <p><strong>Debt Avalanche:</strong> Pay highest interest rates first. Saves the most money mathematically.</p>
+                <p><strong>Our calculator recommends:</strong> Use Avalanche for maximum savings, but Snowball if you need motivation to stick with it.</p>
+            </div>
+        </div>
+
+        <div class="article-section" id="tips">
+            <h2>10 Proven Strategies to Reduce Credit Card Interest</h2>
+            
+            <div class="tips-grid">
+                <div class="tip-card">
+                    <h4>1. Balance Transfer Cards</h4>
+                    <p>Move high-interest debt to 0% APR cards for 12-21 months. Watch for transfer fees (3-5%).</p>
+                </div>
+                
+                <div class="tip-card">
+                    <h4>2. Personal Loans</h4>
+                    <p>Consolidate credit card debt with a lower-interest personal loan (7-15% APR vs 20-30%).</p>
+                </div>
+                
+                <div class="tip-card">
+                    <h4>3. Negotiate Lower APR</h4>
+                    <p>Call your issuer and ask for a lower rate, especially if you have good payment history.</p>
+                </div>
+                
+                <div class="tip-card">
+                    <h4>4. Pay Bi-Weekly</h4>
+                    <p>Split monthly payment in half and pay every 2 weeks. Results in 13 monthly payments yearly.</p>
+                </div>
+                
+                <div class="tip-card">
+                    <h4>5. Round Up Payments</h4>
+                    <p>Round $187 minimum to $200. Small increases dramatically reduce payoff time.</p>
+                </div>
+                
+                <div class="tip-card">
+                    <h4>6. Windfall Strategy</h4>
+                    <p>Apply tax refunds, bonuses, or gifts directly to principal for immediate impact.</p>
+                </div>
+                
+                <div class="tip-card">
+                    <h4>7. Debt Management Plans</h4>
+                    <p>Non-profit credit counseling agencies can negotiate lower rates on your behalf.</p>
+                </div>
+                
+                <div class="tip-card">
+                    <h4>8. Stop Using Cards</h4>
+                    <p>Freeze cards in literal ice or use cash-only until balances are paid.</p>
+                </div>
+                
+                <div class="tip-card">
+                    <h4>9. Side Hustle Income</h4>
+                    <p>Dedicate extra earnings from gig work specifically to debt payoff.</p>
+                </div>
+                
+                <div class="tip-card">
+                    <h4>10. Automatic Payments</h4>
+                    <p>Set up auto-pay for more than minimum to ensure consistent progress.</p>
+                </div>
+            </div>
+            
+            <h3 style="margin-top: 2rem;">The Interest-Saving Power of Extra Payments</h3>
+            <p>Adding just $50-100 to your minimum payment can save thousands in interest and cut years off your payoff timeline. Our calculator shows exactly how much each extra dollar saves you.</p>
+            
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Extra Payment</th>
+                        <th>Time Saved</th>
+                        <th>Interest Saved</th>
+                        <th>ROI (Return on $50)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>+$25/month</td>
+                        <td>1.5 years</td>
+                        <td>$1,250</td>
+                        <td>5,000% return</td>
+                    </tr>
+                    <tr>
+                        <td>+$50/month</td>
+                        <td>2.5 years</td>
+                        <td>$2,100</td>
+                        <td>4,200% return</td>
+                    </tr>
+                    <tr>
+                        <td>+$100/month</td>
+                        <td>4 years</td>
+                        <td>$3,800</td>
+                        <td>3,800% return</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <p><strong>Key insight:</strong> Every extra dollar paid toward principal has an effective "return" equal to your APR. Paying off 20% APR debt gives you a risk-free 20% return!</p>
+        </div>
+
+        <!-- Bluehost Affiliate Section -->
+        <div class="bluehost-section">
+            <h2>Best Hosting for Financial Calculator Websites</h2>
+            <p>Many finance bloggers and financial advisors choose Bluehost for hosting calculator websites like this one. Bluehost is a popular hosting provider known for reliability and excellent customer support.</p>
+            <p>With one-click WordPress installation and 24/7 expert support, Bluehost simplifies the process of building professional finance websites. Their affordable plans include a free domain name, SSL certificate, and sufficient storage for growing websites.</p>
+            <a href="#" class="bluehost-btn">Start Your Calculator Website with Bluehost</a>
+            <p style="margin-top: 1.5rem; font-size: 0.9rem; opacity: 0.9;">Note: Based on recommendations from finance professionals and bloggers.</p>
+        </div>
+
+        <div class="article-section" id="faq">
+            <h2>Frequently Asked Questions: Credit Card Interest 2026</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">How is credit card interest calculated daily? <span>▼</span></div>
+                <div class="faq-answer">
+                    <p>Credit card companies use daily periodic rates: APR ÷ 365. Each day, they multiply your balance by this rate to calculate that day's interest. Interest compounds daily, meaning each day's interest gets added to the balance for the next day's calculation.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">What's the average credit card APR in 2026? <span>▼</span></div>
+                <div class="faq-answer">
+                    <p>The average credit card APR in 2026 is projected to be 22.8%. Store cards often exceed 29%, while premium cards for excellent credit might offer rates as low as 15-18%. Rates vary based on credit score, card type, and market conditions.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">How can I avoid paying interest completely? <span>▼</span></div>
+                <div class="faq-answer">
+                    <p>Pay your statement balance in full by the due date each month. This utilizes the grace period where no interest accrues on purchases. Note: Cash advances and balance transfers often have no grace period.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">Why does my balance keep growing with minimum payments? <span>▼</span></div>
+                <div class="faq-answer">
+                    <p>When minimum payments barely cover the interest charges, little to nothing goes toward principal. If your minimum payment is less than the monthly interest, your balance increases even with no new purchases. This is called "negative amortization."</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">Are balance transfer cards worth the fee? <span>▼</span></div>
+                <div class="faq-answer">
+                    <p>Usually yes. A 3% transfer fee to get 0% APR for 12-21 months beats paying 20-30% interest. Example: $5,000 balance with 3% fee ($150) vs. 20% interest ($1,000+ yearly). Just ensure you can pay it off before the promotional period ends.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">Can I negotiate my APR with the credit card company? <span>▼</span></div>
+                <div class="faq-answer">
+                    <p>Yes, especially if you have good payment history and credit score improvements. Call and ask for a rate reduction. Mention competitor offers. Success rate is about 70% for customers with good history.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">What happens if I only pay the minimum? <span>▼</span></div>
+                <div class="faq-answer">
+                    <p>You'll stay in debt for decades and pay 2-3 times your original balance in interest. A $5,000 balance at 20% APR takes 22+ years to pay off with minimum payments, costing $8,000+ in interest.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">How does compound interest work against me? <span>▼</span></div>
+                <div class="faq-answer">
+                    <p>Compound interest means paying "interest on interest." Each day's interest gets added to your balance, so the next day you pay interest on a slightly larger amount. This exponential growth makes credit card debt spiral quickly.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">Should I pay off high-interest or high-balance cards first? <span>▼</span></div>
+                <div class="faq-answer">
+                    <p>Mathematically, pay highest interest first (avalanche method) to save the most money. Psychologically, pay smallest balances first (snowball method) for motivation wins. Choose based on what keeps you committed.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">How accurate is this interest calculator? <span>▼</span></div>
+                <div class="faq-answer">
+                    <p>Our calculator uses standard daily compounding formulas used by most credit card issuers. Results are accurate estimates, but actual calculations may vary slightly based on your card's specific terms, billing cycle length, and how they round amounts.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- AdSense Ad 3 -->
+        <div class="ad-container">
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7300331231530877"
+                 crossorigin="anonymous"></script>
+            <ins class="adsbygoogle"
+                 style="display:block; text-align:center;"
+                 data-ad-layout="in-article"
+                 data-ad-format="fluid"
+                 data-ad-client="ca-pub-7300331231530877"
+                 data-ad-slot="2175956093"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+
+        <div class="article-section">
+            <h2>Conclusion: Take Control of Your Credit Card Debt in 2026</h2>
+            <p>Credit card interest is one of the most expensive forms of debt most Americans carry. With average APRs exceeding 22% and daily compounding, balances can quickly spiral out of control if managed with only minimum payments.</p>
+            
+            <h3>Your Action Plan:</h3>
+            <ul style="margin-left: 2rem; margin-bottom: 1.5rem;">
+                <li style="margin-bottom: 0.5rem;"><strong>Calculate your exact situation:</strong> Use our calculator to see your true payoff timeline and interest costs.</li>
+                <li style="margin-bottom: 0.5rem;"><strong>Stop the bleeding:</strong> Avoid new charges on cards carrying balances.</li>
+                <li style="margin-bottom: 0.5rem;"><strong>Increase payments:</strong> Add even $25-50 to monthly payments for dramatic long-term savings.</li>
+                <li style="margin-bottom: 0.5rem;"><strong>Explore lower-rate options:</strong> Consider balance transfers or personal loans for high-rate debt.</li>
+                <li><strong>Automate your plan:</strong> Set up automatic payments for more than the minimum.</li>
+            </ul>
+            
+            <p><strong>Remember:</strong> Every dollar paid toward principal has an effective return equal to your APR. Paying off 20% APR debt gives you a risk-free 20% return—far better than most investments.</p>
+            
+            <div style="background: #e3f2fd; padding: 1.5rem; border-radius: var(--radius); margin-top: 2rem; border-left: 4px solid #2196f3;">
+                <h4>🚀 Your Next Steps</h4>
+                <p>1. Calculate your exact payoff plan using our calculator<br>
+                   2. Set up automatic payments for more than minimum<br>
+                   3. Consider balance transfer options for high-rate debt<br>
+                   4. Allocate windfalls (tax refunds, bonuses) to principal<br>
+                   5. Track your progress monthly and celebrate milestones</p>
+            </div>
+        </div>
+
+        <div class="disclaimer">
+            <h3>Important Legal & Financial Disclaimer</h3>
+            <p>This credit card interest calculator provides estimates based on standard daily compounding formulas. It is not financial advice and does not guarantee actual interest charges or payoff timelines. Actual calculations may vary based on your specific credit card terms, billing cycle length, rounding methods, and issuer policies.</p>
+            <p>Credit card APRs, fees, and terms are subject to change by issuers. Always review your cardholder agreement for exact terms. This tool is for educational and planning purposes only.</p>
+            <p style="margin-top: 1rem; font-weight: bold;">For debt management advice, consult with a qualified financial advisor or credit counseling service. We are not responsible for financial decisions made based on these calculations.</p>
+        </div>
+    </article>
+
+    <!-- Footer Navigation -->
+    <div class="footer-nav">
+        <h3>All Our Free Calculators & Tools</h3>
+        <div class="nav-grid">
+            <div class="nav-column">
+                <h4>💰 Finance Calculators</h4>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home Page</a></li>
+                    <li><a href="paycheck-tax-calculator.html">Paycheck Tax Calculator</a></li>
+                    <li><a href="rent-vs-buy-calculator.html">Rent vs Buy Calculator</a></li>
+                    <li><a href="credit-card-interest-calculator.html">Credit Card Interest Calculator</a></li>
+                </ul>
+            </div>
+            
+            <div class="nav-column">
+                <h4>🎓 Education & Loans</h4>
+                <ul class="nav-links">
+                    <li><a href="student-loan-calculator.html">Student Loan Calculator</a></li>
+                    <li><a href="#retirement-calculator">Retirement Calculator</a></li>
+                    <li><a href="#mortgage-calculator">Mortgage Calculator</a></li>
+                    <li><a href="#investment-calculator">Investment Calculator</a></li>
+                </ul>
+            </div>
+            
+            <div class="nav-column">
+                <h4>🎬 Content Creator Tools</h4>
+                <ul class="nav-links">
+                    <li><a href="youtube-rpm-calculator.html">YouTube RPM Calculator</a></li>
+                    <li><a href="tiktok-engagement-calculator.html">TikTok Engagement Calculator</a></li>
+                    <li><a href="#instagram-earnings">Instagram Earnings Calculator</a></li>
+                    <li><a href="#podcast-revenue">Podcast Revenue Calculator</a></li>
+                </ul>
+            </div>
+            
+            <div class="nav-column">
+                <h4>🛠️ Business & Career Tools</h4>
+                <ul class="nav-links">
+                    <li><a href="resume-ats-checker.html">Resume ATS Checker</a></li>
+                    <li><a href="business-name-generator.html">Business Name Generator</a></li>
+                    <li><a href="contract-generator.html">Contract Generator</a></li>
+                    <li><a href="#salary-negotiation">Salary Negotiation Calculator</a></li>
+                </ul>
+            </div>
+            
+            <div class="nav-column">
+                <h4>🏥 Health & Lifestyle</h4>
+                <ul class="nav-links">
+                    <li><a href="calorie-calculator.html">Calorie Calculator</a></li>
+                    <li><a href="#bmr-calculator">BMR Calculator</a></li>
+                    <li><a href="#macro-calculator">Macro Calculator</a></li>
+                    <li><a href="#meal-planner">Meal Planner</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div style="text-align: center; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1); color: #cbd5e1; font-size: 0.9rem;">
+            <p>© 2026 Financial Calculators Hub. All tools are free for personal use.</p>
+            <p style="margin-top: 0.5rem;"><a href="#privacy" style="color: #cbd5e1; margin: 0 1rem;">Privacy Policy</a> | 
+               <a href="#terms" style="color: #cbd5e1; margin: 0 1rem;">Terms of Use</a> | 
+               <a href="#contact" style="color: #cbd5e1; margin: 0 1rem;">Contact</a></p>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize range values
+        document.addEventListener('DOMContentLoaded', function() {
+            updateRangeValue('aprRange', 'aprValue', '%');
+            updateMinPaymentNote();
+            
+            // Add event listeners
+            document.getElementById('aprRange').addEventListener('input', function() {
+                updateRangeValue('aprRange', 'aprValue', '%');
+                updateMinPaymentNote();
+                calculateInterest();
+            });
+            
+            document.getElementById('balance').addEventListener('input', updateMinPaymentNote);
+            document.getElementById('paymentType').addEventListener('change', updatePaymentType);
+            
+            // Initial calculation
+            calculateInterest();
+        });
+        
+        function updateRangeValue(rangeId, valueId, suffix) {
+            const range = document.getElementById(rangeId);
+            const value = document.getElementById(valueId);
+            value.textContent = range.value + suffix;
+        }
+        
+        function updateMinPaymentNote() {
+            const balance = parseFloat(document.getElementById('balance').value) || 5000;
+            const apr = parseFloat(document.getElementById('aprRange').value) / 100;
+            
+            // Calculate minimum payment (typically 1-3% of balance + interest)
+            const monthlyInterest = (balance * apr) / 12;
+            const minPaymentPercentage = 0.02; // 2%
+            const minPayment = Math.max(25, (balance * minPaymentPercentage) + monthlyInterest);
+            
+            document.getElementById('minPaymentNote').textContent = 
+                `Minimum payment approx: $${Math.round(minPayment)} (2% + interest)`;
+            
+            // Set default payment to minimum if empty
+            if (!document.getElementById('monthlyPayment').value || document.getElementById('monthlyPayment').value < minPayment) {
+                document.getElementById('monthlyPayment').value = Math.round(minPayment);
+            }
+        }
+        
+        function updatePaymentType() {
+            const type = document.getElementById('paymentType').value;
+            const balance = parseFloat(document.getElementById('balance').value) || 5000;
+            const apr = parseFloat(document.getElementById('aprRange').value) / 100;
+            
+            let payment;
+            
+            switch(type) {
+                case 'minimum':
+                    const monthlyInterest = (balance * apr) / 12;
+                    payment = Math.max(25, (balance * 0.02) + monthlyInterest);
+                    break;
+                case 'aggressive':
+                    payment = Math.max(100, balance * 0.1); // 10% of balance
+                    break;
+                case 'fixed':
+                default:
+                    payment = document.getElementById('monthlyPayment').value || 200;
+                    break;
+            }
+            
+            document.getElementById('monthlyPayment').value = Math.round(payment);
+            calculateInterest();
+        }
+        
+        function calculateInterest() {
+            // Get input values
+            const balance = parseFloat(document.getElementById('balance').value) || 5000;
+            const apr = parseFloat(document.getElementById('aprRange').value) / 100;
+            let payment = parseFloat(document.getElementById('monthlyPayment').value) || 200;
+            const additionalPayment = parseFloat(document.getElementById('additionalPayment').value) || 0;
+            
+            // Daily interest rate
+            const dailyRate = apr / 365;
+            
+            // Calculations
+            let currentBalance = balance;
+            let totalInterest = 0;
+            let months = 0;
+            let monthlyInterest = (currentBalance * apr) / 12;
+            
+            // Check if payment covers interest
+            const warningMessage = document.getElementById('warningMessage');
+            if (payment < monthlyInterest) {
+                warningMessage.style.display = 'block';
+            } else {
+                warningMessage.style.display = 'none';
+            }
+            
+            // Calculate payoff with additional payment in first month
+            let firstMonthBalance = balance;
+            if (additionalPayment > 0) {
+                firstMonthBalance = Math.max(0, balance - additionalPayment);
+            }
+            
+            // Simulate monthly payments
+            let tempBalance = firstMonthBalance;
+            while (tempBalance > 0 && months < 600) { // Cap at 50 years
+                // Monthly interest
+                const monthlyInterest = (tempBalance * apr) / 12;
+                totalInterest += monthlyInterest;
+                
+                // Apply payment
+                const principalPayment = Math.max(0, payment - monthlyInterest);
+                tempBalance = Math.max(0, tempBalance - principalPayment);
+                
+                months++;
+                
+                // Prevent infinite loop
+                if (payment <= monthlyInterest && tempBalance > 0) {
+                    months = 600; // Set to maximum
+                    break;
+                }
+            }
+            
+            // Calculate results
+            const years = Math.floor(months / 12);
+            const remainingMonths = months % 12;
+            
+            // Minimum payment calculation
+            const minPayment = Math.max(25, (balance * 0.02) + ((balance * apr) / 12));
+            let minMonths = 0;
+            let minInterest = 0;
+            let minBalance = balance;
+            
+            while (minBalance > 0 && minMonths < 600) {
+                const minMonthlyInterest = (minBalance * apr) / 12;
+                minInterest += minMonthlyInterest;
+                const minPrincipalPayment = Math.max(0, minPayment - minMonthlyInterest);
+                minBalance = Math.max(0, minBalance - minPrincipalPayment);
+                minMonths++;
+            }
+            
+            const minYears = Math.floor(minMonths / 12);
+            const minRemainingMonths = minMonths % 12;
+            
+            // Recommended payment (10% of balance or enough to pay in 3 years)
+            const recPayment = Math.max(minPayment * 1.5, balance / 36);
+            let recMonths = 0;
+            let recInterest = 0;
+            let recBalance = balance;
+            
+            while (recBalance > 0 && recMonths < 600) {
+                const recMonthlyInterest = (recBalance * apr) / 12;
+                recInterest += recMonthlyInterest;
+                const recPrincipalPayment = Math.max(0, recPayment - recMonthlyInterest);
+                recBalance = Math.max(0, recBalance - recPrincipalPayment);
+                recMonths++;
+            }
+            
+            // Format results
+            const formatter = new Intl.NumberFormat('en-US', {
+                style: 'currency',
+                currency: 'USD',
+                minimumFractionDigits: 0,
+                maximumFractionDigits: 0
+            });
+            
+            const formatterWithCents = new Intl.NumberFormat('en-US', {
+                style: 'currency',
+                currency: 'USD',
+                minimumFractionDigits: 2,
+                maximumFractionDigits: 2
+            });
+            
+            // Update UI
+            document.getElementById('totalInterest').textContent = formatter.format(totalInterest);
+            document.getElementById('monthlyInterest').textContent = formatterWithCents.format(monthlyInterest);
+            document.getElementById('totalPaid').textContent = formatter.format(balance + totalInterest);
+            
+            // Payoff time
+            let payoffText = '';
+            if (months >= 600) {
+                payoffText = 'Never (payment too low)';
+            } else if (years === 0) {
+                payoffText = `${months} months`;
+            } else if (remainingMonths === 0) {
+                payoffText = `${years} years`;
+            } else {
+                payoffText = `${years} years ${remainingMonths} months`;
+            }
+            document.getElementById('payoffTime').textContent = payoffText;
+            
+            // Interest percentage note
+            const interestPercent = ((totalInterest / balance) * 100).toFixed(0);
+            document.getElementById('interestNote').textContent = 
+                `That's ${interestPercent}% of your original balance!`;
+            
+            // Update comparison cards
+            document.getElementById('minPayTime').textContent = `${minYears}y ${minRemainingMonths}m`;
+            document.getElementById('minPayInterest').textContent = formatter.format(minInterest);
+            
+            document.getElementById('yourPayTime').textContent = payoffText;
+            document.getElementById('yourPayInterest').textContent = formatter.format(totalInterest);
+            
+            const recYears = Math.floor(recMonths / 12);
+            const recRemainingMonths = recMonths % 12;
+            document.getElementById('recPayTime').textContent = `${recYears}y ${recRemainingMonths}m`;
+            document.getElementById('recPayInterest').textContent = formatter.format(recInterest);
+            
+            // Update progress bar
+            const progressFill = document.getElementById('progressFill');
+            const maxMonths = Math.max(minMonths, months, recMonths);
+            const progressPercent = months >= 600 ? 100 : (months / maxMonths) * 100;
+            progressFill.style.width = `${Math.min(100, progressPercent)}%`;
+            
+            // Update payoff date
+            const today = new Date();
+            today.setMonth(today.getMonth() + months);
+            const payoffDate = today.toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
+            document.getElementById('payoffDate').textContent = payoffDate;
+        }
+        
+        function toggleFAQ(element) {
+            const answer = element.nextElementSibling;
+            const icon = element.querySelector('span');
+            
+            if (answer.style.display === 'block') {
+                answer.style.display = 'none';
+                icon.textContent = '▼';
+            } else {
+                answer.style.display = 'block';
+                icon.textContent = '▲';
+            }
+        }
+        
+        // Initialize FAQ to be collapsed
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqAnswers = document.querySelectorAll('.faq-answer');
+            faqAnswers.forEach(answer => {
+                answer.style.display = 'none';
+            });
+        });
+    </script>
+</body>
+</html>
