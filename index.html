@@ -1,190 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Professional AdSense RPM Calculator | Estimate Your Earnings</title>
-    <meta name="description" content="Calculate your Google AdSense Revenue Per Mille (RPM) easily. High-accuracy tool for bloggers and publishers to optimize ad revenue.">
-    
-    <style>
-        :root {
-            --primary-color: #007bff;
-            --secondary-color: #28a745;
-            --dark-bg: #f8f9fa;
-            --text-color: #333;
-        }
+<meta charset="UTF-8">
+<title>Adsense RPM Calculator – Estimate Your Earnings</title>
+<meta name="description" content="Free Adsense RPM Calculator. Calculate revenue from pageviews, CTR and CPC. Best SEO optimized RPM calculator tool for bloggers and publishers.">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: var(--text-color);
-            background-color: #f4f7f6;
-            margin: 0;
-            padding: 0;
-        }
+<style>
+body{font-family:Arial;background:#f4f6f9;margin:0;padding:0;}
+.container{max-width:1000px;margin:auto;padding:20px;}
+h1,h2{color:#1a1a1a;}
+.box{background:#fff;padding:20px;border-radius:8px;box-shadow:0 0 10px rgba(0,0,0,0.1);}
+input,button{width:100%;padding:10px;margin:10px 0;font-size:16px;}
+button{background:#007bff;color:#fff;border:none;cursor:pointer;}
+button:hover{background:#0056b3;}
+.result{font-size:20px;color:green;margin-top:10px;}
+.faq{margin-top:30px;}
+footer{text-align:center;padding:20px;background:#222;color:#fff;margin-top:40px;}
+@media(max-width:600px){
+h1{font-size:22px;}
+}
+</style>
 
-        .container {
-            max-width: 900px;
-            margin: 40px auto;
-            background: #fff;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-        }
-
-        h1, h2 { text-align: center; color: var(--primary-color); }
-
-        /* Calculator Box */
-        .calculator-box {
-            background: var(--dark-bg);
-            padding: 25px;
-            border-radius: 8px;
-            margin-bottom: 30px;
-            border-top: 5px solid var(--primary-color);
-        }
-
-        .input-group { margin-bottom: 20px; }
-        label { display: block; font-weight: bold; margin-bottom: 8px; }
-        input {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid #ddd;
-            border-radius: 6px;
-            box-sizing: border-box;
-            font-size: 16px;
-        }
-
-        button {
-            width: 100%;
-            padding: 15px;
-            background: var(--primary-color);
-            color: white;
-            border: none;
-            border-radius: 6px;
-            font-size: 18px;
-            cursor: pointer;
-            transition: 0.3s;
-        }
-
-        button:hover { background: #0056b3; }
-
-        .result {
-            margin-top: 20px;
-            padding: 20px;
-            background: #e9f7ef;
-            border-radius: 6px;
-            text-align: center;
-            display: none;
-        }
-
-        .result h3 { color: var(--secondary-color); margin: 0; }
-
-        /* Content Sections */
-        .content-section { margin-top: 40px; }
-        .faq-section { background: #fff; padding: 20px; border-radius: 8px; }
-        .faq-item { margin-bottom: 15px; border-bottom: 1px solid #eee; padding-bottom: 10px; }
-        .faq-item h4 { color: #444; margin-bottom: 5px; }
-
-        footer { text-align: center; margin-top: 50px; padding: 20px; color: #777; font-size: 14px; }
-    </style>
-
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "AdSense RPM Calculator",
-      "operatingSystem": "All",
-      "applicationCategory": "BusinessApplication",
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "ratingCount": "1250"
-      },
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      }
-    }
-    </script>
 </head>
 <body>
 
 <div class="container">
-    <h1>AdSense RPM Calculator</h1>
-    <p style="text-align: center;">Accurately estimate your revenue per 1,000 impressions.</p>
 
-    <div class="calculator-box">
-        <div class="input-group">
-            <label for="earnings">Total Earnings ($)</label>
-            <input type="number" id="earnings" placeholder="e.g. 50">
-        </div>
-        <div class="input-group">
-            <label for="views">Total Page Views / Impressions</label>
-            <input type="number" id="views" placeholder="e.g. 10000">
-        </div>
-        <button onclick="calculateRPM()">Calculate RPM</button>
+<h1>Adsense RPM Calculator</h1>
 
-        <div class="result" id="resultBox">
-            <h3>Your Page RPM: $<span id="rpmValue">0.00</span></h3>
-        </div>
-    </div>
+<div class="box">
+<label>Pageviews:</label>
+<input type="number" id="views" placeholder="Enter pageviews">
 
-    <div class="content-section">
-        <h2>What is AdSense Page RPM?</h2>
-        <p>Page Revenue Per Mille (RPM) is a crucial metric that represents your estimated earnings for every 1,000 page views you receive. It is not exactly what you have earned; rather, it's a calculation based on your current performance to help you understand the value of your traffic.</p>
-        
-        <p>The formula for RPM is: <strong>$RPM = (Estimated Earnings / Number of Page Views) * 1000$</strong></p>
+<label>CTR (%):</label>
+<input type="number" id="ctr" placeholder="Enter CTR">
 
-        <h3>How to Increase Your AdSense RPM?</h3>
-        <ul>
-            <li><strong>Target High CPC Keywords:</strong> Focus on niches like Finance, Insurance, and Tech.</li>
-            <li><strong>Improve Ad Placement:</strong> Use "Above the Fold" placements for better visibility.</li>
-            <li><strong>User Experience:</strong> A faster site leads to more page views and better engagement.</li>
-        </ul>
-    </div>
+<label>CPC ($):</label>
+<input type="number" id="cpc" placeholder="Enter CPC">
 
-    <hr>
+<button onclick="calculateRPM()">Calculate RPM</button>
 
-    <div class="faq-section">
-        <h2>Frequently Asked Questions</h2>
-        <div class="faq-item">
-            <h4>1. Is RPM the same as CPM?</h4>
-            <p>No. CPM (Cost Per Mille) is what advertisers pay for 1,000 impressions, while RPM is what you, the publisher, earn per 1,000 views after Google's cut.</p>
-        </div>
-        <div class="faq-item">
-            <h4>2. What is a "good" AdSense RPM?</h4>
-            <p>It depends on your niche. For entertainment, $2-$5 is common. For finance or legal niches, it can go up to $50+.</p>
-        </div>
-        <div class="faq-item">
-            <h4>3. Why is my RPM decreasing?</h4>
-            <p>Seasonal changes, poor traffic quality, or low-value keywords can cause a drop in RPM.</p>
-        </div>
-    </div>
+<div class="result" id="output"></div>
+</div>
+
+<script>
+function calculateRPM(){
+let views = document.getElementById("views").value;
+let ctr = document.getElementById("ctr").value;
+let cpc = document.getElementById("cpc").value;
+
+let earnings = (views * ctr / 100) * cpc;
+let rpm = (earnings / views) * 1000;
+
+document.getElementById("output").innerHTML = 
+"Estimated Earnings: $" + earnings.toFixed(2) + "<br>RPM: $" + rpm.toFixed(2);
+}
+</script>
+
+<h2>What is RPM?</h2>
+<p>RPM means Revenue Per 1000 impressions. It shows how much money you earn per 1000 pageviews from Google Adsense or any ad network.</p>
+
+<h2>Why RPM is Important?</h2>
+<p>RPM helps bloggers and website owners understand their income performance. A higher RPM means better monetization.</p>
+
+<h2>How This Calculator Works</h2>
+<p>This calculator uses CTR and CPC to estimate earnings. It is useful for Adsense publishers, bloggers, and digital marketers.</p>
+
+<h2>Benefits</h2>
+<ul>
+<li>100% Free tool</li>
+<li>No signup required</li>
+<li>Accurate estimation</li>
+<li>Mobile friendly</li>
+<li>SEO optimized</li>
+</ul>
+
+<div class="faq">
+<h2>Frequently Asked Questions</h2>
+
+<h3>What is a good RPM?</h3>
+<p>A good RPM depends on niche. Finance and tech niches usually have higher RPM.</p>
+
+<h3>Is this calculator accurate?</h3>
+<p>It gives estimated results based on inputs. Actual earnings depend on traffic quality.</p>
+
+<h3>Can I use it for any ad network?</h3>
+<p>Yes, you can use it for Adsense, Ezoic, Mediavine and other networks.</p>
+
+<h3>Does RPM depend on traffic?</h3>
+<p>Yes, RPM depends on visitor location, niche, CPC and ad placement.</p>
+
+</div>
+
+<h2>Contact Us</h2>
+<p>Email: support@example.com</p>
+
 </div>
 
 <footer>
-    &copy; 2026 AdSense Tools Pro. All Rights Reserved. Designed for Publishers.
+<p>© 2026 RPM Calculator Tool. All Rights Reserved.</p>
 </footer>
 
-<script>
-    function calculateRPM() {
-        const earnings = document.getElementById('earnings').value;
-        const views = document.getElementById('views').value;
-        const resultBox = document.getElementById('resultBox');
-        const rpmDisplay = document.getElementById('rpmValue');
-
-        if (earnings > 0 && views > 0) {
-            const rpm = (earnings / views) * 1000;
-            rpmDisplay.innerText = rpm.toFixed(2);
-            resultBox.style.display = 'block';
-            
-            // Smooth Scroll to result
-            resultBox.scrollIntoView({ behavior: 'smooth' });
-        } else {
-            alert("Please enter valid numbers for both fields.");
-        }
-    }
+<script type="application/ld+json">
+{
+"@context":"https://schema.org",
+"@type":"FAQPage",
+"mainEntity":[
+{"@type":"Question","name":"What is RPM?","acceptedAnswer":{"@type":"Answer","text":"RPM means revenue per 1000 impressions."}},
+{"@type":"Question","name":"Is RPM calculator free?","acceptedAnswer":{"@type":"Answer","text":"Yes, this tool is completely free to use."}},
+{"@type":"Question","name":"Can I use it for Adsense?","acceptedAnswer":{"@type":"Answer","text":"Yes, it works perfectly for Google Adsense."}}
+]
+}
 </script>
 
 </body>
